@@ -18,7 +18,7 @@ routes = [[
 
 # https://www.nps.gov/grca/planyourvisit/upload/tonto_distances.pdf
 
-# TODO: Page Spring water
+# TODO: Page Spring #water
 # TODO: Lower Boucher trail?
 
 some_input = """
@@ -29,22 +29,22 @@ A9 Little Colorado
 4.3 Escalante Creek
 2.3 Seventyfivemile Creek
 2.4 BD9 Hance Rapids
-6.5 BE9 Hance Creek water
-1.9 BF5 Horseshoe Mesa toilet camp
-1.5 BG9 Cottonwood Creek water?
+6.5 BE9 Hance Creek #water
+1.9 BF5 Horseshoe Mesa #toilet #camp
+1.5 BG9 Cottonwood Creek #water?
 5.5 BH9 Grapevine Creek
 8.7 BJ9 Lonetree Canyon
 3.5 BJ9 Cremation Creek
 2.1 Tip Off
-2.7 CIG Indian Garden water toilet camp
-2.5 BL4 Horn Creek toilet camp
-4.8 BL5 Salt Creek toilet camp
-2.1 BL6 Cedar Spring water? camp
-1.3 BL7 Monument Creek toilet water camp
+2.7 CIG Indian Garden #water #toilet #camp
+2.5 BL4 Horn Creek #toilet #camp
+4.8 BL5 Salt Creek #toilet #camp
+2.1 BL6 Cedar Spring #water? #camp
+1.3 BL7 Monument Creek #toilet #water #camp
 3.4 Hermit Tonto junction
-1.2 BM7 Hermit Creek water toilet camp
+1.2 BM7 Hermit Creek #water #toilet #camp
 6.2 Boucher Tonto junction
-0.4 BN9 Boucher Upper Creek Crossing water camp
+0.4 BN9 Boucher Upper Creek Crossing #water #camp
 5.7 BO9 Slate Creek
 9.3 BO9 Turquoise Creek
 5.8 BP9 Ruby Creek
@@ -63,53 +63,53 @@ BF5 Horseshoe Mesa
 1.1 Grandview Trailhead
 
 Bright Angel Trailhead
-1.6 Mile-and-a-Half Resthouse water
-1.5 Three-Mile Resthouse water
-1.7 CIG Indian Garden water
+1.6 Mile-and-a-Half Resthouse #water
+1.5 Three-Mile Resthouse #water
+1.7 CIG Indian Garden #water
 
 BL7 Monument Creek
-1.6 BL8 Granite Rapids water camp
+1.6 BL8 Granite Rapids #water #camp
 
 BM7 Hermit Creek
-1.5 BM8 Hermit Rapids water camp
+1.5 BM8 Hermit Rapids #water #camp
 
 Hermit Trailhead
-2.2 Santa Maria Spring water
+2.2 Santa Maria Spring #water
 3.3 Breezy Point
 1.5 Hermit Tonto junction
 
 Hermit Trailhead
 2.7 Boucher Hermit Junction
-2.5 Yuma Point camp
-2.4 Boucher top of Redwall camp
+2.5 Yuma Point #camp
+2.4 Boucher top of Redwall #camp
 1.3 Boucher Tonto junction
 
 CIG Indian Garden
-3.2 River Resthouse water toilet
-1.5 Bright Angel Campground water toilet camp
-0.4 Phantom Ranch water toilet
+3.2 River Resthouse #water #toilet
+1.5 Bright Angel Campground #water #toilet #camp
+0.4 Phantom Ranch #water #toilet
 
 South Kaibab Trailhead
-1.5 Cedar Ridge toilet
-1.5 Skeleton Point toilet
-1.4 Tip Off toilet
+1.5 Cedar Ridge #toilet
+1.5 Skeleton Point #toilet
+1.4 Tip Off #toilet
 2.6 Bright Angel Campground
 
 North Kaibab Trailhead
-1.7 Supai Tunnel water?
-3.0 Roaring Springs water?
+1.7 Supai Tunnel #water?
+3.0 Roaring Springs #water?
 0.7 Manzanita Rest Area
-1.4 Cottonwood Campground water? camp
+1.4 Cottonwood Campground #water? #camp
 1.6 Ribbon Falls
 4.9 North Kaibab Clear Creek junction
 0.3 Phantom Ranch
 
 North Kaibab Trailhead
-1.5 North Rim Campground water? camp
+1.5 North Rim Campground #water? #camp
 
 North Kaibab Clear Creek junction
-1.7 Sumner Wash camp
-6.7 Clear Creek toilet water camp
+1.7 Sumner Wash #camp
+6.7 Clear Creek #toilet #water #camp
 6.0 Clear Creek at Colorado River
 
 Clear Creek
@@ -122,14 +122,14 @@ Bright Angel Campground
 2.0 Phantom Creek
 """
 
-water = {'b', 'e'}
+#water = {'b', 'e'}
 # mileages = [
 #     ('a', 'b', 3.0),
 #     ('b', 'c', 1.5),
 #     ('c', 'd', 3.5),
 #     ('d', 'e', 2.0),
 # ]
-attribute_words = {'camp', 'toilet', 'water', 'water?'}
+attribute_words = {'#camp', '#toilet', '#water', '#water?'}
 HEADING = '''
 miles miles miles since  Day {}
       today total water
@@ -263,7 +263,7 @@ def main(argv):
     for waypoint in waypoints[1:]:
         #print('*', waypoint)
         if waypoint == 'camp':
-            if 'camp' not in attributes[last_waypoint]:
+            if '#camp' not in attributes[last_waypoint]:
                 print('WARNING: no campground')
             print()
             day = day + 1
@@ -275,14 +275,12 @@ def main(argv):
         miles_today += new_miles
         miles_since_water += new_miles
         words = [waypoint]
-        if 'camp' in attributes[waypoint]:
-            words.append('camp')
+        words.extend(sorted(attributes[waypoint], reverse=True))
         #if waypoint in water:
         print(line_format.format(
             new_miles, miles_today, miles, miles_since_water, ' '.join(words)
         ))
-        if 'water' in attributes[waypoint]:
-            words.append('water')
+        if '#water' in attributes[waypoint]:
             miles_since_water = 0.0
         last_waypoint = waypoint
 
