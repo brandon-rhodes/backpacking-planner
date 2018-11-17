@@ -23,13 +23,16 @@ routes = [[
 
 some_input = """
 A9 Little Colorado
-6.5 Lava Canyon Rapids
-3.0 BB9 Tanner Beach
-3.0 BC9 Cardenas Creek
-4.3 Escalante Creek
-2.3 Seventyfivemile Creek
-2.4 BD9 Hance Rapids
-6.5 BE9 Hance Creek #water
+6.5 BA9 Lava Canyon Rapids
+3.0 BB9 Tanner Beach #camp #toilet
+3.0 BC9 Cardenas Creek #camp
+4.3 BC9 Escalante Creek #water #camp
+2.3 BC9 Seventyfivemile Creek #water #camp
+# Neville Rapids #rafters
+# BC9 Papago Creek #camp
+2.4 BD9 Hance Rapids #water #rafters
+2.6 BE9 Mineral Canyon
+3.9 BE9 Hance Creek #water
 1.9 BF5 Horseshoe Mesa #toilet #camp
 1.5 BG9 Cottonwood Creek #water?
 5.5 BH9 Grapevine Creek
@@ -75,31 +78,31 @@ BM7 Hermit Creek
 
 Hermit Trailhead
 2.2 Santa Maria Spring #water
-3.3 Breezy Point
+0.5 Boucher Hermit Junction
+2.8 Breezy Point
 1.5 Hermit Tonto junction
 
-Hermit Trailhead
-2.7 Boucher Hermit Junction
+Boucher Hermit Junction
 2.5 Yuma Point #camp
 2.4 Boucher top of Redwall #camp
 1.3 Boucher Tonto junction
 
 CIG Indian Garden
 3.2 River Resthouse #water #toilet
-1.5 Bright Angel Campground #water #toilet #camp
+1.5 CBG Bright Angel Campground #water #toilet #camp
 0.4 Phantom Ranch #water #toilet
 
 South Kaibab Trailhead
 1.5 Cedar Ridge #toilet
 1.5 Skeleton Point #toilet
 1.4 Tip Off #toilet
-2.6 Bright Angel Campground
+2.6 CBG Bright Angel Campground
 
 North Kaibab Trailhead
 1.7 Supai Tunnel #water?
-3.0 Roaring Springs #water?
-0.7 Manzanita Rest Area
-1.4 Cottonwood Campground #water? #camp
+3.0 Roaring Springs #water
+0.7 Manzanita Rest Area #water
+1.4 Cottonwood Campground #water #camp
 1.6 Ribbon Falls
 4.9 North Kaibab Clear Creek junction
 0.3 Phantom Ranch
@@ -108,16 +111,16 @@ North Kaibab Trailhead
 1.5 North Rim Campground #water? #camp
 
 North Kaibab Clear Creek junction
-1.7 Sumner Wash #camp
-6.7 Clear Creek #toilet #water #camp
-6.0 Clear Creek at Colorado River
+1.7 AK9 Sumner Wash #camp
+6.7 AK9 Clear Creek #toilet #water #camp
+6.0 AK9 Clear Creek at Colorado River
 
-Clear Creek
-5.0 Cheyava Falls
+AK9 Clear Creek
+5.0 AJ9 Cheyava Falls
 """
 
 some_input += """
-Bright Angel Campground
+CBG Bright Angel Campground
 2.0 Utah Flats
 2.0 Phantom Creek
 """
@@ -145,7 +148,7 @@ def main(argv):
 
     for line in some_input.splitlines():
         line = line.strip()
-        if not line:
+        if not line or line.startswith('#'):
             continue
         if not line[0].isdigit():
             here = line
@@ -155,7 +158,7 @@ def main(argv):
         words = line.split()
         miles = float(words[0])
         these_attributes = set()
-        while words[-1] in attribute_words:
+        while words[-1].startswith('#'):
             attribute = words.pop()
             these_attributes.add(attribute)
         there = ' '.join(words[1:])
@@ -178,6 +181,27 @@ def main(argv):
     #     distances[(start, finish)] = mileage
     #     distances[(finish, start)] = mileage
 
+    waypoints9 = [
+        'Hermit Trailhead',
+        'Yuma Point',
+        'camp',
+        'Boucher top of Redwall',
+        'Boucher Hermit Junction',
+        'Hermit Tonto junction',
+        'BN9 Boucher Upper Creek Crossing',  # fix
+        'camp',
+        'BM7 Hermit Creek',
+        'BM8 Hermit Rapids',  # camp at Tonto? or river?
+        'camp',
+        'BL8 Granite Rapids',
+        'camp',
+        'BL5 Salt Creek',  # bad idea? BL6 instead?
+        'camp',
+        'BL4 Horn Creek',
+        'camp',
+        'Bright Angel Trailhead',
+    ]
+
     waypoints = [
         'Hermit Trailhead',
         'Yuma Point',
@@ -196,24 +220,27 @@ def main(argv):
         'Bright Angel Trailhead',
     ]
 
-    waypoints2 = [  # TODO: study where campgrounds are
+    waypoints = [
         'BB9 Tanner Trailhead',
         'BB9 Tanner Beach',
         'camp',
+        'BA9 Lava Canyon Rapids',
+        'camp',
         'A9 Little Colorado',
+        'BA9 Lava Canyon Rapids',
         'camp',
         'BB9 Tanner Beach',
-        'camp',
         'BC9 Cardenas Creek',
         'camp',
-        'Seventyfivemile Creek',
+        'BC9 Seventyfivemile Creek',
         'camp',
-        'BE9 Hance Creek',  # water?
+        'BE9 Mineral Canyon',
+        #'BD9 Hance Rapids',  # water?
         'camp',
         'Grandview Trailhead',  # how get back?
     ]
 
-    waypoints2 = [
+    waypoints = [
         'South Kaibab Trailhead',
         'Cottonwood Campground',
         'camp',
@@ -225,26 +252,26 @@ def main(argv):
         'camp',
         'Utah Flats',
         'camp',
-        'Bright Angel Campground',
+        'CBG Bright Angel Campground',
         'camp',
         'Bright Angel Trailhead'
     ]
 
-    waypoints2 = [
+    waypoints = [
         'South Kaibab Trailhead',
         'Cottonwood Campground',
         'camp',
         #'Bright Angel Campground',
         'Phantom Ranch',
-        'Sumner Wash',
+        'AK9 Sumner Wash',
         'camp',
-        'Clear Creek',
+        'AK9 Clear Creek',
         'camp',
-        'Cheyava Falls',
+        'AJ9 Cheyava Falls',
         'camp',
-        'Clear Creek',
+        'AK9 Clear Creek',
         'camp',
-        'Bright Angel Campground',
+        'CBG Bright Angel Campground',
         'camp',
         'Bright Angel Trailhead'
     ]
