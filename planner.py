@@ -241,6 +241,38 @@ def main(argv):
     ]
 
     waypoints = [
+        'BB9 Tanner Trailhead',
+        'BB9 Tanner Beach',
+        'camp',
+        'A9 Little Colorado',
+        'camp',
+        'BA9 Lava Canyon Rapids',
+        'camp',
+        'BC9 Cardenas Creek',
+        'camp',
+        'BC9 Seventyfivemile Creek',
+        'camp',
+        #'BD9 Hance Rapids',  # water?
+        #'BE9 Mineral Canyon',
+        'BE9 Hance Creek',
+        'camp',
+        'Grandview Trailhead',  # how get back?
+    ]
+
+    waypoints2 = [
+        'Grandview Trailhead',
+        'BH9 Grapevine Creek',  # TODO: didn't make it all the way
+        'camp',
+        'BJ9 Lonetree Canyon',
+        'camp',
+        'CBG Bright Angel Campground',
+        'camp',
+        'CIG Indian Garden',
+        'camp',
+        'Bright Angel Trailhead',
+    ]
+
+    waypoints2 = [
         'South Kaibab Trailhead',
         'Cottonwood Campground',
         'camp',
@@ -257,7 +289,7 @@ def main(argv):
         'Bright Angel Trailhead'
     ]
 
-    waypoints = [
+    waypoints2 = [
         'South Kaibab Trailhead',
         'Cottonwood Campground',
         'camp',
