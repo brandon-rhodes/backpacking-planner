@@ -22,7 +22,7 @@ routes = [[
 # TODO: Lower Boucher trail?
 
 some_input = """
-A9 Little Colorado
+A9 Little Colorado #camp
 6.5 BA9 Lava Canyon Rapids
 3.0 BB9 Tanner Beach #camp #toilet
 3.0 BC9 Cardenas Creek #camp
@@ -138,6 +138,25 @@ miles miles miles since  Day {}
       today total water
 '''.strip()
 
+def parse_location(words):
+    """Parse the name and attributes of a location from a line of text.
+
+    >>> name, attrs = parse_location('A9 Little Colorado #camp #water'.split())
+    >>> name == 'A9 Little Colorado'
+    True
+    >>> attrs == {'#camp', '#water'}
+    True
+
+    """
+    i = -1
+    attributes = set()
+    while words[i].startswith('#'):
+        attribute = words[i]
+        attributes.add(attribute)
+        i -= 1
+    name = ' '.join(words[:i+1 or None])
+    return name, attributes
+
 def main(argv):
     # parser = argparse.ArgumentParser(description='Process some integers.')
     # parser.add_argument('waypoints', nargs='+', help='waypoint codes')
@@ -151,17 +170,19 @@ def main(argv):
         if not line or line.startswith('#'):
             continue
         if not line[0].isdigit():
-            here = line
+            here, here_attributes = parse_location(line.split())
             if here not in attributes:
-                attributes[here] = set()
+                attributes[here] = here_attributes
+            else:
+                attributes[here] = attributes[here] | here_attributes
             continue
         words = line.split()
         miles = float(words[0])
-        these_attributes = set()
-        while words[-1].startswith('#'):
-            attribute = words.pop()
-            these_attributes.add(attribute)
-        there = ' '.join(words[1:])
+        there, these_attributes = parse_location(words[1:])
+        # while words[-1].startswith('#'):
+        #     attribute = words.pop()
+        #     these_attributes.add(attribute)
+        # there = ' '.join(words[1:])
         if here not in mileages:
             mileages[here] = {}
         if there not in mileages:
