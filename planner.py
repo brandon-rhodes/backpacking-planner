@@ -23,7 +23,7 @@ routes = [[
 
 some_input = """
 A9 Little Colorado #camp
-6.5 BA9 Lava Canyon Rapids
+6.5 BA9 Lava Canyon Rapids #camp
 3.0 BB9 Tanner Beach #camp #toilet
 3.0 BC9 Cardenas Creek #camp
 4.3 BC9 Escalante Creek #water #camp
