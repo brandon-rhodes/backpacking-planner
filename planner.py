@@ -33,7 +33,10 @@ A9 Little Colorado #camp
 2.4 BD9 Hance Rapids #water #rafters
 2.6 BE9 Mineral Canyon
 3.9 BE9 Hance Creek #water
-1.9 BF5 Horseshoe Mesa #toilet #camp
+0.5 BE9 Hance Canyon west
+0.8 BE9 Page Spring #water
+0.6 BF5 Horseshoe Mesa saddle
+0.2 BF5 Horseshoe Mesa campsites #toilet #camp
 1.5 BG9 Cottonwood Creek #water?
 5.5 BH9 Grapevine Creek
 8.7 BJ9 Lonetree Canyon
@@ -61,9 +64,16 @@ BB9 Tanner Beach
 BD9 Hance Rapids
 6.5 New Hance Trailhead
 
-BF5 Horseshoe Mesa
-1.9 Grandview Coconino Saddle
+BF5 Horseshoe Mesa saddle
+1.7 Grandview Coconino saddle
 1.1 Grandview Trailhead
+
+BE9 Hance Canyon west
+3.4 BG9 Tonto Platform beneath Horseshoe Mesa
+1.5 BG9 Cottonwood Creek
+
+BF5 Horseshoe Mesa campsites
+1.5 BG9 Tonto Platform beneath Horseshoe Mesa
 
 Bright Angel Trailhead
 1.6 Mile-and-a-Half Resthouse #water
@@ -277,6 +287,8 @@ def main(argv):
         #'BE9 Mineral Canyon',
         'BE9 Hance Creek',
         'camp',
+        'BE9 Hance Canyon west',
+        'BG9 Tonto Platform beneath Horseshoe Mesa',
         'Grandview Trailhead',  # how get back?
     ]
 
@@ -371,6 +383,11 @@ def expand_waypoints(waypoints, mileages):
     for waypoint in waypoints[1:]:
         if waypoint == 'camp':
             yield 'camp'
+            continue
+        miles = mileages[previous_waypoint].get(waypoint)
+        if miles is not None:
+            yield waypoint
+            previous_waypoint = waypoint
             continue
         path = list(find_path(previous_waypoint, waypoint, mileages))
         for w in path[1:]:
