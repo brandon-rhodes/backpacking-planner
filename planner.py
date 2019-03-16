@@ -23,16 +23,26 @@ routes = [[
 
 some_input = """
 A9 Little Colorado #camp
-6.5 BA9 Lava Canyon Rapids #camp
-3.0 BB9 Tanner Beach #camp #toilet
-3.0 BC9 Cardenas Creek #camp
-4.3 BC9 Escalante Creek #water #camp
-2.3 BC9 Seventyfivemile Creek #water #camp
-# Neville Rapids #rafters
-# BC9 Papago Creek #camp
-2.4 BD9 Hance Rapids #water #rafters
+
+# 6.5 to Lava Canyon Rapids; intermediate points are estimates:
+2.0 BA9 HSM Beach #camp #water
+4.5 BA9 Lava Canyon Rapids #camp #water
+
+3.0 BB9 Tanner Beach #camp #toilet #water
+3.0 BC9 Cardenas Creek #camp #water
+4.3 BC9 Escalante Creek #camp
+
+# 2.3 to Seventyfivemile Creek; intermediate points are estimates:
+1.3 BC9 Escalante Creek mouth #water
+1.0 BC9 Seventyfivemile Creek #camp
+
+# 2.4 to Hance; intermediate points are estimates:
+0.4 BC9 Neville Rapids #rafters #water
+1.0 BC9 Papago Creek #camp #water
+1.0 BD9 Hance Rapids #rafters #water
+
 2.6 BE9 Mineral Canyon
-3.9 BE9 Hance Creek #water
+3.9 BE9 Hance Creek #camp #water
 0.5 BE9 Hance Canyon west
 0.8 BE9 Page Spring #water
 0.6 BF5 Horseshoe Mesa saddle
