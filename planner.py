@@ -28,7 +28,7 @@ A9 Little Colorado #camp
 2.0 BA9 HSM Beach #camp #water
 4.5 BA9 Lava Canyon Rapids #camp #water
 
-3.0 BB9 Tanner Beach #camp #toilet #water
+3.0 BB9 Tanner Beach #camp #rafters #toilet #water
 3.0 BC9 Cardenas Creek #camp #water
 4.3 BC9 Escalante Creek #camp
 
@@ -298,7 +298,7 @@ def main(argv):
         'BE9 Hance Creek',
         'camp',
         'BE9 Hance Canyon west',
-        'BG9 Tonto Platform beneath Horseshoe Mesa',
+        #'BG9 Tonto Platform beneath Horseshoe Mesa',
         'Grandview Trailhead',  # how get back?
     ]
 
