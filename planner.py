@@ -11,130 +11,6 @@ from pprint import pprint
 # TODO: Page Spring #water
 # TODO: Lower Boucher trail?
 
-some_input = """
-A9 Little Colorado #camp
-
-# 6.5 to Lava Canyon Rapids; intermediate points are estimates:
-2.0 BA9 HSM Beach #camp #water
-4.5 BA9 Lava Canyon Rapids #camp #water
-
-3.0 BB9 Tanner Beach #camp #rafters #toilet #water
-3.0 BC9 Cardenas Creek #camp #water
-4.3 BC9 Escalante Creek #camp
-
-# 2.3 to Seventyfivemile Creek; intermediate points are estimates:
-1.3 BC9 Escalante Creek mouth #water
-1.0 BC9 Seventyfivemile Creek #camp
-
-# 2.4 to Hance; intermediate points are estimates:
-0.4 BC9 Neville Rapids #rafters #water
-1.0 BC9 Papago Creek #camp #water
-1.0 BD9 Hance Rapids #rafters #water
-
-2.6 BE9 Mineral Canyon
-3.9 BE9 Hance Creek #camp #water
-0.5 BE9 Hance Canyon west
-0.8 BE9 Page Spring #water
-0.6 BF5 Horseshoe Mesa saddle
-0.2 BF5 Horseshoe Mesa campsites #toilet #camp
-1.5 BG9 Cottonwood Creek #water?
-5.5 BH9 Grapevine Creek
-8.7 BJ9 Lonetree Canyon
-3.5 BJ9 Cremation Creek
-2.1 Tip Off
-2.7 CIG Indian Garden #water #toilet #camp
-2.5 BL4 Horn Creek #toilet #camp
-4.8 BL5 Salt Creek #toilet #camp
-2.1 BL6 Cedar Spring #water? #camp
-1.3 BL7 Monument Creek #toilet #water #camp
-3.4 Hermit Tonto junction
-1.2 BM7 Hermit Creek #water #toilet #camp
-6.2 Boucher Tonto junction
-0.4 BN9 Boucher Upper Creek Crossing #water #camp
-5.7 BO9 Slate Creek
-9.3 BO9 Turquoise Creek
-5.8 BP9 Ruby Creek
-4.8 BP9 Serpentine Canyon
-3.8 BQ9 Bass Upper Creek Crossing
-5.0 South Bass Trailhead
-
-BB9 Tanner Beach
-7.8 BB9 Tanner Trailhead
-
-BD9 Hance Rapids
-6.5 New Hance Trailhead
-
-BF5 Horseshoe Mesa saddle
-1.7 Grandview Coconino saddle
-1.1 Grandview Trailhead
-
-BE9 Hance Canyon west
-3.4 BG9 Tonto Platform beneath Horseshoe Mesa
-1.5 BG9 Cottonwood Creek
-
-BF5 Horseshoe Mesa campsites
-1.5 BG9 Tonto Platform beneath Horseshoe Mesa
-
-Bright Angel Trailhead
-1.6 Mile-and-a-Half Resthouse #water
-1.5 Three-Mile Resthouse #water
-1.7 CIG Indian Garden #water
-
-BL7 Monument Creek
-1.6 BL8 Granite Rapids #water #camp
-
-BM7 Hermit Creek
-1.5 BM8 Hermit Rapids #water #camp
-
-Hermit Trailhead
-2.2 Santa Maria Spring #water
-0.5 Boucher Hermit Junction
-2.8 Breezy Point
-1.5 Hermit Tonto junction
-
-Boucher Hermit Junction
-2.5 Yuma Point #camp
-2.4 Boucher top of Redwall #camp
-1.3 Boucher Tonto junction
-
-CIG Indian Garden
-3.2 River Resthouse #water #toilet
-1.5 CBG Bright Angel Campground #water #toilet #camp
-0.4 Phantom Ranch #water #toilet
-
-South Kaibab Trailhead
-1.5 Cedar Ridge #toilet
-1.5 Skeleton Point #toilet
-1.4 Tip Off #toilet
-2.6 CBG Bright Angel Campground
-
-North Kaibab Trailhead
-1.7 Supai Tunnel #water?
-3.0 Roaring Springs #water
-0.7 Manzanita Rest Area #water
-1.4 Cottonwood Campground #water #camp
-1.6 Ribbon Falls
-4.9 North Kaibab Clear Creek junction
-0.3 Phantom Ranch
-
-North Kaibab Trailhead
-1.5 North Rim Campground #water? #camp
-
-North Kaibab Clear Creek junction
-1.7 AK9 Sumner Wash #camp
-6.7 AK9 Clear Creek #toilet #water #camp
-6.0 AK9 Clear Creek at Colorado River
-
-AK9 Clear Creek
-5.0 AJ9 Cheyava Falls
-"""
-
-some_input += """
-CBG Bright Angel Campground
-2.0 Utah Flats
-2.0 Phantom Creek
-"""
-
 HEADING = '''
 miles miles miles since  Day {}
       today total water
@@ -164,39 +40,8 @@ def main(argv):
     # parser.add_argument('waypoints', nargs='+', help='waypoint codes')
     # args = parser.parse_args(argv)
 
-    attributes = {}  # {waypoint: {attr)}
-    mileages = {}    # {w1: {w2: mileage}}
-
-    for line in some_input.splitlines():
-        line = line.strip()
-        if not line or line.startswith('#'):
-            continue
-        if not line[0].isdigit():
-            here, here_attributes = parse_location(line.split())
-            if here not in attributes:
-                attributes[here] = here_attributes
-            else:
-                attributes[here] = attributes[here] | here_attributes
-            continue
-        words = line.split()
-        miles = float(words[0])
-        there, these_attributes = parse_location(words[1:])
-        # while words[-1].startswith('#'):
-        #     attribute = words.pop()
-        #     these_attributes.add(attribute)
-        # there = ' '.join(words[1:])
-        if here not in mileages:
-            mileages[here] = {}
-        if there not in mileages:
-            mileages[there] = {}
-        mileages[here][there] = miles
-        mileages[there][here] = miles
-        here = there
-        if here in attributes:
-            attributes[here] = attributes[here] | these_attributes
-        else:
-            attributes[here] = these_attributes
-
+    with open('mileages') as f:
+        mileages, attributes = parse_mileage_file(f)
     #pprint(mileages)
 
     # distances = {}
@@ -355,6 +200,42 @@ def main(argv):
         if '#water' in attributes[waypoint]:
             miles_since_water = 0.0
         last_waypoint = waypoint
+
+def parse_mileage_file(lines):
+    mileages = {}    # {w1: {w2: mileage}}
+    attributes = {}  # {waypoint: {attr)}
+
+    for line in lines:
+        line = line.strip()
+        if not line or line.startswith('#'):
+            continue
+        if not line[0].isdigit():
+            here, here_attributes = parse_location(line.split())
+            if here not in attributes:
+                attributes[here] = here_attributes
+            else:
+                attributes[here] = attributes[here] | here_attributes
+            continue
+        words = line.split()
+        miles = float(words[0])
+        there, these_attributes = parse_location(words[1:])
+        # while words[-1].startswith('#'):
+        #     attribute = words.pop()
+        #     these_attributes.add(attribute)
+        # there = ' '.join(words[1:])
+        if here not in mileages:
+            mileages[here] = {}
+        if there not in mileages:
+            mileages[there] = {}
+        mileages[here][there] = miles
+        mileages[there][here] = miles
+        here = there
+        if here in attributes:
+            attributes[here] = attributes[here] | these_attributes
+        else:
+            attributes[here] = these_attributes
+
+    return mileages, attributes
 
 def expand_waypoints(waypoints, mileages):
     start = waypoints[0]
