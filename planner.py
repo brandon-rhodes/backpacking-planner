@@ -6,16 +6,6 @@ import argparse
 import sys
 from pprint import pprint
 
-routes = [[
-    (0.0, 'CIG Indian Garden'),
-    (2.5, 'BL4 Horn Creek'),
-    (4.8, 'BL5 Salt Creek'),
-    (3.4, 'BL7 Monument Creek'),
-    (3.5, 'BM7 Hermit Creek'),
-    (5.0, ''),
-]]
-
-
 # https://www.nps.gov/grca/planyourvisit/upload/tonto_distances.pdf
 
 # TODO: Page Spring #water
@@ -145,14 +135,6 @@ CBG Bright Angel Campground
 2.0 Phantom Creek
 """
 
-#water = {'b', 'e'}
-# mileages = [
-#     ('a', 'b', 3.0),
-#     ('b', 'c', 1.5),
-#     ('c', 'd', 3.5),
-#     ('d', 'e', 2.0),
-# ]
-attribute_words = {'#camp', '#toilet', '#water', '#water?'}
 HEADING = '''
 miles miles miles since  Day {}
       today total water
@@ -281,27 +263,6 @@ def main(argv):
         'Grandview Trailhead',  # how get back?
     ]
 
-    waypoints = [
-        'BB9 Tanner Trailhead',
-        'BB9 Tanner Beach',
-        'camp',
-        'A9 Little Colorado',
-        'camp',
-        'BA9 Lava Canyon Rapids',
-        'camp',
-        'BC9 Cardenas Creek',
-        'camp',
-        'BC9 Seventyfivemile Creek',
-        'camp',
-        #'BD9 Hance Rapids',  # water?
-        #'BE9 Mineral Canyon',
-        'BE9 Hance Creek',
-        'camp',
-        'BE9 Hance Canyon west',
-        #'BG9 Tonto Platform beneath Horseshoe Mesa',
-        'Grandview Trailhead',  # how get back?
-    ]
-
     waypoints2 = [
         'Grandview Trailhead',
         'BH9 Grapevine Creek',  # TODO: didn't make it all the way
@@ -350,6 +311,15 @@ def main(argv):
         'camp',
         'Bright Angel Trailhead'
     ]
+
+    from fileinput import input
+
+    waypoints = []
+    for line in input():
+        line = line.split('#')[0].strip()
+        if not line:
+            continue
+        waypoints.append(line)
 
     waypoints = list(expand_waypoints(waypoints, mileages))
     #pprint(waypoints)
