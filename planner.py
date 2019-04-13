@@ -12,9 +12,10 @@ from pprint import pprint
 # TODO: Lower Boucher trail?
 
 HEADING = '''
-miles miles miles since  Day {}
-      today total water
+miles miles miles since from   Day {}
+      today total water safety
 '''.strip()
+FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
 
 def main(argv):
     # parser = argparse.ArgumentParser(description='Process some integers.')
@@ -23,6 +24,8 @@ def main(argv):
 
     with open('mileages') as f:
         mileages, attributes = parse_mileage_file(f)
+
+    remoteness = compute_remoteness(mileages)
     #pprint(mileages)
 
     # distances = {}
@@ -154,9 +157,9 @@ def main(argv):
     miles = 0.0
     miles_today = 0.0
     miles_since_water = 0.0
-    line_format = '{:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
     print(HEADING.format(1))
-    print(line_format.format(0.0, 0.0, 0.0, 0.0, waypoints[0]))
+    print(FORMAT.format(0.0, 0.0, 0.0, 0.0,
+                        remoteness[waypoints[0]], waypoints[0]))
     last_waypoint = waypoints[0]
     for waypoint in waypoints[1:]:
         #print('*', waypoint)
@@ -175,8 +178,9 @@ def main(argv):
         words = [waypoint]
         words.extend(sorted(attributes[waypoint], reverse=True))
         #if waypoint in water:
-        print(line_format.format(
-            new_miles, miles_today, miles, miles_since_water, ' '.join(words)
+        print(FORMAT.format(
+            new_miles, miles_today, miles, miles_since_water,
+            remoteness[waypoint], ' '.join(words)
         ))
         if '#water' in attributes[waypoint]:
             miles_since_water = 0.0
@@ -273,6 +277,21 @@ def find_path(start, end, mileages):
             tup = (miles_so_far + miles, waypoints + [waypoint])
             destinations.append(tup)
         destinations.sort()
+
+def compute_remoteness(mileages):
+    trailheads = [w for w in mileages if 'Trailhead' in w]
+    queue = [(0.0, w) for w in trailheads]
+    remoteness = {}
+    while queue:
+        miles, waypoint = queue.pop(0)
+        if waypoint in remoteness:
+            continue
+        remoteness[waypoint] = miles
+        for waypoint2, miles2 in mileages[waypoint].items():
+            tup = (miles + miles2, waypoint2)
+            queue.append(tup)
+        queue.sort()
+    return remoteness
 
 if __name__ == '__main__':
     main(sys.argv[1:])
