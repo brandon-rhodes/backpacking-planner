@@ -16,25 +16,6 @@ miles miles miles since  Day {}
       today total water
 '''.strip()
 
-def parse_location(words):
-    """Parse the name and attributes of a location from a line of text.
-
-    >>> name, attrs = parse_location('A9 Little Colorado #camp #water'.split())
-    >>> name == 'A9 Little Colorado'
-    True
-    >>> attrs == {'#camp', '#water'}
-    True
-
-    """
-    i = -1
-    attributes = set()
-    while words[i].startswith('#'):
-        attribute = words[i]
-        attributes.add(attribute)
-        i -= 1
-    name = ' '.join(words[:i+1 or None])
-    return name, attributes
-
 def main(argv):
     # parser = argparse.ArgumentParser(description='Process some integers.')
     # parser.add_argument('waypoints', nargs='+', help='waypoint codes')
@@ -236,6 +217,25 @@ def parse_mileage_file(lines):
             attributes[here] = these_attributes
 
     return mileages, attributes
+
+def parse_location(words):
+    """Parse the name and attributes of a location from a line of text.
+
+    >>> name, attrs = parse_location('A9 Little Colorado #camp #water'.split())
+    >>> name == 'A9 Little Colorado'
+    True
+    >>> attrs == {'#camp', '#water'}
+    True
+
+    """
+    i = -1
+    attributes = set()
+    while words[i].startswith('#'):
+        attribute = words[i]
+        attributes.add(attribute)
+        i -= 1
+    name = ' '.join(words[:i+1 or None])
+    return name, attributes
 
 def expand_waypoints(waypoints, mileages):
     start = waypoints[0]
