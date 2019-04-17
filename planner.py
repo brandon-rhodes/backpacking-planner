@@ -12,7 +12,7 @@ from pprint import pprint
 # TODO: Lower Boucher trail?
 
 HEADING = '''
-miles miles miles since from   Day {}
+miles miles miles since  from
       today total water safety
 '''.strip()
 FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
@@ -157,7 +157,7 @@ def main(argv):
     miles = 0.0
     miles_today = 0.0
     miles_since_water = 0.0
-    print(HEADING.format(1))
+    print(HEADING)
     print(FORMAT.format(0.0, 0.0, 0.0, 0.0,
                         remoteness[waypoints[0]], waypoints[0]))
     last_waypoint = waypoints[0]
@@ -166,9 +166,8 @@ def main(argv):
         if waypoint == 'camp':
             if '#camp' not in attributes[last_waypoint]:
                 print('WARNING: no campground')
-            print()
             day = day + 1
-            print(HEADING.format(day))
+            print('{:31}--- DAY {} ---'.format('', day))
             miles_today = 0.0
             continue
         new_miles = mileages[last_waypoint][waypoint]
