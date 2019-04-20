@@ -28,7 +28,7 @@ def main(argv):
 def events(args):
     fmt = '%Y-%m-%d'
     start = dt.datetime.strptime(args.start, fmt)
-    end = dt.datetime.strptime(args.end, fmt)
+    end = dt.datetime.strptime(args.end, fmt) + dt.timedelta(days=1)
     tz = timezone(args.timezone)
 
     start = start.replace(tzinfo=tz)
