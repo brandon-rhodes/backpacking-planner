@@ -277,6 +277,12 @@ def find_path(start, end, mileages):
             destinations.append(tup)
         destinations.sort()
 
+def path_mileages(path, mileages):
+    previous = path[0]
+    for waypoint in path[1:]:
+        yield mileages[previous][waypoint]
+        previous = waypoint
+
 def compute_remoteness(mileages):
     trailheads = [w for w in mileages if 'Trailhead' in w]
     queue = [(0.0, w) for w in trailheads]

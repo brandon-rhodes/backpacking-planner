@@ -2,6 +2,7 @@
 
 import datetime as dt
 import os
+import re
 import sys
 
 here = os.path.dirname(__file__)
@@ -49,8 +50,8 @@ B 26.4 D 25.8 L 23.7
 5:30a Awake
 70°
 7:30a Start
-8:10a Unkar
-8:30a Start
+# 8:10a Unkar
+# 8:30a Start
 # GPS
 # made up:
 6:00p Seventyfivemile Creek
@@ -81,19 +82,57 @@ def main(argv):
     with open(os.path.join(here, '../mileages')) as f:
         mileages, attributes = planner.parse_mileage_file(f)
 
+    names = list(attributes)
+
     waypoints = []
     waypoint = None
+
+    itinerary = list(read_itinerary(names))
+
+    for i in range(len(itinerary) - 1):
+        time1, waypoint1 = itinerary[i]
+        time2, waypoint2 = itinerary[i + 1]
+        if waypoint1 == waypoint2:
+            continue
+        hours = (time2 - time1).total_seconds() / 3600.0
+        path = planner.find_path(waypoint1, waypoint2, mileages)
+        miles = sum(planner.path_mileages(path, mileages))
+        mph = miles / hours
+        print('{:%H:%M} - {:%H:%M}  {:.1f}  {:.2f}  {} -> {}'.format(
+            time1, time2, miles, mph, waypoint1, waypoint2))
+        #miles = sum(
+
+def read_itinerary(names):
+    time_re = re.compile(r'\d+:\d+[ap]m?\b')
+    previous_place = None
 
     for line in log.splitlines():
         if line.startswith('2019'):
             datestr = line
-        elif line[1:2] == ':':
-            dtstr = datestr + ' ' + line.split()[0]
+        elif time_re.match(line):
+            fields = line.split()
+            timestr = fields[0]
+            dtstr = datestr + ' ' + timestr
             if dtstr.endswith(('a', 'p')):
                 dtstr = dtstr[:-1] + ' ' + dtstr[-1] + 'm'
-            dtstr = dtstr.upper()
-            dtstr = dtstr.replace('8', '08')
-            print(dt.datetime.strptime('%Y-%m-%d %I:%M %p', dtstr))
+            time = dt.datetime.strptime(dtstr, '%Y-%m-%d %I:%M %p')
+            if len(fields) > 1:
+                place = ' '.join(fields[1:])
+                if place.startswith('('):
+                    place = previous_place
+                elif place == 'Start':
+                    place = previous_place
+                elif place == 'Awake':
+                    place = previous_place
+                else:
+                    matches = [name for name in names if place in name]
+                    if len(matches) != 1:
+                        print(place, matches)
+                        #print([name for name in names if name in place])
+                        asdf
+                    place = matches[0]
+            yield time, place
+            previous_place = place
 
 if __name__ == '__main__':
     main(sys.argv[1:])
