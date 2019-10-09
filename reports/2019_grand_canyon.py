@@ -26,14 +26,13 @@ D 25.6 L 21.7 B 26.7
 # 17.1? "autorades"?
 75°
 # 10:50a-11:50a Palisades Creek
-6:45p HSM Beach
-# todo: was north of HSM?
+6:45p Beach below confluence
 # todo: drink
 
 2019-04-25
 5:00p Start
 5:30p Little Colorado
-6:32p HSM Beach
+6:32p Beach below confluence
 
 2019-04-26
 5:04a Awake
@@ -72,7 +71,7 @@ B 27.9 D 23.7
 5:01a Awake
 6:05a Start
 8:15a Horseshoe Mesa saddle
-# TODO visit to campsites
+8:35a Horseshoe Mesa campsites
 8:55a Horseshoe Mesa saddle
 12:00n Grandview Trailhead
 B 21.2 L 14.6 D 15.3
@@ -89,6 +88,8 @@ def main(argv):
 
     itinerary = list(read_itinerary(names))
 
+    print('Start - End   Miles  MPH  Start -> End')
+
     for i in range(len(itinerary) - 1):
         time1, waypoint1 = itinerary[i]
         time2, waypoint2 = itinerary[i + 1]
@@ -103,7 +104,7 @@ def main(argv):
         #miles = sum(
 
 def read_itinerary(names):
-    time_re = re.compile(r'\d+:\d+[ap]m?\b')
+    time_re = re.compile(r'\d+:\d+(a|p|am|pm|n|m)?\b')
     previous_place = None
 
     for line in log.splitlines():
@@ -112,6 +113,8 @@ def read_itinerary(names):
         elif time_re.match(line):
             fields = line.split()
             timestr = fields[0]
+            if not timestr[-2].isalpha():
+                timestr = timestr.replace('m', ' am').replace('n', ' pm')
             dtstr = datestr + ' ' + timestr
             if dtstr.endswith(('a', 'p')):
                 dtstr = dtstr[:-1] + ' ' + dtstr[-1] + 'm'
@@ -127,9 +130,11 @@ def read_itinerary(names):
                 else:
                     matches = [name for name in names if place in name]
                     if len(matches) != 1:
-                        print(place, matches)
+                        print()
+                        print('Error: unable to find a match for %r' % place)
+                        print()
                         #print([name for name in names if name in place])
-                        asdf
+                        exit(1)
                     place = matches[0]
             yield time, place
             previous_place = place
