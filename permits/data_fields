@@ -1,0 +1,521 @@
+---
+FieldType: Text
+FieldName: Last Name
+FieldNameAlt: Last Name
+FieldFlags: 0
+FieldValue: Rhodes
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: First Name
+FieldNameAlt: First Name
+FieldFlags: 0
+FieldValue: Brandon
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: MI
+FieldNameAlt: Middle Initial
+FieldFlags: 0
+FieldValue: C
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Suffix
+FieldNameAlt: Suffix
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Street Address
+FieldNameAlt: Street Address
+FieldFlags: 0
+FieldValue: 127 N Lawn Ave
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: City
+FieldNameAlt: City
+FieldFlags: 0
+FieldValue: Bluffton
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: State
+FieldNameAlt: State
+FieldFlags: 0
+FieldValue: OH
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Zip Code
+FieldNameAlt: Zip Code
+FieldFlags: 0
+FieldValue: 45817
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Country
+FieldNameAlt: Country
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Email Address
+FieldNameAlt: Email Address
+FieldFlags: 0
+FieldValue: brandon@rhodesmill.org
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Contact Phone 1
+FieldNameAlt: Phone (cell, home, or work)
+FieldFlags: 0
+FieldValue: 404-704-6376
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Contact Phone 2
+FieldNameAlt: Phone (cell, home, or work)
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: OrganizedTrip
+FieldFlags: 49152
+FieldValue: noOrganized
+FieldJustification: Left
+FieldStateOption: yesOrganized
+FieldStateOption: noOrganized
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: Group/Organization Name
+FieldNameAlt: Group/Organization Name
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Backpacking
+FieldNameAlt: Backpacking
+FieldFlags: 0
+FieldValue: On
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: Stock
+FieldNameAlt: Stock
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: Entry Location
+FieldNameAlt: Entry Location
+FieldFlags: 0
+FieldValue: Tanner
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: GroupSize_1
+FieldNameAlt: Group Size for choice one
+FieldFlags: 0
+FieldValue: 4
+FieldValueDefault: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: typeOfRiverUse
+FieldNameAlt: type of river use
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: CanyoneeringRappelling
+FieldNameAlt: Canyoneering/Rappelling
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: River Use
+FieldNameAlt: River Use
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: numberOfStock
+FieldNameAlt: number of stock
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: ExitLocation
+FieldNameAlt: Exit Location
+FieldFlags: 0
+FieldValue: Tanner
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_1_Choice_1
+FieldNameAlt: Date for night 1, choice 1
+FieldFlags: 0
+FieldValue: 2/20/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1a
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: Tanner / Comanche / BA9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_3_Choice_1
+FieldNameAlt: Date for night 3, choice 1
+FieldFlags: 0
+FieldValue: 2/22/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1b
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: Beamer / Confluence / BA9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_2_Choice_1
+FieldNameAlt: Date for night 2, choice 1
+FieldFlags: 0
+FieldValue: 2/21/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_4_Choice_1
+FieldNameAlt: Date for night 4, choice 1
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1d
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1c
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: Beamer / Comanche / BA9
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_5_Choice_1
+FieldNameAlt: Date for night 5, choice 1
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: MethodOfPayment
+FieldFlags: 49152
+FieldValue: Visa
+FieldJustification: Left
+FieldStateOption: AmericanExpress
+FieldStateOption: Visa
+FieldStateOption: Discover
+FieldStateOption: MasterCard
+FieldStateOption: Off
+---
+FieldType: Text
+FieldName: totalAmountAuthorized
+FieldNameAlt: Total Cost = $8 per person per night + $10
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Name on Card
+FieldNameAlt: Name on Card
+FieldFlags: 0
+FieldValue: Brandon Rhodes
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Use hiker credit on file
+FieldNameAlt: Use hiker credit on file
+FieldFlags: 0
+FieldValue: On
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: plateState
+FieldNameAlt: vehicle state
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: plateNumber
+FieldNameAlt: vehicle plate number
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: parkingLocation
+FieldNameAlt: trailhead parking location
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: Rental
+FieldFlags: 49152
+FieldValue: Yes_2
+FieldJustification: Left
+FieldStateOption: No_2
+FieldStateOption: Off
+FieldStateOption: Yes_2
+---
+FieldType: Button
+FieldName: Flexible Itinerary
+FieldFlags: 49152
+FieldValue: No
+FieldJustification: Left
+FieldStateOption: No
+FieldStateOption: Yes
+FieldStateOption: Off
+---
+FieldType: Button
+FieldName: reverseItinerary
+FieldNameAlt: check for reverse itinerary
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Button
+FieldName: similarCampsites
+FieldNameAlt: check for similar/nearby campsites
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+FieldStateOption: Off
+FieldStateOption: On
+---
+FieldType: Text
+FieldName: Minimum Group Size
+FieldNameAlt: Minimum Group Size
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Trip Length  of nights
+FieldNameAlt: Trip Length (# of nights)
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Alternate Start Dates 2
+FieldNameAlt: Alternate Start Date End
+FieldFlags: 0
+FieldValue: 3/15/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: alternateStartDate1
+FieldNameAlt: alternate start date begin
+FieldFlags: 0
+FieldValue: 3/12/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2g
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1g
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_7_Choice_2
+FieldNameAlt: Date for night 7, choice 2
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2f
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_6_Choice_2
+FieldNameAlt: Date for night 6, choice 2
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2e
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_5_Choice_2
+FieldNameAlt: Date for night 5, choice 2
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2d
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_4_Choice_2
+FieldNameAlt: Date for night 4, choice 2
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2c
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: CBG Bright Angel
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_3_Choice_2
+FieldNameAlt: Date for night 3, choice 2
+FieldFlags: 0
+FieldValue: 2/22/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2b
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: AK9 Clear Creek
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_2_Choice_2
+FieldNameAlt: Date for night 2, choice 2
+FieldFlags: 0
+FieldValue: 2/21/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea2a
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: AK9 Clear Creek
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_1_Choice_2
+FieldNameAlt: Date for night 1, choice 2
+FieldFlags: 0
+FieldValue: 2/20/2020
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Exit Location_2
+FieldNameAlt: Exit Location
+FieldFlags: 0
+FieldValue: Bright Angel
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Entry Location_2
+FieldNameAlt: Entry Location
+FieldFlags: 0
+FieldValue: Kaibab
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: GroupSize_2
+FieldNameAlt: Group Size for choice two
+FieldFlags: 0
+FieldValue: 4
+FieldValueDefault: 0
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_6_Choice_1
+FieldNameAlt: Date for night 6, choice 1
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: Date_Night_7_Choice_1
+FieldNameAlt: Date for night 7, choice 1
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1e
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Text
+FieldName: UseArea1f
+FieldNameAlt: camp location / use area, for example: Bright Angel Camp / CBG
+FieldFlags: 0
+FieldValue: 
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: calculateOne
+FieldNameAlt: Select to get an estimated permit cost for choice one
+FieldFlags: 65536
+FieldJustification: Left
+---
+FieldType: Button
+FieldName: calculateTwo
+FieldNameAlt: Select to get an estimated permit cost for choice two
+FieldFlags: 65536
+FieldJustification: Left
