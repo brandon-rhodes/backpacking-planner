@@ -12,25 +12,25 @@ corridor_numbers = {'CIG': 1, 'CBG' :2, 'CCG': 3}
 corridor = set(corridor_numbers)
 
 simple_categories = [
-    ('Corridor (other)', {'CIG', 'CBG', 'CCG'}),
-    ('Corridor (winter)', {'CIG', 'CBG', 'CCG', 'NCG'}),
-    ('Clear Creek', {'CIG', 'CBG', 'AK9'}),
-    ('Boucher', {'BN9', 'BM7'}),
-    ('Tonto West', {'BM8', 'BM7', 'BL8', 'BL7', 'BL6', 'BL5', 'BL4', 'CIG'}),
-    ('Tanner to Confluence', {'BA9', 'BB9'}),
-    ('Horseshoe Hance Cottonwood', {'BE9', 'BF5', 'BG9'}),
-    ('New Hance Trail', {'BD9'}),
-    ('Tanner to Horseshoe', {'BB9', 'BC9', 'BD9', 'BE9', 'BF5'}),
-    ('Tonto East', {'BG9', 'BH9', 'BJ9'}),
-    ('Nankoweap Trail', {'AE9'}),
-    ('Point Sublime (North Rim)', {'NH1'}),
-    ('Point Final (North Rim)', {'NA1'}),
-    ('Soap Creek (Marble Canyon)', {'AB0'}),
-    ('South Bass', {'BQ9'}),
-    ('South Canyon (Marble Canyon)', {'AC9'}),
-    ('Tapeats and Deer Creek', {'AM9', 'AW7', 'AW8', 'AX7', 'AY9'}),
-    ('Tuweep', {'TCG'}),
-    ('Widforss Trail (North Rim)', {'NF9'}),
+    ('Corridor: Other', {'CIG', 'CBG', 'CCG'}),
+    ('Corridor + Winter North Rim Campground', {'CIG', 'CBG', 'CCG', 'NCG'}),
+    ('Corridor + North Rim Area', {'CIG', 'CBG', 'CCG', 'NRA'}),
+    ('N: Clear Creek', {'CIG', 'CBG', 'AK9'}),
+    ('N: Nankoweap Trail', {'AE9'}),
+    ('S: Boucher', {'BN9', 'BM7'}),
+    ('S: Tonto West', {'BM8', 'BM7', 'BL8', 'BL7', 'BL6', 'BL5', 'BL4', 'CIG'}),
+    ('S: Tanner and Confluence', {'BA9', 'BB9'}),
+    ('S: Horseshoe Hance Cottonwood New Hance', {'BD9', 'BE9', 'BF5', 'BG9'}),
+    ('S: Tanner to New Hance and Grandview', {'BB9','BC9','BD9','BE9','BF5'}),
+    ('S: Tonto East', {'BG9', 'BH9', 'BJ9'}),
+    ('North Rim: Point Sublime', {'NH1'}),
+    ('North Rim: Point Final', {'NA1'}),
+    ('Marble Canyon: Soap Creek', {'AB0'}),
+    ('S: South Bass', {'BQ9'}),
+    ('Marble Canyon: South Canyon', {'AC9'}),
+    ('N: Tapeats and Deer Creek', {'AM9', 'AW7', 'AW8', 'AX7', 'AY9'}),
+    ('North Rim: Tuweep', {'TCG'}),
+    ('North Rim: Widforss Trail', {'NF9'}),
 ]
 
 def main(argv):
@@ -38,7 +38,7 @@ def main(argv):
     parser.parse_args(argv)
 
     stats = list(read_stats())
-    stats.sort()
+    stats.sort(reverse=True)
 
     by_category = defaultdict(list)
     for count, itinerary in stats:
@@ -58,6 +58,9 @@ def main(argv):
             print('{:5}  {:5}  {}'.format('', count, ','.join(itinerary)))
         print()
 
+    print('Total itineraries listed here:',
+          sum(count for count, itinerary in stats))
+
 def read_stats():
     for line in open(os.path.dirname(os.path.abspath(__file__)) + '/text'):
         line = line.strip()
@@ -76,7 +79,7 @@ def assign_category(itinerary):
         moves = ''.join(
             move_of(nums[i], nums[i+1]) for i in range(len(nums) - 1)
         )
-        print(itinerary, moves)
+        #print(itinerary, moves)
         if not moves:
             return('Corridor: {} only'.format(itinerary[0]))
         if re.match(r'n+$', moves):
@@ -99,7 +102,7 @@ def assign_category(itinerary):
     for name, code_set in simple_categories:
         if codes <= code_set:
             return name
-    return '~other'
+    return '~Other~'
 
 def move_of(a, b):
     return 'n' if b > a else 's' if a > b else ''

@@ -1,0 +1,151 @@
+
+   22  Corridor + North Rim Area
+          11  NRA,CCG,CBG,CIG
+          11  CBG,NRA,CBG
+
+   43  Corridor + Winter North Rim Campground
+          26  NCG
+          17  CCG,NCG,CBG
+
+ 3205  Corridor: CBG only
+        2246  CBG
+         923  CBG,CBG
+          36  CBG,CBG,CBG
+
+  432  Corridor: CCG only
+         237  CCG
+         195  CCG,CCG
+
+  899  Corridor: CIG only
+         651  CIG
+         248  CIG,CIG
+
+  384  Corridor: north then south
+          76  CBG,CCG,CCG,CBG
+          64  CBG,CCG,CCG,CIG
+          50  CIG,CBG,CIG
+          50  CBG,CCG,CCG,CBG,CIG
+          47  CIG,CBG,CBG,CIG
+          41  CBG,CCG,CBG
+          28  CBG,CCG,CIG
+          28  CBG,CCG,CBG,CIG
+
+  349  Corridor: northbound
+         170  CBG,CCG
+          82  CIG,CBG
+          52  CIG,CBG,CCG
+          24  CBG,CBG,CCG
+          21  CIG,CBG,CBG
+
+   50  Corridor: south then north
+          37  CCG,CBG,CCG
+          13  CCG,CBG,CBG,CCG
+
+ 2245  Corridor: southbound
+        1004  CBG,CIG
+         414  CBG,CBG,CIG
+         331  CCG,CBG,CIG
+         226  CCG,CBG
+          76  CCG,CBG,CBG,CIG
+          63  CCG,CIG
+          42  CCG,CCG,CBG
+          35  CCG,CCG,CIG
+          33  CBG,CBG,CIG,CIG
+          21  CCG,CBG,CBG
+
+   13  Marble Canyon: Soap Creek
+          13  AB0
+
+   12  Marble Canyon: South Canyon
+          12  AC9,AC9
+
+   85  N: Clear Creek
+          23  CBG,AK9,AK9,CBG
+          21  AK9
+          19  AK9,AK9
+          11  CBG,AK9,AK9,AK9,CBG
+          11  AK9,AK9,AK9
+
+   45  N: Nankoweap Trail
+          17  AE9,AE9
+          15  AE9,AE9,AE9,AE9
+          13  AE9,AE9,AE9
+
+   35  N: Tapeats and Deer Creek
+          12  AW7,AX7
+          12  AM9,AW8,AY9
+          11  AW7,AX7,AY9
+
+   51  North Rim: Point Final
+          51  NA1
+
+  142  North Rim: Point Sublime
+         101  NH1
+          41  NH1,NH1
+
+  513  North Rim: Tuweep
+         290  TCG
+         156  TCG,TCG
+          48  TCG,TCG,TCG
+          19  TCG,TCG,TCG,TCG
+
+   48  North Rim: Widforss Trail
+          48  NF9
+
+  189  S: Boucher
+          62  BM7,BM7
+          59  BM7
+          24  BN9
+          18  BN9,BM7
+          14  BN9,BN9
+          12  BN9,BN9,BM7
+
+  332  S: Horseshoe Hance Cottonwood New Hance
+          98  BF5
+          55  BF5,BF5
+          39  BG9
+          24  BG9,BE9
+          24  BE9,BG9
+          21  BD9
+          18  BG9,BF5
+          17  BD9,BE9
+          13  BE9
+          12  BD9,BF5
+          11  BG9,BG9
+
+   13  S: South Bass
+          13  BQ9,BQ9
+
+  102  S: Tanner and Confluence
+          39  BB9
+          26  BB9,BB9
+          21  BB9,BA9,BA9,BB9
+          16  BB9,BA9,BB9
+
+  122  S: Tanner to New Hance and Grandview
+          38  BB9,BC9,BD9,BF5
+          31  BB9,BC9,BD9
+          23  BB9,BC9,BE9
+          19  BB9,BC9,BD9,BE9
+          11  BB9,BD9
+
+   84  S: Tonto East
+          31  BJ9
+          20  BG9,BH9,BJ9
+          17  BH9,BJ9
+          16  BJ9,BJ9
+
+  264  S: Tonto West
+          44  BM7,BL7,CIG
+          33  BL7,BL7
+          31  BM8
+          29  BL7
+          28  BL7,CIG
+          26  BL4,BL7,BM7
+          18  BM7,BL7
+          18  BL8
+          15  BL4
+          11  BM7,BL7,BL4
+          11  BL8,CIG
+
+Total itineraries listed here: 9679
