@@ -1,4 +1,11 @@
 
+   85  Corridor + Clear Creek
+          23  CBG,AK9,AK9,CBG
+          21  AK9
+          19  AK9,AK9
+          11  CBG,AK9,AK9,AK9,CBG
+          11  AK9,AK9,AK9
+
    22  Corridor + North Rim Area
           11  NRA,CCG,CBG,CIG
           11  CBG,NRA,CBG
@@ -58,13 +65,6 @@
 
    12  Marble Canyon: South Canyon
           12  AC9,AC9
-
-   85  N: Clear Creek
-          23  CBG,AK9,AK9,CBG
-          21  AK9
-          19  AK9,AK9
-          11  CBG,AK9,AK9,AK9,CBG
-          11  AK9,AK9,AK9
 
    45  N: Nankoweap Trail
           17  AE9,AE9
@@ -148,4 +148,4 @@
           11  BM7,BL7,BL4
           11  BL8,CIG
 
-Total itineraries listed here: 9679
+Total: 99 instances of 9679 unique itineraries:

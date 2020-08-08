@@ -15,7 +15,7 @@ simple_categories = [
     ('Corridor: Other', {'CIG', 'CBG', 'CCG'}),
     ('Corridor + Winter North Rim Campground', {'CIG', 'CBG', 'CCG', 'NCG'}),
     ('Corridor + North Rim Area', {'CIG', 'CBG', 'CCG', 'NRA'}),
-    ('N: Clear Creek', {'CIG', 'CBG', 'AK9'}),
+    ('Corridor + Clear Creek', {'CIG', 'CBG', 'AK9'}),
     ('N: Nankoweap Trail', {'AE9'}),
     ('S: Boucher', {'BN9', 'BM7'}),
     ('S: Tonto West', {'BM8', 'BM7', 'BL8', 'BL7', 'BL6', 'BL5', 'BL4', 'CIG'}),
@@ -58,8 +58,10 @@ def main(argv):
             print('{:5}  {:5}  {}'.format('', count, ','.join(itinerary)))
         print()
 
-    print('Total itineraries listed here:',
-          sum(count for count, itinerary in stats))
+    print('Total: {} instances of {} unique itineraries:'.format(
+        len(stats),
+        sum(count for count, itinerary in stats),
+    ))
 
 def read_stats():
     for line in open(os.path.dirname(os.path.abspath(__file__)) + '/text'):
