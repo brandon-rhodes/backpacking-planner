@@ -1,8 +1,7 @@
-#!/usr/bin/env python
-
-from __future__ import print_function
+#!/usr/bin/env python3
 
 import argparse
+import csv
 import os
 import re
 import sys
@@ -34,11 +33,31 @@ simple_categories = [
 ]
 
 def main(argv):
-    parser = argparse.ArgumentParser(description='Load Grand Canyon stats')
-    parser.parse_args(argv)
+    parser = argparse.ArgumentParser(description='Categorize popular GC hikes')
+    parser.add_argument('-c', action='store_true', help='convert to a CSV')
+    args = parser.parse_args(argv)
 
     stats = list(read_stats())
     stats.sort(reverse=True)
+
+    if args.c:
+        with open('gcnp_itineraries_2019.csv', 'w') as f:
+            w = csv.writer(f)
+            w.writerow(['count', 'itinerary'])
+            for count, itinerary in stats:
+                w.writerow([count, ' '.join(itinerary)])
+
+        with open('gcnp_codes_2019.csv', 'w') as f:
+            w = csv.writer(f)
+            w.writerow(['code', 'description'])
+            for line in open('text-codes'):
+                line = line.strip()
+                if not line or line.startswith('#'):
+                    continue
+                code, description = line.split(None, 1)
+                w.writerow([code, description])
+
+        return
 
     by_category = defaultdict(list)
     for count, itinerary in stats:
@@ -48,7 +67,6 @@ def main(argv):
 
     print()
 
-    # exit()
     for category, itineraries in sorted(by_category.items()):
         print('{:5}  {}'.format(
             sum(count for count, itinerary in itineraries),
@@ -64,7 +82,8 @@ def main(argv):
     ))
 
 def read_stats():
-    for line in open(os.path.dirname(os.path.abspath(__file__)) + '/text'):
+    path = os.path.dirname(os.path.abspath(__file__)) + '/text-itineraries'
+    for line in open(path):
         line = line.strip()
         if not line or line[0] == '#':
             continue
