@@ -1,10 +1,7 @@
-#!/usr/bin/env python
-
-from __future__ import print_function
+#!/usr/bin/env python3
 
 import argparse
 import sys
-from pprint import pprint
 
 # https://www.nps.gov/grca/planyourvisit/upload/tonto_distances.pdf
 
@@ -18,9 +15,11 @@ miles miles miles since  from
 FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
 
 def main(argv):
-    # parser = argparse.ArgumentParser(description='Process some integers.')
-    # parser.add_argument('waypoints', nargs='+', help='waypoint codes')
-    # args = parser.parse_args(argv)
+    parser = argparse.ArgumentParser(
+        description='Compute hiking distance between water sources.'
+    )
+    parser.add_argument('itinerary_file', help='Path to itinerary file')
+    args = parser.parse_args(argv)
 
     with open('mileages') as f:
         mileages, attributes = parse_mileage_file(f)
@@ -141,10 +140,8 @@ def main(argv):
         'Bright Angel Trailhead'
     ]
 
-    from fileinput import input
-
     waypoints = []
-    for line in input():
+    for line in open(args.itinerary_file):
         line = line.split('#')[0].strip()
         if not line:
             continue
