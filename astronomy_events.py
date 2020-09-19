@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 #
 # python astronomy_events.py 36.0544 -112.1401 2019-04-23 2019-04-29 US/Arizona
+# python astronomy_events.py 36.0544 -112.1401 2020-09-27 2020-10-03 US/Arizona
 
 from __future__ import print_function
 
