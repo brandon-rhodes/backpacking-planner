@@ -10,7 +10,6 @@ import datetime as dt
 import sys
 
 from pytz import timezone
-from numpy import arange
 from skyfield import api, almanac
 
 def main(argv):
