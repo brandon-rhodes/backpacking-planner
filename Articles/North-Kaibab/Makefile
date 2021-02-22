@@ -1,4 +1,6 @@
 
+section2.svg: section.svg transform.py
+	python transform.py
 
 section.svg: i-2688.pdf
 	pdftocairo \

@@ -35,7 +35,7 @@ def transform(lines):
             fields = line.split()
             assert fields[2].startswith('x=')
             x = float(fields[2][3:-1])
-            if x > 2300:
+            if x > 2300:  # remove text from right-hand scale
                 continue
         # if 'xlink:href="#glyph0-1' in line:
         #     continue
