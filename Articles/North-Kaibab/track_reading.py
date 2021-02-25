@@ -96,7 +96,6 @@ def average_tracks(tracks):
     x_min = 36 + 5/60 + 47.5/3600 #+ 21/3600
     x_max = 36 + 11/60 + 19/3600
 
-    36 + 11/60 + 19/3600
     x = np.arange(x_min, x_max, 0.0002)
     x = np.around(x, 4)
     ystack = []

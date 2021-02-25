@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 import argparse
+import re
 import sys
 
 X_LEFT = 1892
 X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1473.4
-NORTH_LATITUDE = 36 + 11/60 + 19/3600
+NORTH_LATITUDE = 36 + 10/60 + 56/3600
 SOUTH_LATITUDE = 36 + 5/60 + 21/3600
 FEET_IN_A_METER = 3.2808399
 PATH_STYLE = (
@@ -40,14 +41,28 @@ def main(argv):
 
 def transform(lines):
     for line in lines[:-1]:
+        # Remove most text.
         if '<use' in line:
             #continue
             fields = line.split()
             assert fields[2].startswith('x=')
             x = float(fields[2][3:-1])
             y = float(fields[3][3:-3])
-            if x > X_LEFT and y < 1590:  # remove text from right-hand scale
+            if X_LEFT < x < X_RIGHT and y < 1590:
                 continue
+
+        # Get rid of the little tick lines that connected names
+        # with strata.
+        m = re.search(r' d="([^"]+)"', line)
+        if m is not None:
+            words = m[1].split()
+            if len(words) == 6 and 'stroke-miterlimit:4' in line:
+                continue
+
+        # Get rid of vertical dashed line.
+        if 'stroke-dasharray' in line:
+            continue
+
         # if line.startswith('<path') and len(line) < 290:
         #     continue
         # if 'xlink:href="#glyph0-1' in line:
@@ -58,18 +73,28 @@ def transform(lines):
     strings = [f'{to_x(latitude)} {to_y(elevation)}'
                for latitude, elevation in points]
 
-    d = 'M ' + 'L '.join(strings)
+    path_pieces = ['M ', 'L '.join(strings)]
+    d = ''.join(path_pieces)
 
-    latitude, elevation = points[-1]
-    point_br = f'{to_x(latitude)} {to_y(0)}'
+    elevation = points[-1][-1]
+    latitude = NORTH_LATITUDE - 0.00010  # Avoid graying out right elevation scale.
+    path_pieces.append(f' L {to_x(latitude)} {to_y(elevation)}')
+    path_pieces.append(f' L {to_x(latitude)} {to_y(0)}')
 
     latitude, elevation = points[0]
-    point_bl = f'{to_x(latitude) + 7} {to_y(0)}'
+    path_pieces.append(f' L {to_x(latitude) + 7.5} {to_y(0)}')
 
     style = 'fill:#fffc;'
-    yield f'<path style="{style}" d="{d} L {point_br} L {point_bl}" />\n'
+    yield f'<path style="{style}" d="{"".join(path_pieces)}" />\n'
 
     yield f'<path style="{PATH_STYLE}" d="{d}" />\n'
+
+    lat = 36.1704
+    m = FEET_IN_A_METER
+    yield (f'<path style="{PATH_STYLE}" d="'
+           f'M {to_x(lat)} {to_y(1234 * m)} '
+           f'L {to_x(lat)} {to_y(1334 * m)} '
+           f'" />\n')
 
     yield lines[-1]  # "</svg>"
 
@@ -81,6 +106,8 @@ def read_trail_elevation():
             fields = line.split(',')
             latitude = float(fields[0])
             elevation = float(fields[1]) * FEET_IN_A_METER
+            if latitude > NORTH_LATITUDE:
+                break
             yield [latitude, elevation]
 
 def to_x(latitude):
