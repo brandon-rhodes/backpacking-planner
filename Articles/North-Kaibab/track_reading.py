@@ -85,8 +85,18 @@ def average_tracks(tracks):
     # one back track that recorded a consistent -1000 feet.  But the
     # median is wonderful because it chooses the middle sample of the
     # many tracks, giving a realistic but representative elevation.
-    x_min = 36. + 6./60
-    x_max = 36. + 11./60 + 35./3600
+
+    # Original, from mousing over trail on Google Earth:
+    # x_min = 36. + 6./60
+    # x_max = 36. + 11./60 + 35./3600
+
+    # Revised, from transform.py, which got them by matching D-D' line
+    # on contour map against Google Earth, then adjusting x_min to start
+    # at the Colorado River:
+    x_min = 36 + 5/60 + 47.5/3600 #+ 21/3600
+    x_max = 36 + 11/60 + 19/3600
+
+    36 + 11/60 + 19/3600
     x = np.arange(x_min, x_max, 0.0002)
     x = np.around(x, 4)
     ystack = []
