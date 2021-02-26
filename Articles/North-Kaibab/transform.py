@@ -4,12 +4,19 @@ import argparse
 import re
 import sys
 
+def dms(degrees, minutes, seconds):
+    return degrees + minutes / 60 + seconds / 3600
+
 X_LEFT = 1892
 X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1473.4
-NORTH_LATITUDE = 36 + 10/60 + 56/3600
-SOUTH_LATITUDE = 36 + 5/60 + 21/3600
+# NORTH_OFFSET = +0.0021  # degrees latitude
+# SOUTH_OFFSET = -0.0041  # degrees latitude
+NORTH_LATITUDE = 36 + 10/60 + 56/3600 #+ NORTH_OFFSET
+SOUTH_LATITUDE = 36 + 5/60 + 21/3600 #+ SOUTH_OFFSET
+PHANTOM_CREEK_LATITUDE = dms(36,6,58)
+RIVER_LATITUDE = 36.1009
 FEET_IN_A_METER = 3.2808399
 PATH_STYLE = (
     'fill:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;'
@@ -78,8 +85,8 @@ def transform(lines):
 
     elevation = points[-1][-1]
     latitude = NORTH_LATITUDE - 0.00010  # Avoid graying out right elevation scale.
-    path_pieces.append(f' L {to_x(latitude)} {to_y(elevation)}')
-    path_pieces.append(f' L {to_x(latitude)} {to_y(0)}')
+    path_pieces.append(f' L {X_RIGHT-0.2} {to_y(elevation)}')
+    path_pieces.append(f' L {X_RIGHT-0.2} {to_y(0)}')
 
     latitude, elevation = points[0]
     path_pieces.append(f' L {to_x(latitude) + 7.5} {to_y(0)}')
@@ -89,30 +96,49 @@ def transform(lines):
 
     yield f'<path style="{PATH_STYLE}" d="{d}" />\n'
 
-    lat = 36.1704
     m = FEET_IN_A_METER
-    yield (f'<path style="{PATH_STYLE}" d="'
-           f'M {to_x(lat)} {to_y(1234 * m)} '
-           f'L {to_x(lat)} {to_y(1334 * m)} '
-           f'" />\n')
+    for (lat, ele) in [
+            (RIVER_LATITUDE, 2420), # Black Bridge
+            (36.1018, 2507), # Bright Angel CG
+            (36.10498, 774*m), # Phantom Ranch
+            (dms(36,6,58), 2800), # Phantom Creek enters Bright Angel Creek
+            (dms(36,9,32), 3773), # Ribbon Falls
+            (36.1704, 1234*m), # Cottonwood CG
+    ]:
+        yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
+               f'M {to_x(lat)} {to_y(ele + 500)} '
+               f'L {to_x(lat)} {to_y(ele)} '
+               f'" />\n')
 
     yield lines[-1]  # "</svg>"
 
 def read_trail_elevation():
     with open('trail_elevation.csv') as f:
         lines = iter(f)
-        next(f)
+        next(f)  # Skip column names
         for line in lines:
             fields = line.split(',')
             latitude = float(fields[0])
             elevation = float(fields[1]) * FEET_IN_A_METER
-            if latitude > NORTH_LATITUDE:
-                break
+            x = to_x(latitude)
+            if latitude < RIVER_LATITUDE or x > X_RIGHT:
+                continue
             yield [latitude, elevation]
 
 def to_x(latitude):
-    x_fraction = (latitude - SOUTH_LATITUDE) / (NORTH_LATITUDE - SOUTH_LATITUDE)
-    return X_LEFT + x_fraction * (X_RIGHT - X_LEFT)
+    X_PHANTOM_CREEK = 2018
+    if latitude < PHANTOM_CREEK_LATITUDE:
+        n = PHANTOM_CREEK_LATITUDE
+        s = SOUTH_LATITUDE + 0.007
+        x1 = X_LEFT
+        x2 = X_PHANTOM_CREEK
+    else:
+        n = NORTH_LATITUDE
+        s = PHANTOM_CREEK_LATITUDE
+        x1 = X_PHANTOM_CREEK
+        x2 = X_RIGHT - 9
+    x_fraction = (latitude - s) / (n - s)
+    return x1 + x_fraction * (x2 - x1)
 
 def to_y(elevation):
     y_fraction = elevation / 6000
