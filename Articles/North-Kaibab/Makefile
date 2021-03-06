@@ -1,4 +1,10 @@
 
+triptych1.png triptych2.png triptych3.png: section3.png crop.py
+	python crop.py
+
+section3.png: section2.svg
+	inkscape --export-dpi=300 --export-png=$@ $<
+
 section2.svg: section.svg trail_elevation.csv transform.py
 	python transform.py
 

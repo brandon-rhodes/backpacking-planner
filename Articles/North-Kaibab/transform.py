@@ -30,10 +30,9 @@ def main(argv):
     with open('section.svg') as f:
         lines = list(f)
 
-    #lines[1] = lines[1].replace('0 0 4176 3024', '2800 1900 3300 2100')
-    x = 1800
-    y = 1400
-    w = 550
+    x = 1850
+    y = 1440
+    w = 494
     h = 300
     lines[1] = lines[1].replace('4176pt', f'{w}pt')
     lines[1] = lines[1].replace('3024pt', f'{h}pt')
@@ -91,17 +90,21 @@ def transform(lines):
     latitude, elevation = points[0]
     path_pieces.append(f' L {to_x(latitude) + 7.5} {to_y(0)}')
 
-    style = 'fill:#fffc;'
+    style = 'fill:#fff;fill-opacity:0.8;'
     yield f'<path style="{style}" d="{"".join(path_pieces)}" />\n'
 
     yield f'<path style="{PATH_STYLE}" d="{d}" />\n'
 
     m = FEET_IN_A_METER
     for (lat, ele) in [
+            (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 2/3,0),# 1/3 break
+            (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 1/3,0),# 2/3 break
+
             (RIVER_LATITUDE, 2420), # Black Bridge
             (36.1018, 2507), # Bright Angel CG
             (36.10498, 774*m), # Phantom Ranch
             (dms(36,6,58), 2800), # Phantom Creek enters Bright Angel Creek
+            (dms(36,8,19.3), 3252), # Where canyon hits supergroup and opens out!
             (dms(36,9,32), 3773), # Ribbon Falls
             (36.1704, 1234*m), # Cottonwood CG
     ]:
