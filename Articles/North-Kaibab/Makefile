@@ -8,8 +8,8 @@ section3.png: section2.svg
 section2.svg: section.svg trail_elevation.csv transform.py
 	python transform.py
 
-trail_elevation.csv: track_reading.py
-	python track_reading.py
+trail_elevation.csv: process_gps_tracks.py
+	python process_gps_tracks.py
 
 section.svg: i-2688.pdf
 	pdftocairo \

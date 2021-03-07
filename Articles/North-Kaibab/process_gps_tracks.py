@@ -22,7 +22,7 @@ def main():
     for track in tracks:
         add_to_plot(track, ax)
 
-    average = latitude, elevation = average_tracks(tracks)
+    result = latitude, longitude, elevation = average_tracks(tracks)
     ax.plot(latitude, elevation, '-k')
     ax.grid()
     #ax.set(xlabel='time (s)', ylabel='voltage (mV)', title='Title')
@@ -32,10 +32,15 @@ def main():
     #plt.legend()
     fig.savefig('elevations.png')
 
+    fig, ax = plt.subplots()
+    ax.plot(latitude, longitude, '-k')
+    ax.grid()
+    fig.savefig('longitudes.png')
+
     with open('trail_elevation.csv', 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(['latitude', 'elevation'])
-        writer.writerows(average.T)
+        writer.writerow(['latitude', 'longitude', 'elevation'])
+        writer.writerows(result.T)
 
 def read_tracks():
     with open('../../../Downloads/tmp.html') as f:
@@ -64,21 +69,20 @@ def load_track(track_id):
 def parse_gpx(content):
     gpx = '{http://www.topografix.com/GPX/1/1}'
     root = ET.fromstring(content) #.getroot()
-    elevation = []
     latitude = []
-    for trkpt in root.findall(f'.//{gpx}trkpt'):
-        ele = trkpt.find(f'{gpx}ele')
-        elevation.append(float(ele.text))
+    longitude = []
+    elevation = []
+    for trkpt in root.findall(f'.//{gpx}trkpt') + root.findall(f'.//{gpx}rtept'):
         latitude.append(float(trkpt.get('lat')))
-    for rtept in root.findall(f'.//{gpx}rtept'):
-        latitude.append(float(rtept.get('lat')))
-        ele = rtept[0]
+        longitude.append(float(trkpt.get('lon')))
+        ele = trkpt.find(f'{gpx}ele')
         elevation.append(float(ele.text))
     if not elevation:
         print('-')
         return
-    print(len(elevation), 'elevations')
-    return latitude, elevation
+    print(len(elevation), 'points')
+    track = latitude, longitude, elevation
+    return track
 
 def average_tracks(tracks):
     # Actually, use the median.  The average winds up way off because of
@@ -98,26 +102,39 @@ def average_tracks(tracks):
 
     x = np.arange(x_min, x_max, 0.0002)
     x = np.around(x, 4)
-    ystack = []
+    longitude_stack = []
+    elevation_stack = []
     # ysum = 0.0 * x
     # n = 0
     for track in tracks:
-        latitude, elevation = track
+        latitude, longitude, elevation = track
         latitude = np.array(latitude)
+        longitude = np.array(longitude)
         elevation = np.array(elevation)
+
         order = latitude.argsort()
         latitude = latitude[order]
+        longitude = longitude[order]
         elevation = elevation[order]
-        y = np.interp(x, latitude, elevation)
-        ystack.append(y)
-    ystack = np.array(ystack)
-    print('Computing median over', ystack.shape)
-    y = np.median(ystack, axis=0)
-    y = np.around(y, 1)
-    return np.array([x, y])
+
+        longitude_stack.append(np.interp(x, latitude, longitude))
+        elevation_stack.append(np.interp(x, latitude, elevation))
+
+    longitude_stack = np.array(longitude_stack)
+    elevation_stack = np.array(elevation_stack)
+
+    print('Computing medians over', longitude_stack.shape)
+
+    longitude = np.median(longitude_stack, axis=0)
+    longitude = np.around(longitude, 4)
+
+    elevation = np.median(elevation_stack, axis=0)
+    elevation = np.around(elevation, 1)
+
+    return np.array([x, longitude, elevation])
 
 def add_to_plot(track, ax):
-    latitude, elevation = track
+    latitude, longitude, elevation = track
     ax.plot(latitude, elevation, ',', label='label', alpha=0.5)
     #, linestyle='--')
 

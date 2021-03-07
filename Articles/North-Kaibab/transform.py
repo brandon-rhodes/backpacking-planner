@@ -122,7 +122,8 @@ def read_trail_elevation():
         for line in lines:
             fields = line.split(',')
             latitude = float(fields[0])
-            elevation = float(fields[1]) * FEET_IN_A_METER
+            longitude = float(fields[1])
+            elevation = float(fields[2]) * FEET_IN_A_METER
             x = to_x(latitude)
             if latitude < RIVER_LATITUDE or x > X_RIGHT:
                 continue
