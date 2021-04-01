@@ -7,6 +7,9 @@ import re
 import time
 import matplotlib.pyplot as plt
 import xml.etree.ElementTree as ET
+from geopy.distance import distance as geopy_distance
+
+FEET_IN_A_METER = 3.2808399
 
 def main():
     track_ids = read_tracks()
@@ -22,7 +25,9 @@ def main():
     for track in tracks:
         add_to_plot(track, ax)
 
-    result = latitude, longitude, elevation = average_tracks(tracks)
+    latitude, longitude, elevation = average_tracks(tracks)
+    miles = np.array(compute_miles(latitude, longitude))
+
     ax.plot(latitude, elevation, '-k')
     ax.grid()
     #ax.set(xlabel='time (s)', ylabel='voltage (mV)', title='Title')
@@ -37,10 +42,14 @@ def main():
     ax.grid()
     fig.savefig('longitudes.png')
 
+    elevation *= FEET_IN_A_METER
+
+    table = np.array([latitude, longitude, elevation.round(2), miles.round(5)])
+
     with open('trail_elevation.csv', 'w') as f:
         writer = csv.writer(f)
-        writer.writerow(['latitude', 'longitude', 'elevation'])
-        writer.writerows(result.T)
+        writer.writerow(['latitude', 'longitude', 'elevation', 'miles'])
+        writer.writerows(table.T)
 
 def read_tracks():
     with open('../../../Downloads/tmp.html') as f:
@@ -132,6 +141,17 @@ def average_tracks(tracks):
     elevation = np.around(elevation, 1)
 
     return np.array([x, longitude, elevation])
+
+def compute_miles(latitude, longitude):
+    pairs = list(zip(latitude, longitude))
+    prev_lat, prev_lon = pairs[0]
+    m = 0.0
+    miles = []
+    for lat, lon in pairs:
+        m += geopy_distance((prev_lat, prev_lon), (lat, lon)).miles
+        miles.append(m)
+        prev_lat, prev_lon = lat, lon
+    return miles
 
 def add_to_plot(track, ax):
     latitude, longitude, elevation = track
