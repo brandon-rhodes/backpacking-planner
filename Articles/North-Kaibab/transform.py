@@ -18,16 +18,22 @@ def dms(degrees, minutes, seconds):
 X_LEFT = 1892
 X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
-Y_6000_FEET = 1473.4
+Y_6000_FEET = 1476 # was 1473.4, until we doubted scale
 NORTH_LATITUDE = 36.1825  # Line on map would make you think 36,11,18
 SOUTH_LATITUDE = 36 + 5/60 + 21/3600 #+ SOUTH_OFFSET
 PHANTOM_CREEK_LATITUDE = dms(36,6,58)  # from Google Earth mouse cursor
-RIVER_LATITUDE = 36.1009
+RIVER_LATITUDE = 36.1001
 FEET_IN_A_METER = 3.2808399
 PATH_STYLE = (
     'fill:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;'
     'stroke:black;stroke-opacity:1;stroke-miterlimit:4;'
 )
+FILL_STYLE = 'fill:black;stroke:none'
+BLANK_STYLE = 'fill:red;stroke:none'
+TEXT_STYLE = 'font-size:4;text-anchor:middle'
+LEFT_STYLE = 'font-size:4;text-anchor:end'
+RIGHT_STYLE = 'font-size:4;text-anchor:start'
+YELLOW = 'rgb(96.078491%,84.313965%,14.509583%)'
 
 def main(argv):
     parser = argparse.ArgumentParser(description='Transform SVG using Python')
@@ -53,15 +59,15 @@ def main(argv):
 
 def transform(lines):
     for line in lines[:-1]:
-        # Remove most text.
+        # Remove all text.
         if '<use' in line:
-            #continue
-            fields = line.split()
-            assert fields[2].startswith('x=')
-            x = float(fields[2][3:-1])
-            y = float(fields[3][3:-3])
-            if X_LEFT < x < X_RIGHT and y < 1590:
-                continue
+            continue
+            # fields = line.split()
+            # assert fields[2].startswith('x=')
+            # x = float(fields[2][3:-1])
+            # y = float(fields[3][3:-3])
+            # if X_LEFT < x < X_RIGHT and y < 1590:
+            #     continue
 
         # Get rid of the little tick lines that connected names
         # with strata.
@@ -75,8 +81,21 @@ def transform(lines):
         if 'stroke-dasharray' in line:
             continue
 
-        # if line.startswith('<path') and len(line) < 290:
-        #     continue
+        line = line.replace(YELLOW, 'rgb(93.333435%,58.432007%,10.980225%)')
+
+        if line.startswith('<path ') and line.endswith('/>\n'):
+            x_list = []
+            pairs = re.findall(r' \d+\.\d+ \d+\.\d+ ', line)
+            for pair in pairs:
+                pieces = pair.split()
+                x = float(pieces[0])
+                x_list.append(x)
+            #print(x_list)
+            if all(1900 < x < 2200 for x in x_list):
+                #print('yeah')
+                #continue
+                pass
+
         # if 'xlink:href="#glyph0-1' in line:
         #     continue
         yield line
@@ -88,7 +107,6 @@ def transform(lines):
     d = ''.join(path_pieces)
 
     elevation = points[-1].elevation
-    latitude = NORTH_LATITUDE - 0.00010  # Avoid graying out right elevation scale.
     path_pieces.append(f' L {X_RIGHT-0.2} {to_y(elevation)}')
     path_pieces.append(f' L {X_RIGHT-0.2} {to_y(0)}')
 
@@ -119,17 +137,84 @@ def transform(lines):
                f'L {to_x(lat)} {to_y(ele)} '
                f'" />\n')
 
+    # Erase stuff near the river.
+
+    x0 = to_x(RIVER_LATITUDE) - 10
+    x1 = to_x(RIVER_LATITUDE) - 4.2
+    y0 = to_y(0)
+    y1 = to_y(3430)
+    yield (f'<path style="{PATH_STYLE}" d="'
+           f'M {x0} {y0} '
+           f'L {x1} {y1} '
+           f'Z" />\n')
+    # yield (f'<path style="{BLANK_STYLE}" d="'
+    #        f'M {x0} {y0} '
+    #        f'L {x0} {y1} '
+    #        f'L {x1} {y1} '
+    #        f'L {x1} {y0} '
+    #        f'Z" />\n')
+
+    # Draw mile markers.
+
     offset = points[0].mileage
-    threshold = 1.0
+    mile = 0
     for p in points:
         mileage = p.mileage - offset
-        if mileage < threshold:
+        if mileage < mile:
             continue
-        threshold += 1.0
-        yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
-               f'M {to_x(p.latitude)} {to_y(2000)} '
-               f'L {to_x(p.latitude)} {to_y(2500)} '
-               f'" />\n')
+            # yield (f'<path style="{PATH_STYLE}" d="'
+            #        f'M {to_x(p.latitude)} {to_y(0)} '
+            #        f'L {to_x(p.latitude)} {to_y(0) + 3} '
+            #        f'" />\n')
+        yield triangle(to_x(p.latitude), to_y(0))
+        yield (f'<text style="{TEXT_STYLE}"'
+               f' x="{to_x(p.latitude)}" y="{to_y(0)+7}">{mile}</text>')
+        mile += 1
+
+    # Draw text labels.
+
+    for latitude, elevation, label in [
+            (36.0905, 3900, 'Colorado|River'),
+            (36.1049, 0, '^Phantom|Ranch'),
+            (dms(36,6,57), 4200, 'Phantom|Creek'),
+            (36.1323, 5300, 'Hillers|Butte'),
+            (36.1432, 5700, 'Powell Butte'),
+            (36.1580, 4900, 'Ribbon|Falls'),
+            (36.1704, 1234*m, '^Cottonwood|CG'),
+            (36.1737, 5100, 'Transept'),
+    ]:
+        y = to_y(elevation)
+        if label.startswith('^'):
+            yield triangle(to_x(latitude), y)
+            label = label[1:]
+            y += 7
+        pieces = label.split('|')
+        for piece in pieces:
+            yield (f'<text style="{TEXT_STYLE}"'
+                   f' x="{to_x(latitude)}" y="{y}">{piece}</text>')
+            y += 4
+
+    # Draw our own vertical scale.
+
+    scale_range = range(1000, 6001, 1000)
+
+    lat = 36.08
+    x = int(to_x(lat))
+    yield f'<path style="{PATH_STYLE}" d="'
+    yield f'M {x} {to_y(6000)} L {x} {to_y(-25)} '
+    for elevation in scale_range:
+        y = to_y(elevation)
+        yield f'M {x-2} {y} L {x+2} {y} '
+    yield '" />\n'
+
+    for elevation in scale_range:
+        y = to_y(elevation) + 1.5
+        yield (f'<text style="{LEFT_STYLE}"'
+               f' x="{x-3}" y="{y}">{elevation}</text>')
+        yield (f'<text style="{RIGHT_STYLE}"'
+               f' x="{x+3}" y="{y}">{elevation}</text>')
+
+    # Close the svg tag.
 
     yield lines[-1]  # "</svg>"
 
@@ -148,19 +233,12 @@ def read_trail_elevation():
                 continue
             yield Point(latitude, longitude, elevation, mileage)
 
+def triangle(x, y):
+    return (f'<path style="{FILL_STYLE}" d="'
+            f'M {x} {y} L {x-2} {y+3} L {x+2} {y+3} Z" />\n')
+
 def to_x(latitude):
     X_PHANTOM_CREEK = 2018
-    # ss = (PHANTOM_CREEK_LATITUDE-SOUTH_LATITUDE-0.007) / (X_PHANTOM_CREEK - X_LEFT)
-    # ns = (NORTH_LATITUDE - PHANTOM_CREEK_LATITUDE) / (X_RIGHT - X_PHANTOM_CREEK)
-    # print('South scale:', ss)
-    # print('North scale:', ns)
-    # print('Ratio:', ss/ns)
-    # if latitude < PHANTOM_CREEK_LATITUDE:
-    #     n = PHANTOM_CREEK_LATITUDE
-    #     s = SOUTH_LATITUDE + 0.007
-    #     x1 = X_LEFT
-    #     x2 = X_PHANTOM_CREEK
-    # else:
     n = NORTH_LATITUDE
     s = PHANTOM_CREEK_LATITUDE
     x1 = X_PHANTOM_CREEK
