@@ -19,7 +19,9 @@ X_LEFT = 1892
 X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1476 # was 1473.4, until we doubted scale
+#Y_6000_FEET = 1474 # was 1473.4, until we doubted scale
 NORTH_LATITUDE = 36.1825  # Line on map would make you think 36,11,18
+#NORTH_LATITUDE = 36.1785  # Line on map would make you think 36,11,18
 SOUTH_LATITUDE = 36 + 5/60 + 21/3600 #+ SOUTH_OFFSET
 PHANTOM_CREEK_LATITUDE = dms(36,6,58)  # from Google Earth mouse cursor
 RIVER_LATITUDE = 36.1001
@@ -33,6 +35,7 @@ BLANK_STYLE = 'fill:red;stroke:none'
 TEXT_STYLE = 'font-size:4;text-anchor:middle'
 LEFT_STYLE = 'font-size:4;text-anchor:end'
 RIGHT_STYLE = 'font-size:4;text-anchor:start'
+FEET_STYLE = 'font-size:3;text-anchor:start'
 YELLOW = 'rgb(96.078491%,84.313965%,14.509583%)'
 
 def main(argv):
@@ -113,7 +116,7 @@ def transform(lines):
     p = points[0]
     path_pieces.append(f' L {to_x(p.latitude) + 7.5} {to_y(0)}')
 
-    style = 'fill:#fff;fill-opacity:0.8;'
+    style = 'fill:#fff;fill-opacity:0.9;'
     yield f'<path style="{style}" d="{"".join(path_pieces)}" />\n'
 
     yield f'<path style="{PATH_STYLE}" d="{d}" />\n'
@@ -132,6 +135,7 @@ def transform(lines):
             (36.1704, 1234*m), # Cottonwood CG
             (dms(36,11,10.2), 4566), # Manzanita Rest Area
     ]:
+        break
         yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
                f'M {to_x(lat)} {to_y(ele + 500)} '
                f'L {to_x(lat)} {to_y(ele)} '
@@ -156,19 +160,29 @@ def transform(lines):
 
     # Draw mile markers.
 
-    offset = points[0].mileage
+    offset = +0 #.25  # Distance from bridge to intersection at 36°6'0"
+    start = points[0].mileage - offset
     mile = 0
     for p in points:
-        mileage = p.mileage - offset
+        mileage = p.mileage - start
         if mileage < mile:
             continue
-            # yield (f'<path style="{PATH_STYLE}" d="'
-            #        f'M {to_x(p.latitude)} {to_y(0)} '
-            #        f'L {to_x(p.latitude)} {to_y(0) + 3} '
-            #        f'" />\n')
         yield triangle(to_x(p.latitude), to_y(0))
-        yield (f'<text style="{TEXT_STYLE}"'
-               f' x="{to_x(p.latitude)}" y="{to_y(0)+7}">{mile}</text>')
+        y = to_y(0)+7
+        yield from put_label(to_x(p.latitude), y, f'Mile|{mile}.0')
+
+        feet = round(p.elevation)
+        x = to_x(p.latitude)
+        y = to_y(p.elevation)
+        yield f'<circle cx="{x}" cy="{y}" r="1" style="{FILL_STYLE}" />'
+        label = f'{feet} ft'
+        if mile == 0:
+            x -= 1.2
+            y -= 8.75
+        if mile == 0 or mile == 8:
+            label = label.replace(' ', '|')
+        yield from put_label(x+0.5, y+3.25, label, style=FEET_STYLE)
+
         mile += 1
 
     # Draw text labels.
@@ -180,7 +194,7 @@ def transform(lines):
             (36.1323, 5300, 'Hillers|Butte'),
             (36.1432, 5700, 'Powell Butte'),
             (36.1580, 4900, 'Ribbon|Falls'),
-            (36.1704, 1234*m, '^Cottonwood|CG'),
+            (36.1704, 1175*m, '^Cottonwood|CG'),
             (36.1737, 5100, 'Transept'),
     ]:
         y = to_y(elevation)
@@ -188,11 +202,7 @@ def transform(lines):
             yield triangle(to_x(latitude), y)
             label = label[1:]
             y += 7
-        pieces = label.split('|')
-        for piece in pieces:
-            yield (f'<text style="{TEXT_STYLE}"'
-                   f' x="{to_x(latitude)}" y="{y}">{piece}</text>')
-            y += 4
+        yield from put_label(to_x(latitude), y, label)
 
     # Draw our own vertical scale.
 
@@ -232,6 +242,13 @@ def read_trail_elevation():
             if latitude < RIVER_LATITUDE or x > X_RIGHT:
                 continue
             yield Point(latitude, longitude, elevation, mileage)
+
+def put_label(x, y, label, style=TEXT_STYLE):
+    pieces = label.split('|')
+    for piece in pieces:
+        yield (f'<text style="{style}"'
+               f' x="{x}" y="{y}">{piece}</text>')
+        y += 4
 
 def triangle(x, y):
     return (f'<path style="{FILL_STYLE}" d="'
