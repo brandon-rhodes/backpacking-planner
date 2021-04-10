@@ -114,7 +114,7 @@ def transform(lines):
     path_pieces.append(f' L {X_RIGHT-0.2} {to_y(0)}')
 
     p = points[0]
-    path_pieces.append(f' L {to_x(p.latitude) + 7.5} {to_y(0)}')
+    path_pieces.append(f' L {to_x(p.latitude)} {to_y(0)}')
 
     style = 'fill:#fff;fill-opacity:0.9;'
     yield f'<path style="{style}" d="{"".join(path_pieces)}" />\n'
@@ -176,10 +176,7 @@ def transform(lines):
         y = to_y(p.elevation)
         yield f'<circle cx="{x}" cy="{y}" r="1" style="{FILL_STYLE}" />'
         label = f'{feet} ft'
-        if mile == 0:
-            x -= 1.2
-            y -= 8.75
-        if mile == 0 or mile == 8:
+        if mile == 8:
             label = label.replace(' ', '|')
         yield from put_label(x+0.5, y+3.25, label, style=FEET_STYLE)
 

@@ -18,7 +18,7 @@ third_third = im.crop((x,y1, x+width,y2))
 right_scale = im.crop((91,y1, 91+(93-20),y2))
 plan = [
     ['triptych1.png', [left_scale, river, first_third_a,
-                       first_third_b, right_scale], 260],
+                       first_third_b, right_scale], 277],
     ['triptych2.png', [left_scale, second_third, right_scale], 250],
     ['triptych3.png', [left_scale, third_third, right_scale], 230],
 ]
