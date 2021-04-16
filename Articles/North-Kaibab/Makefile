@@ -1,7 +1,11 @@
 
 LEGENDS := legend-Mr.png
 
-all: triptych1.png triptych2.png triptych3.png column.png $(LEGENDS)
+all: index.html triptych1.png triptych2.png triptych3.png column.png $(LEGENDS)
+
+index.html: text.md text.py
+	pandoc $< | python text.py > /tmp/out
+	mv /tmp/out $@
 
 triptych1.png triptych2.png triptych3.png: section3.png crop_triptych.py
 	python crop_triptych.py
