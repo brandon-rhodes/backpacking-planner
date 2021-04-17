@@ -1,6 +1,9 @@
 
 <style>
-img { display: block; margin: 0px auto; max-width: 96% }
+img {
+  display: block; margin: 0px auto; max-width: 96%; height: auto;
+  aspect-ratio: attr(width) / attr(height);
+}
 img.legend { max-width: 60% }
 </style>
 
@@ -76,6 +79,30 @@ https://photos.google.com/share/AF1QipMpI2PfrKETjqoCfTJN7QA1CtzrX7UIRL7xJUo0PSAU
 
 start ~1+k below Tapeats
 
+triptych2.png
+
+legend-Mr.png
+
+legend-Dtb.png
+
+legend-Cm.png
+
+legend-Cba.png
+
+legend-Ct.png
+
+legend-Ys.png
+
+legend-Yh.png
+
+legend-Yi.png
+
+legend-Yb.png
+
+legend-Xgr.png
+
+legend-Xr.png
+
 mile 4
 things open up
 those layers you saw? now they take over: so, *nothing* familiar!
@@ -94,10 +121,29 @@ when are they as far from N top as river is from S top?
   (- 8241 (- 7260 2480)) 3461 is when they have made up difference
   at Mile 5!
 
+triptych3.png
+
+legend-Mr.png
+
+legend-Dtb.png
+
+legend-Cm.png
+
+legend-Cba.png
+
+legend-Ct.png
+
+legend-Yd.png
+
+legend-Ys.png
+
+legend-Yh.png
+
+legend-Yi.png
+
 mile 6
 Ribbon Falls
 hill!
-
 
 mile 7
 Cottonwood CG
@@ -122,27 +168,3 @@ Compare thickness of layers: bot of tapeats to rim, in both directions
   So, essentially, same thickness, if we bump up S rim Tapeats number
 
 this is why N rim is deeper, because it slopes south
-
-legend-Cba.png
-
-legend-Cm.png
-
-legend-Ct.png
-
-legend-Dtb.png
-
-legend-Mr.png
-
-legend-Xbr.png
-
-legend-Xgr.png
-
-legend-Xr.png
-
-legend-Xv.png
-
-legend-Yb.png
-
-legend-Yh.png
-
-legend-Ys.png
