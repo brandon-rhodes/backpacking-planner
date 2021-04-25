@@ -4,6 +4,16 @@ import re
 import sys
 from PIL import Image
 
+subs = {
+    'Pc': 'Coconino Sandstone',
+    'Mr': 'Redwall Limestone',
+    'Ct': 'Tapeats Sandstone',
+    'Yh': 'Hakatai Shale',
+    'Xbr': 'Brahma Schist',
+    'Xgr': 'Granite',
+    'Xr': 'Rama Schist',
+}
+
 def main(argv):
     text = sys.stdin.read()
 
@@ -29,6 +39,10 @@ def main(argv):
         w, h = im.size
         return f'<img class="legend" src="{url}" height={h} width={w}>'
     text = re.sub(r'<p>(legend-[^<]*\.png)</p>', f, text)
+
+    for a, b in subs.items():
+        b = f'({a}) {b}'
+        text = text.replace('$' + a, b)
 
     print(text)
 
