@@ -189,7 +189,7 @@ def transform(lines):
             (36.1049, 0, '^Phantom|Ranch'),
             (dms(36,6,57), 4200, 'Phantom|Creek'),
             (36.1323, 5300, 'Hillers|Butte'),
-            (36.1432, 5700, 'Powell Butte'),
+            (36.1432, 5900, 'Clement|Powell Butte'),
             (36.1580, 4900, 'Ribbon|Falls'),
             (36.1704, 1175*m, '^Cottonwood|CG'),
             (36.1737, 5100, 'Transept'),

@@ -8,10 +8,13 @@ def main(argv):
     text = sys.stdin.read()
 
     def f(match):
-        url = match.group(1)
-        # TODO: parse w515-h344 in URL
-        return f'<img src="{url}" width=515 height=344>'
-    text = re.sub(r'<p>(https://lh3.googleusercontent.com/[^<]*)</p>', f, text)
+        url = match.group(0)
+        if '-h' not in url:
+            return url
+        #print(url, file=sys.stderr)
+        w, h = re.search(r'w(\d+)-h(\d+)', url).groups()
+        return f'<img src="{url}" width={w} height={h}>'
+    text = re.sub(r'https://lh3.googleusercontent.com/[^<]*', f, text)
 
     def f(match):
         url = match.group(1)
