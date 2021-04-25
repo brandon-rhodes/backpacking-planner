@@ -24,4 +24,21 @@ plan = [
 for n, name, coords in plan:
     im = Image.open(f'layers-screenshot-{n}.png')
     rect = im.crop(coords)
+    data = list(rect.getdata(0))
+
+    # At which x coordinate does the text label start?
+    w = rect.width
+    h = rect.height
+    xhist = [
+        min(data[x::w])
+        for x in range(w)
+    ]
+    for x in range(72, w):
+        if xhist[x] < 255:
+            break
+
+    # Move the text left so the gap between color and text is uniform.
+    text = rect.crop((x,0, w,h))
+    rect.paste(text, (80,0))
+
     rect.save('legend-' + name + '.png')
