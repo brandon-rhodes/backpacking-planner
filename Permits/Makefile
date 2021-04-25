@@ -1,10 +1,10 @@
 
-FDFS=$(wildcard $(HOME)/Plain/forms/*.fdf)
-PDFS=$(patsubst $(HOME)/Plain/forms/%.fdf, $(HOME)/Downloads/%.pdf, $(FDFS))
+FDFS=$(wildcard $(HOME)/Plain/Forms/*.fdf)
+PDFS=$(patsubst $(HOME)/Plain/Forms/%.fdf, $(HOME)/Downloads/%.pdf, $(FDFS))
 
 all: $(PDFS)
 
-$(PDFS): $(HOME)/Downloads/%.pdf: $(HOME)/Plain/forms/%.fdf permit-request.pdf
+$(PDFS): $(HOME)/Downloads/%.pdf: $(HOME)/Plain/Forms/%.fdf permit-request.pdf
 	pdftk permit-request.pdf fill_form $< output - | pdftk A=- cat A2 output $@
 
 permit-request.pdf:
