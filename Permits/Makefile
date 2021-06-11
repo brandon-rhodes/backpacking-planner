@@ -6,7 +6,7 @@ all: $(PDFS)
 
 $(PDFS): $(HOME)/Downloads/%.pdf: $(HOME)/Plain/Forms/%.fdf \
 		permit-request.pdf overlay.pdf
-	pdftk permit-request.pdf fill_form $< output - \
+	pdftk permit-request.pdf fill_form $< output - flatten \
 	| pdftk - stamp overlay.pdf output - \
 	| pdftk A=- cat A2 output $@
 
