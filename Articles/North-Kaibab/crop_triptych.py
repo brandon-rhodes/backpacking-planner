@@ -9,12 +9,10 @@ bottom_margin = 60
 left_scale = im.crop((20,y1, 93,y2))
 river = im.crop((176+25,y1, 312,y2))
 first_third_a = im.crop((412,y1, 556,y2)) # skip pixel to avoid vertical line
-first_third_b = im.crop((557,y1, 947,y2))
+first_third_b = im.crop((557,y1, 873,y2))
 width = river.width + (first_third_a.width + first_third_b.width)
-x = 731
-second_third = im.crop((x,y1, x+width,y2))
-x = 1182+25
-third_third = im.crop((x,y1, x+width,y2))
+second_third = im.crop((811,y1, 1377,y2))
+third_third = im.crop((1302,y1, 1853,y2))
 right_scale = im.crop((91,y1, 91+(93-20),y2))
 plan = [
     ['triptych1.png', [left_scale, river, first_third_a,

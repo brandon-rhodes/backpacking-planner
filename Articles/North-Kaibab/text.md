@@ -163,12 +163,6 @@ Gradual climb.
 
 triptych1.png
 
-legend-Mr.png
-
-legend-Dtb.png
-
-legend-Cm.png
-
 legend-Cba.png
 
 legend-Ct.png
