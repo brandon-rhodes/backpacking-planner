@@ -60,7 +60,6 @@ the white cliffs and red cliffs keep the hiker happily oriented.
 https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w790-h529-no?authuser=0
 <span style="left:60%;top:28%">Pc</span>
 <span style="left:67%;top:34%">Mr</span>
-<span style="left:16%;top:64%">Ct</span>
 <span style="left:46%;top:84%">Ct</span>
 </div>
 
@@ -323,6 +322,13 @@ https://lh3.googleusercontent.com/pw/ACtC-3fMHO4Aws1JxZPQe-F1lTrPVmnWTadcXGY7r7K
 </div>
 
 The hiker is utterly bewildered.
+
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
+</div>
+
+
+
 The basement rocks, atop which he imagined the Tapeats rearing,
 here disappear into the earth.
 Instead of angled ramparts,
