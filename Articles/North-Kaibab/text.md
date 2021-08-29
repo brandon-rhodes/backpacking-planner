@@ -4,8 +4,20 @@
     font-family: High-Alpine;
     src: url("HighAlpine.otf") format("opentype");
 }
+@font-face {
+    font-family: Vollkorn;
+    src: url("Forum-Regular.otf");
+    src: url("LibreBaskerville-Regular.otf");
+    src: url("CharisSILR.ttf");
+    src: url("GalSILR.ttf");
+    src: url("Vollkorn-Regular.ttf");
+}
 body {
   max-width: 42em;
+  margin: 0 auto;
+  font-family: Vollkorn;
+  font-size: 18px;
+  line-height: 1.33333;
 }
 h1 {
   margin-top: 30pt;
