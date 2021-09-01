@@ -221,6 +221,25 @@ def transform(lines):
         yield (f'<text style="{RIGHT_STYLE}"'
                f' x="{x+3}" y="{y}">{elevation}</text>')
 
+    # The small print.
+
+    y = to_y(5700)
+    yield (f'<text style="{RIGHT_STYLE}; font: 2.5"'
+           f' x="{x+3}" y="{y}">Elevation</text>')
+    y += 3
+    yield (f'<text style="{RIGHT_STYLE}; font: 2.5"'
+           f' x="{x+3}" y="{y}">(feet)</text>')
+
+    x += 0.5
+    y = to_y(-200)
+    pre = f'<text style="font-size:2.5;text-anchor:start" x="{x}"'
+    yield pre + f' y="{y}">Vertical</text>'
+    y += 3
+    yield pre + f' y="{y}">Exaggeration</text>'
+    y += 3
+    yield pre + f' y="{y}">2x</text>'
+
+
     # Close the svg tag.
 
     yield lines[-1]  # "</svg>"

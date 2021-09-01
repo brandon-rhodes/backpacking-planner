@@ -2,3 +2,22 @@
 https://webapps.stackexchange.com/questions/92777/how-to-get-the-direct-link-to-an-image-in-my-google-photos
 
 https://developers.google.com/people/image-sizing
+
+Thickness at Bright Angel Trail:
+
+(+ 350 ; Kaibab
+   250 ; Toroweap
+   350 ; Coconino
+   300 ; Hermit
+   950 ; Supai
+   ) 2200
+
+(+ 2200 450) 2650  ; plus the Redwall
+
+(+ (/ 350 2) 300 950 (/ 450 2)) 1650 ; Middle of Coconino to middle of Redwall
+
+(- 1 (/ 350.0 450.0)) 0.2222222222222222
+
+Half mile (/ 5280 2.0) 2640.0
+Third mile (/ 5280 3.0) 1760.0
+Quarter mile (/ 5280 4.0) 1320.0
