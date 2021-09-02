@@ -45,7 +45,7 @@ img {
   display: block; margin: 0px auto; max-width: 96%; height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
-img.legend { max-width: 60% }
+img.legend { max-width: 75% }
 </style>
 
 Vertical ×2
@@ -350,21 +350,17 @@ it sweeps aside its props,
 pulls aside the curtains of basement rock,
 and disgorges the hiker
 
-<div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3fMHO4Aws1JxZPQe-F1lTrPVmnWTadcXGY7r7Khb7nIKu3IANxDN82pxqP-hEUSvjTlCO8nr-mLI0Uthf6-uNRoQW82Zam5nsueczJ0Ht8E_K1ml0RspF75MXYrPfmSs3x5E3_jb2JNdwhdZ7FSd2an=w1188-h794-no?authuser=0
-<span style="left:38%;top:22%">Ct</span>
-<span style="left:45%;top:32%">Yh</span>
-<span style="left:30%;top:58%">Xr</span>
-<span style="left:72%;top:58%">Xr</span>
-</div>
-
 The hiker is utterly bewildered.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
+<span style="left:82%;top:63.5%">Ct</span>
+<span style="left:74%;top:73%">Yd</span>
+<span style="left:61%;top:59%">Ys</span>
+<span style="left:51%;top:53%">Yh</span>
+<span style="left:38%;top:44%">Yi</span>
+<span style="left:23%;top:37%">Xr</span>
 </div>
-
-
 
 The basement rocks, atop which he imagined the Tapeats rearing,
 here disappear into the earth.
