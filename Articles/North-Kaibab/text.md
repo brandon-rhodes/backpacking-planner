@@ -354,12 +354,10 @@ The hiker is utterly bewildered.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
-<span style="left:82%;top:63.5%">Ct</span>
-<span style="left:74%;top:73%">Yd</span>
-<span style="left:61%;top:59%">Ys</span>
-<span style="left:51%;top:53%">Yh</span>
-<span style="left:38%;top:44%">Yi</span>
-<span style="left:23%;top:37%">Xr</span>
+<span style="left:6%;top:23%">↓ Colorado River</span>
+<span style="left:20%;top:33%">↓ The Box</span>
+<span style="left:62%;top:53%">↓ Ribbon Falls</span>
+<span style="left:65%;top:72.5%">↓ Cottonwood CG</span>
 </div>
 
 The basement rocks, atop which he imagined the Tapeats rearing,

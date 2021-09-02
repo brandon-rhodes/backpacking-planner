@@ -185,7 +185,7 @@ def transform(lines):
     # Draw text labels.
 
     for latitude, elevation, label in [
-            (36.0905, 3900, 'Colorado|River'),
+            (36.0908, 3650, 'Colorado|River'),
             (36.1049, 0, '^Phantom|Ranch'),
             (dms(36,6,57), 4200, 'Phantom|Creek'),
             (36.1323, 5300, 'Hillers|Butte'),
@@ -238,6 +238,11 @@ def transform(lines):
     yield pre + f' y="{y}">Exaggeration</text>'
     y += 3
     yield pre + f' y="{y}">2x</text>'
+
+    x += 0.5
+    y = to_y(-200)
+    pre = f'<text style="font-size:2.5;text-anchor:end" x="{x-3}"'
+    yield pre + f' y="{y}">North →</text>'
 
 
     # Close the svg tag.
