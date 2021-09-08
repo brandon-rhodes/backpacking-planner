@@ -21,10 +21,8 @@ Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1476 # was 1473.4, until we doubted scale
 #Y_6000_FEET = 1474 # was 1473.4, until we doubted scale
 NORTH_LATITUDE = 36.1825  # Line on map would make you think 36,11,18
-#NORTH_LATITUDE = 36.1785  # Line on map would make you think 36,11,18
-SOUTH_LATITUDE = 36 + 5/60 + 21/3600 #+ SOUTH_OFFSET
 PHANTOM_CREEK_LATITUDE = dms(36,6,58)  # from Google Earth mouse cursor
-RIVER_LATITUDE = 36.1001
+RIVER_LATITUDE = 36.1001  # Just north of Bright Angel Campground bathroom
 FEET_IN_A_METER = 3.2808399
 PATH_STYLE = (
     'fill:none;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;'
@@ -231,7 +229,7 @@ def transform(lines):
            f' x="{x+3}" y="{y}">(feet)</text>')
 
     x += 0.5
-    y = to_y(-200)
+    y = to_y(-280)
     pre = f'<text style="font-size:2.5;text-anchor:start" x="{x}"'
     yield pre + f' y="{y}">Vertical</text>'
     y += 3
@@ -240,7 +238,7 @@ def transform(lines):
     yield pre + f' y="{y}">2x</text>'
 
     x += 0.5
-    y = to_y(-200)
+    y = to_y(-500)
     pre = f'<text style="font-size:2.5;text-anchor:end" x="{x-3}"'
     yield pre + f' y="{y}">North →</text>'
 

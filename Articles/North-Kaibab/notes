@@ -40,9 +40,33 @@ Total: (+ 4.5 1.0) 5.5 miles
 == Miles North Kaibab Trail takes to rise from Tapeats to Rim ==
 
 From PDF, Rim to Manzanita is: (- 6.8 1.4) 5.4 miles
+From Cottonwood to Manzanita: 1.4 miles
 
 == Miles South Kaibab Trail takes to rise from Tapeats to Rim ==
 
 From PDF, Rim to Tip Off: (- 7.0 2.6) 4.4 miles = (+ 1.5 1.5 1.4) 4.4 miles
 From Tip off to unconformity: ¼ miles, measured on Google Earth
 Total: (+ 4.4 0.25) 4.65 = maybe round up to 4¾ miles
+
+== Experiment with another font in SVG ==
+
+Put this in SVG, after moving the font into the ~/.fonts directory:
+
+<style type="text/css"><![CDATA[
+    text {
+        font-family: "Andika Regular";
+    }
+  ]]></style>
+
+== Slopes ==
+
+SKT spends (- 2.6 0.25) 2.35 miles below Taps
+BAT spends (- 9.5 1.5 5.5) 2.5 miles below Taps
+NKT spends (- 14.0 5.5) 8.5 miles below Taps = (/ 8.5 2.5) 3.4
+
+North Kaibab middle: (/ (- 4600 2475) 8.0) 265.625 feet per mile
+Tapeats along same: (/ (- 4600 3500) 8.0) 137.5 feet per mile
+(/ 265 137.0) 1.9343065693430657
+(/ 137 265.0) 0.5169811320754717
+(* 2 137) 274
+(* 12.0 (/ 137 265.0)) 6.20377358490566

@@ -7,11 +7,12 @@
 }
 @font-face {
     font-family: Vollkorn;
-    src: url("Forum-Regular.otf");
-    src: url("LibreBaskerville-Regular.otf");
-    src: url("CharisSILR.ttf");
-    src: url("GalSILR.ttf");
     src: url("Vollkorn-Regular.ttf");
+    src: url("Forum-Regular.otf");
+    src: url("GalSILR.ttf");
+    src: url("LibreBaskerville-Regular.ttf");
+    src: url("Andika-6.001/web/Andika-Regular.woff");
+    src: url("CharisSIL-Regular.woff");
 }
 html {
   padding: 0 8px;
@@ -40,6 +41,7 @@ div.labels {
 div.labels span {
   position: absolute;
   color: white;
+  font-size: 16px;
 }
 img {
   display: block; margin: 0px auto; max-width: 96%; height: auto;
