@@ -35,6 +35,7 @@ TEXT_STYLE = 'font-size:4;text-anchor:middle'
 LEFT_STYLE = 'font-size:4;text-anchor:end'
 RIGHT_STYLE = 'font-size:4;text-anchor:start'
 FEET_STYLE = 'font-size:3;text-anchor:start'
+FEET_STYLE_LEFT = 'font-size:3;text-anchor:end'
 YELLOW = 'rgb(96.078491%,84.313965%,14.509583%)'
 
 def main(argv):
@@ -138,7 +139,7 @@ def transform(lines):
             (36.1704, 1234*m), # Cottonwood CG
             (MANZANITA_LATITUDE, 4566), # Manzanita Rest Area
     ]:
-        #break
+        break
         yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
                f'M {to_x(lat)} {to_y(ele + 500)} '
                f'L {to_x(lat)} {to_y(ele)} '
@@ -174,9 +175,14 @@ def transform(lines):
         y = to_y(p.elevation)
         yield f'<circle cx="{x}" cy="{y}" r="1" style="{FILL_STYLE}" />'
         label = f'{feet} ft'
-        if mile == 8:
-            label = label.replace(' ', '|')
-        yield from put_label(x+0.5, y+3.25, label, style=FEET_STYLE)
+        style = FEET_STYLE
+        if mile >= 6:
+            style = FEET_STYLE_LEFT
+            x -= 1.0
+            y += 1.0
+        if mile == 7:
+            y -= 6.0  # Above line, to avoid "Cottonwood CG" label.
+        yield from put_label(x+0.5, y+3.25, label, style=style)
 
         mile += 1
 
@@ -189,15 +195,38 @@ def transform(lines):
             (36.1323, 5300, 'Hillers|Butte'),
             (36.1432, 5900, 'Clement|Powell Butte'),
             (36.1586, 4900, 'Ribbon|Falls'),
-            (36.1704, 1175*m, '^Cottonwood|CG'),
+            (36.1704, 3500, 'Cottonwood|CG'),
             (36.1743, 5100, 'Transept'),
+            (36.1828, 3500, 'Manzanita|Rest Area'),
     ]:
         y = to_y(elevation)
+        style = TEXT_STYLE
         if label.startswith('^'):
             yield triangle(to_x(latitude), y)
             label = label[1:]
             y += 7
-        yield from put_label(to_x(latitude), y, label)
+        elif label.startswith('<'):
+            label = label[1:]
+            style = LEFT_STYLE
+        yield from put_label(to_x(latitude), y, label, style)
+
+    # Lines for the Cottonwood and Manzanita labels.
+
+    yield (f'<path style="{PATH_STYLE}" d="'
+           f'M {to_x(36.1704)} {to_y(3500) - 3.5} '
+           f'L {to_x(36.1704)} {to_y(3950)} '
+           f'Z" />\n')
+
+    yield (f'<path style="{PATH_STYLE}" d="'
+           f'M {to_x(36.1828)} {to_y(3500) - 3.5} '
+           f'L {to_x(36.1855)} {to_y(4500)} '
+           f'Z" />\n')
+
+    # x = to_x(36.1856)
+    # y = to_y(3600)
+    # #yield triangle(x, y - 7)
+    # yield triangle(X_RIGHT, to_y(4550))
+    # yield from put_label(x, y, 'Manzanita|Rest Area', LEFT_STYLE)
 
     # Draw our own vertical scale.
 
