@@ -20,7 +20,8 @@ X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1476 # was 1473.4, until we doubted scale
 #Y_6000_FEET = 1474 # was 1473.4, until we doubted scale
-NORTH_LATITUDE = 36.1825  # Line on map would make you think 36,11,18
+MANZANITA_LATITUDE = dms(36,11,8.5)
+NORTH_LATITUDE = MANZANITA_LATITUDE
 PHANTOM_CREEK_LATITUDE = dms(36,6,58)  # from Google Earth mouse cursor
 RIVER_LATITUDE = 36.1001  # Just north of Bright Angel Campground bathroom
 FEET_IN_A_METER = 3.2808399
@@ -120,6 +121,10 @@ def transform(lines):
     yield f'<path style="{PATH_STYLE}" d="{d}" />\n'
 
     m = FEET_IN_A_METER
+
+    # Red "proofreading" markers that show several strategic positions
+    # along the trail.
+
     for (lat, ele) in [
             (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 2/3,0),# 1/3 break
             (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 1/3,0),# 2/3 break
@@ -131,30 +136,25 @@ def transform(lines):
             (dms(36,8,19.3), 3252), # Where canyon hits supergroup and opens out!
             (dms(36,9,32), 3773), # Ribbon Falls
             (36.1704, 1234*m), # Cottonwood CG
-            (dms(36,11,10.2), 4566), # Manzanita Rest Area
+            (MANZANITA_LATITUDE, 4566), # Manzanita Rest Area
     ]:
-        break
+        #break
         yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
                f'M {to_x(lat)} {to_y(ele + 500)} '
                f'L {to_x(lat)} {to_y(ele)} '
                f'" />\n')
 
-    # Erase stuff near the river.
+    # Draw a diagonal black line right where we cut out some material on
+    # the north bank of the Colorado River.
 
     x0 = to_x(RIVER_LATITUDE) - 10
-    x1 = to_x(RIVER_LATITUDE) - 4.2
+    x1 = to_x(RIVER_LATITUDE) - 5.2
     y0 = to_y(0)
     y1 = to_y(3430)
     yield (f'<path style="{PATH_STYLE}" d="'
            f'M {x0} {y0} '
            f'L {x1} {y1} '
            f'Z" />\n')
-    # yield (f'<path style="{BLANK_STYLE}" d="'
-    #        f'M {x0} {y0} '
-    #        f'L {x0} {y1} '
-    #        f'L {x1} {y1} '
-    #        f'L {x1} {y0} '
-    #        f'Z" />\n')
 
     # Draw mile markers.
 
@@ -183,14 +183,14 @@ def transform(lines):
     # Draw text labels.
 
     for latitude, elevation, label in [
-            (36.0908, 3650, 'Colorado|River'),
+            (36.0905, 3650, 'Colorado|River'),
             (36.1049, 0, '^Phantom|Ranch'),
             (dms(36,6,57), 4200, 'Phantom|Creek'),
             (36.1323, 5300, 'Hillers|Butte'),
             (36.1432, 5900, 'Clement|Powell Butte'),
-            (36.1580, 4900, 'Ribbon|Falls'),
+            (36.1586, 4900, 'Ribbon|Falls'),
             (36.1704, 1175*m, '^Cottonwood|CG'),
-            (36.1737, 5100, 'Transept'),
+            (36.1743, 5100, 'Transept'),
     ]:
         y = to_y(elevation)
         if label.startswith('^'):
@@ -204,7 +204,7 @@ def transform(lines):
     scale_range = range(1000, 6001, 1000)
 
     lat = 36.08
-    x = int(to_x(lat))
+    x = 1872
     yield f'<path style="{PATH_STYLE}" d="'
     yield f'M {x} {to_y(6000)} L {x} {to_y(-25)} '
     for elevation in scale_range:
@@ -242,7 +242,6 @@ def transform(lines):
     pre = f'<text style="font-size:2.5;text-anchor:end" x="{x-3}"'
     yield pre + f' y="{y}">North →</text>'
 
-
     # Close the svg tag.
 
     yield lines[-1]  # "</svg>"
@@ -278,7 +277,7 @@ def to_x(latitude):
     n = NORTH_LATITUDE
     s = PHANTOM_CREEK_LATITUDE
     x1 = X_PHANTOM_CREEK
-    x2 = X_RIGHT - 9
+    x2 = X_RIGHT
     x_fraction = (latitude - s) / (n - s)
     return x1 + x_fraction * (x2 - x1)
 
