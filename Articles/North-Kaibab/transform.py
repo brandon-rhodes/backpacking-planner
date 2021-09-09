@@ -188,6 +188,8 @@ def transform(lines):
 
     # Draw text labels.
 
+    COTTONWOOD_LATITUDE = 36.1718  # North corner of corral.
+
     for latitude, elevation, label in [
             (36.0905, 3650, 'Colorado|River'),
             (36.1049, 0, '^Phantom|Ranch'),
@@ -195,7 +197,7 @@ def transform(lines):
             (36.1323, 5300, 'Hillers|Butte'),
             (36.1432, 5900, 'Clement|Powell Butte'),
             (36.1586, 4900, 'Ribbon|Falls'),
-            (36.1704, 3500, 'Cottonwood|CG'),
+            (COTTONWOOD_LATITUDE, 3500, 'Cottonwood|CG'),
             (36.1743, 5100, 'Transept'),
             (36.1828, 3500, 'Manzanita|Rest Area'),
     ]:
@@ -213,8 +215,8 @@ def transform(lines):
     # Lines for the Cottonwood and Manzanita labels.
 
     yield (f'<path style="{PATH_STYLE}" d="'
-           f'M {to_x(36.1704)} {to_y(3500) - 3.5} '
-           f'L {to_x(36.1704)} {to_y(3950)} '
+           f'M {to_x(COTTONWOOD_LATITUDE)} {to_y(3500) - 3.5} '
+           f'L {to_x(COTTONWOOD_LATITUDE)} {to_y(4050)} '
            f'Z" />\n')
 
     yield (f'<path style="{PATH_STYLE}" d="'
