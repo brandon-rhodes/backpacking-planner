@@ -414,7 +414,9 @@ Beneath feet of Clement Powell Butte:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEmJbZgG08mgaN8E4Y5gEIhQWO_QcD7ZMYkcJ_YADESMd88Lm-feFOpPJoGzpa3MRUKw8FnrdPDPgX3b6w7MgwbA7bhjF7JobkZabGmtStRITHwWofSh=w1188-h794-no?authuser=0
-<span style="left:72%;top:58%">Xr</span>
+<span style="left:30%;top:39%">Ct</span>
+<span style="left:65%;top:38%">Yh</span>
+<span style="left:67%;top:56%">Yi</span>
 </div>
 
 He stares above.
@@ -444,7 +446,8 @@ when are they as far from N top as river is from S top?
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w1188-h794-no?authuser=0
-<span style="left:38%;top:32%">Shinumo Quartzite? or Yh</span>
+<span style="left:51%;top:39%">Ys</span>
+<span style="left:68%;top:48%">Yh</span>
 </div>
 
 Lesson: the Great Unconformity may be great,
