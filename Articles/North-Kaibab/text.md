@@ -358,6 +358,7 @@ The hiker is utterly bewildered.
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
 <span style="left:6%;top:23%">↓ Colorado River</span>
 <span style="left:20%;top:33%">↓ The Box</span>
+<span style="left:26%;top:39%">↓ Mile 4.0</span>
 <span style="left:62%;top:53%">↓ Ribbon Falls</span>
 <span style="left:65%;top:72.5%">↓ Cottonwood CG</span>
 </div>
@@ -446,7 +447,8 @@ when are they as far from N top as river is from S top?
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w1188-h794-no?authuser=0
-<span style="left:51%;top:39%">Ys</span>
+<span style="left:61%;top:4%">Ct</span>
+<span style="left:37%;top:39%">Ys</span>
 <span style="left:68%;top:48%">Yh</span>
 </div>
 
