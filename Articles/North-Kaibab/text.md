@@ -15,7 +15,7 @@
     src: url("CharisSIL-Regular.woff");
 }
 html {
-  padding: 0 8px;
+  padding: 0 1em;
 }
 body {
   max-width: 40em;
@@ -356,6 +356,7 @@ The hiker is utterly bewildered.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
+<span style="left:3%;top:5%">↑ South Rim</span>
 <span style="left:6%;top:23%">↓ Colorado River</span>
 <span style="left:20%;top:33%">↓ The Box</span>
 <span style="left:26%;top:39%">↓ Mile 4.0</span>

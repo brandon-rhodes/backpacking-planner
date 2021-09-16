@@ -84,6 +84,19 @@ Tapeats along same: (/ (- 4600 3500) 8.0) 137.5 feet per mile
 
 Cliffs in photo above BA Creek (- 3800 2600) 1200
 
+== Years ==
+
+Great Unconformity on BAT, basement -> Tapeats: (- 1650 550) 1100
+Basement -> Bass: (- 1650 1254) 396
+Bass -> Dox: (- 1254 1104) 150
+Dox -> Tapeats: (- 1104 550) 554
+Check: (+ 396 150 554) 1100
+
+Fractions:
+(/ 396 1100.0) 0.36
+(/ 150 1100.0) 0.13636363636363635 (/ 1100.0 150) 7.333333333333333
+(/ 554 1100.0) 0.5036363636363637
+
 == Image locations ==
 
 South Supergroup image 2020 Dec 6 15:48 ET: the Redwall peeking out at
