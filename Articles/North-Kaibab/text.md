@@ -468,8 +468,26 @@ of the mighty Grand Canyon Supergroup.
 The question of whether the Tapeats have flitted away
 and abandoned the hiker in the heat
 not entirely silly:
+
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuCBXHA0eJrY54b-L2tlGpyotOvLaEWo9sRxz_5GsWCnxozH6cjX5xoMAhvEHUShkYjRChMTo3ieVDA--DT46Pmop_54kRVQ89-uUrP_pDzmDRWTvOyYCQ=w1080-h810-no?authuser=0
+<span style="left:63%;top:12%">Mr</span>
+<span style="left:33%;top:49%">Ys</span>
+</div>
+
+(88/63 if I want more Ys)
+
 the hiker is approaching the valley of Ribbon Falls,
 where an ancient hard hill of Shinumo Quartzite
+
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
+<span style="left:43%;top:21%">Pc</span>
+<span style="left:34%;top:45%">Mr</span>
+<span style="left:50%;top:47%">Ct</span>
+<span style="left:53%;top:81%">Yd</span>
+</div>
+
 stood tall enough that the sea was only able to deposit Tapeats around it
 — or allowed it to deposit but then washed it away.
 
@@ -509,14 +527,6 @@ The unconformity itself will be clearest if,
 on a later trip,
 the hiker has leisure to explore the valley of Ribbon Falls itself:
 
-<div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3c_lCxCuKKuqOUBqoBY91mdiUYL5XS_EoibPVqgQCmk93izIstMuBIclCGBtcEXFk1n_vgBzvnNjCwN8r3inHONyUnJXXMhNTw7gT1Lj2zjD9C_gM7nuEBBh3q6RD-Hx_5MCKTXkUA8VoGwOkeZTJ-J=w515-h344-no?authuser=0
-<span style="left:38%;top:22%">Ct</span>
-<span style="left:45%;top:32%">Yh</span>
-<span style="left:30%;top:58%">Xr</span>
-<span style="left:72%;top:58%">Xr</span>
-</div>
-
 But even today,
 when the hiker must avoid expense to veer neither left nor right
 while broiling uphill through the sun,
@@ -541,13 +551,6 @@ The Canyon begins to relent.
 The Tapeats return.
 
 Climbing at highest rate yet? [MEASURE ft/mile each mile]
-
-<div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3fGnOxgopfBfGMNmbHsEtCkTaEkU7kS8E0Zrk1V6bj21Xn8kvaMkRGbcTiD2GQuG__O9v_sTff9qPwyiSpJTkQiCBAyfGna1av17Sfdx4NZNvYgzmSq60Ekh-G49xHuV3xCWPNjKD7-vSquZbyiWeMh=w1059-h794-no?authuser=0
-<span style="left:43%;top:22%">Pc</span>
-<span style="left:33%;top:49%">Mr</span>
-<span style="left:50%;top:47%">Ct</span>
-</div>
 
 Cottonwood CG
 friend can collapse under the cottonwood trees

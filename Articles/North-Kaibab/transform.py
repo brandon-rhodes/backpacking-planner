@@ -20,6 +20,7 @@ X_RIGHT = 2295
 Y_SEA_LEVEL = 1578
 Y_6000_FEET = 1476 # was 1473.4, until we doubted scale
 #Y_6000_FEET = 1474 # was 1473.4, until we doubted scale
+COTTONWOOD_LATITUDE = 36.1718  # North corner of corral.
 MANZANITA_LATITUDE = dms(36,11,8.5)
 NORTH_LATITUDE = MANZANITA_LATITUDE
 PHANTOM_CREEK_LATITUDE = dms(36,6,58)  # from Google Earth mouse cursor
@@ -125,7 +126,6 @@ def transform(lines):
 
     # Red "proofreading" markers that show several strategic positions
     # along the trail.
-
     for (lat, ele) in [
             (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 2/3,0),# 1/3 break
             (RIVER_LATITUDE + (NORTH_LATITUDE - RIVER_LATITUDE) * 1/3,0),# 2/3 break
@@ -136,8 +136,14 @@ def transform(lines):
             (dms(36,6,58), 2800), # Phantom Creek enters Bright Angel Creek
             (dms(36,8,19.3), 3252), # Where canyon hits supergroup and opens out!
             (dms(36,9,32), 3773), # Ribbon Falls
-            (36.1704, 1234*m), # Cottonwood CG
+            #(36.1704, 1234*m), # Cottonwood CG
+            (COTTONWOOD_LATITUDE, 1234*m), # Cottonwood CG attempt #2
             (MANZANITA_LATITUDE, 4566), # Manzanita Rest Area
+            # To support assertion about how fast Supergroup declines:
+            (36.1470, 4320),  # top of $Yh
+            (36.1470, 3429),  # trail
+            (36.1525, 3955),  # top of $Yh; difference (- 4320 3955) 365
+            #(36.1525, 3569),  # trail; difference (- 3569 3429) 140
     ]:
         break
         yield (f'<path style="{PATH_STYLE.replace("black","red")}" d="'
@@ -187,8 +193,6 @@ def transform(lines):
         mile += 1
 
     # Draw text labels.
-
-    COTTONWOOD_LATITUDE = 36.1718  # North corner of corral.
 
     for latitude, elevation, label in [
             (36.0905, 3650, 'Colorado|River'),
