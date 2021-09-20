@@ -163,7 +163,7 @@ def transform(lines):
            f'L {x1} {y1} '
            f'Z" />\n')
 
-    # Draw mile markers.
+    # Draw mile markers and mile elevations.
 
     offset = +0 #.25  # Distance from bridge to intersection at 36°6'0"
     start = points[0].mileage - offset
@@ -182,7 +182,7 @@ def transform(lines):
         yield f'<circle cx="{x}" cy="{y}" r="1" style="{FILL_STYLE}" />'
         label = f'{feet} ft'
         style = FEET_STYLE
-        if mile >= 6:
+        if mile >= 7:
             style = FEET_STYLE_LEFT
             x -= 1.0
             y += 1.0
@@ -203,6 +203,7 @@ def transform(lines):
             #(36.1535, 5900, 'Manu|Temple'),
             (36.1545, 5900, 'Manu|Temple'),
             (36.1586, 4900, 'Ribbon|Falls'),
+            (36.1580, 3150, 'Hill'),
             (COTTONWOOD_LATITUDE, 3500, 'Cottonwood|CG'),
             (36.1743, 5100, 'Transept'),
             (36.1828, 3500, 'Manzanita|Rest Area'),
@@ -218,7 +219,12 @@ def transform(lines):
             style = LEFT_STYLE
         yield from put_label(to_x(latitude), y, label, style)
 
-    # Lines for the Cottonwood and Manzanita labels.
+    # Lines for the hill, Cottonwood, and Manzanita labels.
+
+    yield (f'<path style="{PATH_STYLE}" d="'
+           f'M {to_x(36.1580)} {to_y(3400)} '
+           f'L {to_x(36.1580)} {to_y(3650)} '
+           f'Z" />\n')
 
     yield (f'<path style="{PATH_STYLE}" d="'
            f'M {to_x(COTTONWOOD_LATITUDE)} {to_y(3500) - 3.5} '

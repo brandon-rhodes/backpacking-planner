@@ -480,14 +480,6 @@ https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuC
 the hiker is approaching the valley of Ribbon Falls,
 where an ancient hard hill of Shinumo Quartzite
 
-<div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
-<span style="left:43%;top:21%">Pc</span>
-<span style="left:34%;top:45%">Mr</span>
-<span style="left:50%;top:47%">Ct</span>
-<span style="left:53%;top:81%">Yd</span>
-</div>
-
 stood tall enough that the sea was only able to deposit Tapeats around it
 — or allowed it to deposit but then washed it away.
 
@@ -535,6 +527,14 @@ that hem him in to the left —
 that a constant, a reassurance, an anchor
 has momentarily been withdrawn from him
 as the Canyon shimmers ever more emphatically in the heat.
+
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
+<span style="left:43%;top:21%">Pc</span>
+<span style="left:34%;top:45%">Mr</span>
+<span style="left:50%;top:47%">Ct</span>
+<span style="left:53%;top:81%">Yd</span>
+</div>
 
 Or more colloquially,
 “You’re off the edge of the map, mate. Here there be monsters.”
