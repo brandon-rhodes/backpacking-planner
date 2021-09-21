@@ -7,6 +7,9 @@ index.html: text.md text.py
 	pandoc -f markdown_strict $< | python text.py > /tmp/out
 	mv /tmp/out $@
 
+text.md: $(HOME)/Plain/Drafts/north-kaibab-geology
+	cp $< $@
+
 triptych1.png triptych2.png triptych3.png: section3.png crop_triptych.py
 	python crop_triptych.py
 

@@ -4,11 +4,38 @@ import re
 import sys
 from PIL import Image
 
-subs = {
+abbrevs = {
+    'BA': 'Bright Angel',
+    'BAC': 'Bright Angel Creek',
+    'BAH': 'Bright Angel Hiker',
+    'BAT': 'Bright Angel Trail',
+    'NKT': 'North Kaibab Trail',
+    'NK': 'North Kaibab',
+    'SKT': 'South Kaibab Trail',
+    'SK': 'South Kaibab',
+    'PP': 'Plateau Point',
+    'A': 'A',
+    'B': 'Billingsley',
+    'CG': 'CG',
+    'H': 'H',
+    'I': 'I',
+    'IMG': 'IMG',
+    'PDF': 'PDF',
+    'USGS': 'USGS',
+    'CC': '<i class="nobr">C–C′</i>',
+    'DD': '<i class="nobr">D–D′</i>',
+    # s/(\d)[ap]m\b/\1 <span class="sc">pm</span>/
+}
+
+layers = {
     'Pc': 'Coconino Sandstone',
     'Mr': 'Redwall Limestone',
     'Ct': 'Tapeats Sandstone',
+    'Yb': 'Bass Formation',
+    'Yd': 'Dox Formation',
     'Yh': 'Hakatai Shale',
+    'Yi': 'Intrusive sills and dikes',
+    'Ys': 'Shinumo Quartzite',
     'Xbr': 'Brahma Schist',
     'Xgr': 'Granite',
     'Xr': 'Rama Schist',
@@ -40,9 +67,25 @@ def main(argv):
         return f'<img class="legend" src="{url}" height={h} width={w}>'
     text = re.sub(r'<p>(legend-[^<]*\.png)</p>', f, text)
 
-    for a, b in subs.items():
-        b = f'({a}) {b}'
-        text = text.replace('$' + a, b)
+    def get_layer(match):
+        abbrev = match[0][1:]
+        return f'{layers[abbrev]} ({abbrev})'
+
+    text = re.sub(r'\$\w+', get_layer, text)
+
+    def expand_abbrev(match):
+        abbrev = match[1]
+        return abbrevs[abbrev]
+
+    text = re.sub(r'\b([A-Z]+)(?![\w-])', expand_abbrev, text)
+
+    text = re.sub(r'(\d+)ft', r'\1 feet', text)
+
+    text = re.sub(
+        r'(\d+)([ap]m)\b',
+        r'\1<span class="am-pm">\2</span>',
+        text,
+    )
 
     print(text)
 

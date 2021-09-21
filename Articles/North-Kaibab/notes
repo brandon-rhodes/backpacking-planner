@@ -1,4 +1,8 @@
 
+URLs:
+
+https://www.nps.gov/articles/2020-geologic-mapping-on-the-south-kaibab-trail.htm
+
 TIMES, from photographs:
 
 8:18 Black Bridge
@@ -84,6 +88,20 @@ Tapeats along same: (/ (- 4600 3500) 8.0) 137.5 feet per mile
 
 Cliffs in photo above BA Creek (- 3800 2600) 1200
 
+== Effect of Tapeats rise ==
+
+Vs Tapeats south of river (3600 is quick guess):
+
+Climb without Tapeats moving: (- 3600 2475) 1125
+Climb with Tapeats moving: (- 4600 2475) 2125
+(/ 2125.0 1125) 1.8888888888888888
+
+Vs Tapeats N of Phantom Creek (3900 is also a bit of a guess):
+
+Climb without Tapeats moving: (- 3900 2475) 1425
+Climb with Tapeats moving: (- 4600 2475) 2125
+(/ 2125.0 1425) 1.4912280701754386
+
 == Years ==
 
 Great Unconformity on BAT, basement -> Tapeats: (- 1650 550) 1100
@@ -117,3 +135,9 @@ pattern of rocks/boulders, and the bushes up on the red slope match.
 Panning back in Google Earth, this is, in fact, a pour-off at the bottom
 of the drainage that runs from between the two Redwall arms of the Manu
 Temple, which are too far west to appear on the cross section.
+
+Later photos, takenon another trip (EST):
+14:48 Still above Ribbon Falls.
+15:34 (46m) First photo, looking at orange rock between talus slopes.
+15:48 (14m) Second photo, looking at angled layers beneath Tapeats.
+15:57 (9m) Where basement rock emerges from ground.

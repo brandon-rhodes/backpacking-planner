@@ -6,13 +6,13 @@
   src: url("HighAlpine.otf") format("opentype");
 }
 @font-face {
-    font-family: Vollkorn;
-    src: url("Vollkorn-Regular.ttf");
-    src: url("Forum-Regular.otf");
-    src: url("GalSILR.ttf");
-    src: url("LibreBaskerville-Regular.ttf");
-    src: url("Andika-6.001/web/Andika-Regular.woff");
-    src: url("CharisSIL-Regular.woff");
+  font-family: body;
+  src: url("CharisSIL-Regular.woff");
+}
+@font-face {
+  font-family: body;
+  font-style: italic;
+  src: url("CharisSIL-Italic.woff");
 }
 html {
   padding: 0 1em;
@@ -21,19 +21,24 @@ body {
   max-width: 40em;
   margin: 0 auto;
   color: #333;
-  font-family: Vollkorn;
-  font-size: 18px;
+  font-family: body;
   font-weight: normal;
+  font-size: 18px;
   line-height: 1.5;
 }
-h1 {
+h1, h2 {
   margin-top: 30pt;
   margin-bottom: 0px;
   color: black;
   font-family: High-Alpine;
   font-weight: normal;
-  font-size: 72pt;
   line-height: 1;
+}
+h1 {
+  font-size: 72pt;
+}
+h2 {
+  font-size: 56pt;
 }
 div.labels {
   position: relative;
@@ -44,50 +49,71 @@ div.labels span {
   font-size: 16px;
 }
 img {
-  display: block; margin: 0px auto; max-width: 96%; height: auto;
+  display: block; margin: 0px auto; width: 100%; height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
 img.legend { max-width: 75% }
+.am-pm { padding-left: 0.2em; font-variant: small-caps; }
+.nobr { white-space: nowrap }
 </style>
 
-Vertical ×2
+# The Geology of the North Kaibab Trail
 
-Go down layers
-Come back up layers
-Maybe at half the rate
+by [Brandon Rhodes](https://rhodesmill.org/brandon/)
 
-Map showing a half-mile to a mile to your left / northwest.
+<center>⚒</center>
 
-https://www.nps.gov/articles/2020-geologic-mapping-on-the-south-kaibab-trail.htm
+I’ve written this
+to be the article that I wish I myself could have read
+before my first hike up the Grand Canyon’s NKT.
 
-Indian Gardens with Redwall and White cliffs:
+Typical descriptions of the NKT are quick to mention
+its fatal summer temperatures,
+its high altitude trailhead on the North Rim,
+and its 5,761 foot elevation gain
+that requires hikers to climb more than a vertical mile
+from the Colorado River.
 
-Past tip-off, trail turns red:
+But the trail presents yet another challenge that, alas,
+is too rarely mentioned:
 
-<!--
-https://photos.google.com/share/AF1QipMpI2PfrKETjqoCfTJN7QA1CtzrX7UIRL7xJUo0PSAUCWzUJChIsughNt0Vntpmvg/photo/AF1QipPO1KkYWCe4U5a-5LEiJjATGgxYLbUBUDP8UXRe?key=UkxaYThMZklkZzFhbElWZl92NUl3SF9kT2tDTVNR
--->
+Its devastating geology.
 
-Hakatai Shale
+The hiker who starts up the NKT
+possessed of only a simple South Rim day-hike geology
+will soon find themselves adrift and disoriented,
+lost in a wide wilderness of unfamiliar rock —
+when they had instead imagined themselves
+making a steady climb
+through the Canyon’s familiar cliffs and benches.
 
-TODO
+This article, therefore, is written for a “BAH”
+(whom we are going to be too kind to name)
+who has become familiar with the Grand Canyon’s most famous strata
+through day hikes from the South Rim,
+and who now fancies himself ready for the NKT.
+He knows that a rim-to-rim day hike
+carries risks at the beginning of June,
+but two nephews are determined to make the attempt
+and it’s agreed that someone familiar with the Canyon should accompany them.
 
-Grand Canyon hikes start at rim.
-White cliffs and red cliffs.
+## Order and Chaos
 
-Looking down
-standard layers:
-the vast white cliffs of $Pc
-that often stand 300 feet high.
-Only if you hike in might you appreciate
-that the and below them twice as thick $Mr,
-rearing 600 feet and even higher.
+The BAH will already be familiar
+with the Canyon’s two most famous strata:
+the high white Coconino cliffs whose sheer and dizzy precipice
+dominates the view from so many South Rim overlooks,
+and the mighty Redwall
+whose height can be difficult to gauge from the rim
+but whose cliffs stand at least a hundred feet taller.
 
-Whether hiking in or out these layers steady reference
-Whether down dry South Kaibab to Oo-Aah or beyond,
-or past the spigots and shelters of the Bright Angel Trail
-as far as Indian Gardens,
-the white cliffs and red cliffs keep the hiker happily oriented.
+When a hiker looks back south from Plateau Point —
+the most remote inner-canyon overlook
+to which the
+[National Park brochure](https://www.nps.gov/grca/planyourvisit/upload/brightangeltrail.pdf)
+dares to countenance a day hike —
+the $Pc and $Mr are the most prominent features
+of the South Rim’s towering ramparts:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w790-h529-no?authuser=0
@@ -96,45 +122,98 @@ https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_
 <span style="left:46%;top:84%">Ct</span>
 </div>
 
-Only hikers who venture farther than tip off / indian gardens
-might add two further layers against which to gauge their progress
-and the architecture of the Canyon.
-The hiker who reaches Plateau Point out past Indian Gardens
-will see, what are they standing on?
-$Ct set of corrugated cliffs
+*The view back toward the South Rim from Plateau Point.*
+
+But what rock is the hiker himself standing on at PP?
+
+PP stands atop the Canyon’s deepest layer of horizontal rock:
+the $Ct.
+Like the Coconino and Redwall,
+the Tapeats are a cliff-forming layer,
+as the hiker can see by turning east to look across Pipe Creek.
+There, a fine section of Tapeats cliffs
+caps the far wall of Pipe Creek canyon:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLUm5sv17J3qPxJ4AN09vjc9CIYHZDDulV0f7jAR9ykUa40oMTIhM5hl7TxLQ3aTGtUNp8GhCF0nAkUVsSt9P9-tnPOJyX_jclV7sOag36ICb7zBnZNDDERmua3yjTjEvExeniWh2lafoQj4Xy9RJi1EOQ=w1188-h794-no
-<span style="left:18%;top:51%">Pc</span>
-<span style="left:15%;top:61%">Mr</span>
-<span style="left:92%;top:53%">Mr</span>
-<span style="left:5%;top:72%">Ct</span>
-<span style="left:55%;top:73%">Ct</span>
-<span style="left:66%;top:92%">Xbr</span>
+<span style="left:17%;top:50%">Pc</span>
+<span style="left:15%;top:60%">Mr</span>
+<span style="left:88%;top:53%">Mr</span>
+<span style="left:5%;top:71%">Ct</span>
+<span style="left:55%;top:72%">Ct</span>
+<span style="left:66%;top:90%">Xbr</span>
 </div>
 
+*The view east from PP across Pipe Creek.*
 
-# Loomings
+In the distance at the photo’s left,
+you can see a similar line of $Ct cliffs
+arrayed along the top of Upper Granite Gorge
+through which the Colorado River itself runs.
 
-The brisk pace down South Kaibab
-brings the hiker to the Tip-Off mid-morning,
-when he might even describe the air as still morning cool
-rather than ominously hot.
-Just nth of a mile further and the trail leaves the Tonto Platform,
-committing itself to the final thousand-foot descent to the River.
+There are no further horizontal layers below the Tapeats,
+only a twisting chaos of ancient metamorphic rock.
+In the photo above you can see a steep slope of $Xbr
+falling away toward Pipe Creek,
+but the Brahma is only one of several
+granite, schist, and gneiss formations
+that together form the thousand-foot walls of both Upper Granite Gorge
+and its side canyons like Pipe Creek.
 
-The view as the trail cuts down switchbacks is nearly comforting.
-Ahead, the hiker can see all the familiar layers
-in ordered sanity.
-High in the far distance the $Pc
-decorates the edge of the North Rim like frosting,
-while mighty ramparts of $Mr wrap the skirts of the mighty Vishnu Temple
-ahead across the river.
-Closer at hand, the familiar $Ct$ holds out last stand
-before the $Xbr and $Xgr plunging down to the Colorado
-already peeking out behind the gentle red slopes.
+These are the Grand Canyon’s “basement rocks”
+and they are so much older than the Tapeats
+that geologists have given the name “the Great Unconformity”
+to the contact between them.
 
-Wait — gentle red slopes?
+Thus the BAH returns from PP to the South Rim
+with a tidy Grand Canyon diagram in his head:
+a colorful layer cake of horizontal strata
+standing atop a massed chaos of older rock.
+The Canyon’s structure almost seems to have been inspired by cinema,
+where bright heights of order and rationality
+are always underlain by dark hidden depths of primæval chaos.
+
+This emotional contrast
+is only heightened by the National Park brochures.
+They always confine day hikers to the horizontal strata.
+Only there is comfort and safety to be found.
+Heat, dehydration, exhaustion, and even death itself
+stand ready to stalk the day hiker
+who would dare pass beneath the Tapeats
+and descend into the twisted maelstrom
+of Precambrian rocks beneath.
+
+The BAH therefore envisions a rim-to-rim hike with the nephews
+in schematic terms.
+First comes a quick descent of the SKT,
+with all the familiar strata serving as mileposts.
+Then a plunge into the Precambrian depths
+that takes them across the Colorado River.
+Finally, like a diver rising back to the surface,
+the NKT will carry them safe up into the Tapeats
+and their feet will stand once again on familiar rock.
+From there the trail will wind past
+the Redwall and then the Coconino,
+whose cliffs will stand sentinel and measure the hikers’ progress
+as they climb — weary but triumphant — to the North Rim.
+
+## Loomings
+
+And so the hiker and the nephews
+start down the SKT before dawn.
+It’s the year 2014 on June 7.
+The morning is cool, the hike is downhill, and they make excellent time.
+
+To its credit,
+the Grand Canyon doesn’t wait
+until it has lured the BAH
+several dangerous miles north of the Colorado River
+before proclaiming that it intends a more complex geology
+than the hiker is prepared for.
+In fact,
+it’s while the hiker is still south of the River
+that the Canyon unveils a surprising new stratum,
+just as the hikers have finished their descent through the Tapeats:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfvb7MwQ7YOUg6FE5i0E5HB9Z65J_weffvN_ers5EgnJQuip9GRqT5xoBSE7a-ISS9l843Joqg-RFo1mwW_Bd8C5ylBK4RHMOSZvg8Ewh4la8yZSh_0A9Q=w1078-h720-no?authuser=0
@@ -145,52 +224,100 @@ https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfv
 <span style="left:55%;top:57%">Yh</span>
 </div>
 
-The hiker happily plunging,
-different view around each corner,
-doesn’t know it yet,
-but these gentle red slopes are a warning:
-hiker has received his warning:
-pass.
+*The startling $Yh on the SKT at Panorama Point.*
 
-Moment in *All the King’s Men*
+In the distance, across the Colorado River,
+the geology is conventional and familiar:
+a picket of $Ct cliffs caps $Xbr and $Xgr basement rocks,
+just as the BAT has taught the hiker to expect.
+But what’s going on here, over on this side of the river?
+The SKT approaches Panorama Point and its lonely slab of $Ct
+across a surprising shallow slope of loose orange stone.
 
-> “How life is strange and changeful, and the crystal is in the steel at
-> the point of fracture, and the toad bears a jewel in its forehead, and
-> the meaning of moments passes like the breeze that scarcely ruffles
-> the leaf of the willow.”
+If only the hiker stopped to notice!
+But he and the two nephews are at full tilt downhill,
+pushing to make several more miles while the morning is still cool.
 
-If the hiker had only the time to stop think
-at this moment their mental map broken
+They do, at least, notice the change in the trail.
+The awkward muddy mule-sized stairsteps
+on which the SK descends the Tapeats
+suddenly give way to this long gentle slope.
+But it doesn’t occur to them to ponder
+the unfamiliar orange stone which provides them
+with such a gentle grade.
 
-There shouldn’t be a red layer here.
+Shouldn’t the Tapeats have been followed by basement rock instead?
 
-By all rights there should only be schist and granite
-below the Tapeats.
-The great pattern
-that has always sustained the hiker
-is here broken.
+Since they missed it the first time,
+the Canyon offers a second outcrop
+of the same anomalous orange stone.
+The hikers cross the Colorado River at the bridge,
+refill with water at BA Campground,
+and start hiking up the NKT along BA Creek.
+Once they pass the cluster of
+[famous stone cabins](https://www.nps.gov/grca/learn/photosmultimedia/colter_phantom_photos.htm)
+that make up Phantom Ranch
+and climb into the empty valley above it,
+the orange stone reappears high in the cliffs on their left:
 
-But if only rim to river, easily ignored:
-the descent soon reaches the basement rocks the hiker expects,
-and the bright red slope is too easily
-dismissed.
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w790-h529-no?authuser=0
+<span style="left:38%;top:20%">Ct</span>
+<span style="left:45%;top:31%">Yh</span>
+<span style="left:30%;top:58%">Xr</span>
+<span style="left:72%;top:58%">Xr</span>
+</div>
 
-But the hiker has here received their warning:
-the Canyon’s geology rules more complicated.
-Down bridge, across creek delta,
-refill water
-happily hike north,
-has already received warning.
-But,
-he doesn’t have ears to hear.
+*The view west across BA Creek ½ mile north of Phantom Ranch,
+where an outcrop of $Yh stands high in the cliffs.*
 
-# The Box
+It might take a moment
+for your eyes to calibrate the scale of this image.
+The $Ct cliffs atop the canyon wall
+stand more than a thousand feet above BA Creek at the bottom —
+you are looking at nearly a vertical quarter mile of rock.
+The creek, though it’s a full twenty feet wide,
+is barely visible as a slender brown-green ribbon
+running along the base of the cliffs.
+The NKT alongside it is invisible,
+though you might spot the Clear Creek Trail
+curving toward the photographer
+across the near side of the valley floor.
 
-It’s here at Bright Angel Campground,
-as the hiker refills the bottles before heading north into the unknown,
-that we can begin to follow his progress
-along George Billingsley’s section D–D′.
-Gradual climb.
+It’s nearly 9am as the hiker and nephews
+reach this section of the NKT.
+With their attention on the trail in front of them
+and their eyes shaded by hat brims,
+they never even see the rusty orange outcrop high in the cliffs above.
+They see only the rock that’s level with the trail:
+rugged slopes of $Xr,
+a basement rock of exactly the sort that the BAH expects.
+At this point, his mental Grand Canyon schematic remains unchallenged.
+
+## B’s DD
+
+It’s our astounding good fortune
+that George H. B
+has chosen to lavish this part of the Canyon
+with so much attention
+on his magisterial
+[Geologic Map of the Grand Canyon 30′×60′ Quadrangle, Coconino and Mohave Counties, Northwestern Arizona](https://pubs.usgs.gov/imap/i-2688/),
+available from the USGS
+as a free [PDF](https://pubs.usgs.gov/imap/i-2688/i-2688.pdf)
+or a [printed map](https://store.usgs.gov/product/28860).
+B singles out BA Canyon for special treatment:
+of the four cross sections that supplement his map,
+CC runs directly athwart BA Creek
+and DD runs alongside the creek for more than eight miles —
+all the way from the Colorado River to the Manzanita Rest Area.
+
+For this article
+I’ve divided Billingsley’s cross section DD into three diagrams,
+simplified its notations,
+and added a trace showing the elevation of the NKT
+as it climbs the Canyon’s layers.
+
+Here are the first three miles of B’s cross section:
 
 triptych1.png
 
@@ -212,169 +339,152 @@ legend-Xbr.png
 
 legend-Xr.png
 
-Alas that they won’t see.
-Because, distractions.
+A few notes about the these diagrams:
 
-Walls close in around them,
+* B’s cross section
+  **exaggerates the vertical dimension** by a factor of two,
+  so strata look taller
+  and the contacts between them look steeper
+  than in real life.
 
+* The **rugged diagonal line** shows the elevation of the NKT.
+  The strata that are faintly visible below the line
+  are hidden underground beneath the trail.
+  The strata standing bright above the line
+  should be visible in the cliffs beside the trail.
 
-If you have only stayed south of river, this is wild aberration.
-The only exception.
+* I’ve added mileposts along the NKT.
+  These measure **trail miles**,
+  not miles as the crow flies,
+  so the mileposts bunch closer together in the first diagram
+  where the trail does more winding
+  than in the later diagrams.
+  Note that Mile 0.0 isn’t at the Colorado River
+  but at BA Campground,
+  to match the National Park Service’s mileages.
 
-Looking back across river from partway up Clear Creek trail?
-Maybe shows Tapeats at 3500?
+* B’s cross section DD doesn’t run along the NKT itself
+  but **parallel to the trail a few thousand feet to the west**.
+  So, strictly speaking,
+  these diagrams don’t show how the strata
+  are exposed on the cliffs along the trail,
+  but how they’re arranged
+  inside of the hill on the (northbound) hiker’s left.
+  This causes a few small differences,
+  but none that will concern us here.
 
+So,
+now that we’ve brought B alongside as our geologist,
+what do we learn about this mysterious orange stone?
 
-<!--
-https://photos.google.com/share/AF1QipMpI2PfrKETjqoCfTJN7QA1CtzrX7UIRL7xJUo0PSAUCWzUJChIsughNt0Vntpmvg/photo/AF1QipNj33ssHhmBQc6LrsPRDmlMxNNqhyR-6kRQHVze?key=UkxaYThMZklkZzFhbElWZl92NUl3SF9kT2tDTVNR
--->
+First, its name: it’s the $Yh.
 
-Tapeats at ~3650 ft 3700 ft above trail, north of Phantom Ranch:
+Second,
+the diagram reveals why we’re seeing isolated outcrops of Hakatai
+instead of the kind of long continuous layer
+for which the Grand Canyon is famous:
+extensive faulting between the Colorado River and Phantom Creek
+has shattered the once-continuous strata into separate blocks.
+Each thick vertical line in the diagram is a fault,
+some of which have pulled quite different rocks
+right next to each other.
 
-<!--
+Finally,
+we learn that even though the Hakatai
+is the only new layer we’ve noticed in the photographs,
+it’s not alone.
+It’s accompanied by two other layers
+that, when they’re present, always occur in the same order:
+the $Yb on bottom,
+$Yh in the middle,
+and $Ys on top.
 
-“I just hiked my ass off in the canyon gathering the field data.”
-— George Billingsley
+It turns out that these layers
+all belong to the “Grand Canyon Supergroup” —
+the only geologic ensemble named after the Grand Canyon itself.
 
--->
+The BAH never expected to meet the Supergroup.
+After all,
+many of the National Park’s
+[geology illustrations](https://www.nps.gov/articles/images/pop-up-yardstick.jpg)
+put the Supergroup entirely underground.
+This naturally leads the reader to suppose
+that while these deeply buried layers might be of concern
+to a miner sinking a shaft,
+or to an engineer digging a well,
+they can be safely ignored by anyone walking about aboveground.
 
-<div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w790-h529-no?authuser=0
-<span style="left:38%;top:20%">Ct</span>
-<span style="left:45%;top:31%">Yh</span>
-<span style="left:30%;top:58%">Xr</span>
-<span style="left:72%;top:58%">Xr</span>
-</div>
+Not only have we already seen that this impression is mistaken,
+but it’s going to become more mistaken as the day proceeds.
 
-Observe here how cunningly the Canyon offers evidence,
-if only the hiker in the growing heat
-would stop and look upslope.
-While the rocks near at hand beside the trail
-are reassuring,
-the basement $Xr that ought yes,
-That’s $Yh poking out.
-Odd that this exception to the rule
-should have followed the hiker across the river
-and be troubling the slopes above them.
-Isn’t it odd that the $Ct wouldn’t be immediately underlain
-unconformity with the basement rocks?
+## Into the Great Wide Open
 
-Also the $Ct, while familiar,
-ought really to give the hiker pause,
-by its position.
-But it’s difficult to judge distances at a steep angle overhead and,
-anyway, it’s beginning to get rather hot
-even though the Sun is not yet fully illuminating the Box.
+After passing Phantom Ranch,
+the NKT leads the hikers into “The Box” —
+the deep and narrow chasm
+that BA Creek has carved for itself through the basement rock.
+The sky is narrower here.
+The creek meanders so sharply over these 3½ miles
+that at a few spots the hikers are actually walking back south.
+It’s often impossible to see even a tenth of a mile ahead.
+This confined space has a reputation
+for deadly summer temperatures —
+but early on this June morning,
+the hikers are enjoying the shade from the Box’s high walls.
 
-And the Canyon here issues a third and final warning:
-Familiar unconformity.
+Then, right around Mile 4.0, the Box comes to an end.
 
-But isn’t the $Ct rather high here?
+The hikers step out into full sunshine
+and find themselves looking up a wide sundrenched valley
+that slopes up out of sight ahead of them.
+The BAH is bewildered.
+What’s a broad river valley
+doing here in the middle of the Grand Canyon?
 
-In the back of the hiker’s mind is a gauge,
-a geologic gauge that he expects
-will meter his climb back out of the Canyon.
-As the layers stately descent,
-so they will now climb.
-
-Imagine, then, the problem Mile 2.
-
-Remember the $Ct on the south side of the River?
-
-By this time thoughts are beginning to grow hazy in the growing heat,
-but the hiker remembers the Tapeats being not
-that very high above the Colorado.
-Maybe 3.5k.
-As they finish Mile 2 in the Box and start earning Mile 3,
-they expect their steady tread
-to be steadily bringing the Tapeats closer.
-
-Alas!
-
-The section shows the dismal truth:
-with each foot of elevation the hiker gains,
-the Canyon is quietly pulling the Tapeats a nearly equal distance higher.
-The hiker climbs another hundred feet uphill;
-quietly, without fanfare,
-the Tapeats nearly matches them with another 80? feet.
-
-The hiker is very nearly on a geologic treadmill:
-the
-
-Yet the hiker doesn’t yet realize their predicament.
-Their eyes stray upward only occasionally
-staying mainly level to watch the fascinating twists and turns of the Box.
-The trail crosses weighty bridges,
-mighty berms and walls reared against the cliffs
-by the Civilian Conservation Corps,
-heroes of old. [use KJV]
-
-And, after all, it’s difficult for the novice
-to judge the elevation of unconformity
-from hundreds of feet below.
-
-By Mile 3,
-the trap has nearly closed upon the hiker
-if only they knew it.
-They have now climbed more than 500 feet
-above the level of the Colorado.
-Yet the Tapeats have risen to match their progress!
-Its base now stands at more than 4000 feet elevation.
-
-The hiker has made no progress.
-
-start ~1+k below Tapeats
-
-Lesson:
-even the “horizontal” layers of the Canyon
-have a gradual slope.
-this is why N rim is deeper, because it slopes south
-
-# Into the Great Wide Open
-
-The hiker has so far not registered anything unusual.
-Not looking upslope.
-
-Canyon is very cleverly concealing its.
-While gradually lifting the $Ct ever higher,
-and slowing beginning to add extra layers
-through which the hiker will have to climb,
-it has kept the walls at either hand plainly familiar.
-The Box continues to wind back and forth
-between angled ramparts of $Xr and $Xgr
-and the hiker might well believe
-that.
-
-And then the moment comes when the Canyon springs the trap
-so elaborately laid:
-just at Mile 4,
-it sweeps aside its props,
-pulls aside the curtains of basement rock,
-and disgorges the hiker
-
-The hiker is utterly bewildered.
+The valley’s dimensions are difficult to gauge
+from where the hikers stand at its lower end,
+but the valley is more than a third of a mile wide
+and stretches uphill for a full three miles
+before starting to narrow again past Cottonwood Campground.
+BA Creek flows down its center towards them,
+nourishing a slender ribbon of green foliage.
+But the rest of the valley is a shimmering desert of shrub and stone.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
-<span style="left:3%;top:5%">↑ South Rim</span>
+<span style="left:17%;top:4.5%">South Rim</span>
 <span style="left:6%;top:23%">↓ Colorado River</span>
 <span style="left:20%;top:33%">↓ The Box</span>
 <span style="left:26%;top:39%">↓ Mile 4.0</span>
 <span style="left:62%;top:53%">↓ Ribbon Falls</span>
-<span style="left:65%;top:72.5%">↓ Cottonwood CG</span>
+<span style="left:67%;top:73%">↓ Cottonwood CG</span>
 </div>
 
-The basement rocks, atop which he imagined the Tapeats rearing,
-here disappear into the earth.
-Instead of angled ramparts,
-the opens him to the sun.
-Baked slope desert stretching up ahead.
-The walls open up,
-rearing back away from Bright Angel Creek
-in long slopes of talus and red rock.
+*The wide valley of BA Creek between Mile 4.0 and Cottonwood Campground,
+viewed looking back south from the North Rim.*
 
-But look to either side:
-the Tapeats are still nearly 800 feet above the trail!
+The Grand Canyon’s usual rule
+is that once a creek has cut all the way through the Tapeats,
+it hits implacable granites and schists
+that force it to carve a sinuous narrows —
+like the Box.
+Like Pipe Creek at the bottom of the BAT.
+Like any number of other creeks along Upper Granite Gorge,
+even though the BAH hasn’t met them yet:
+Clear Creek, Grapevine, Hance.
+
+But here,
+BA Creek has plainly breached the Tapeats —
+they’re in plain view as a row of high cliffs
+high atop each side of the valley —
+yet it hasn’t had to carve a narrows.
+Instead,
+the creek has been able to furnish itself with a wide spacious valley
+and with a streambed
+that runs nearly straight along its eponymous fault.
+
+Why is the Canyon’s substructure so weak here?
+How has the creek been able to hold its course?
 
 triptych2.png
 
@@ -400,19 +510,49 @@ legend-Xgr.png
 
 legend-Xr.png
 
-mile 4
-things open up
-those layers you saw? now they take over: so, *nothing* familiar!
+B’s cross section reveals the answer:
+the bottom of this valley isn’t basement rock at all!
+It’s the same series of Supergroup strata
+that could be glimpsed above the Colorado River,
+from the $Yb
+through the $Yh
+to the $Ys.
+Down by the river,
+they stood only as faulted blocks or isolated outcrops.
+But here they’ve returned as a deep stack of long continuous strata.
 
-<!--
-Next two photos, timeline (EST):
-14:48 Still above Ribbon Falls.
-15:34 (46m) First photo, looking at orange rock between talus slopes.
-15:48 (14m) Second photo, looking at angled layers beneath Tapeats.
-15:57 (9m) Where basement rock emerges from ground.
--->
+Reading the cross section from left to right,
+we see that even as the hikers
+were at Mile 3.0 winding north
+through the Box’s $Xgr,
+the Supergroup started to reappear in the cliffs above them.
+For more than a mile
+its strata have been slowly descending toward the trail.
+And here, just past Mile 4.0,
+the $Yb has finally reached the valley floor.
 
-Beneath feet of Clement Powell Butte:
+On the diagram,
+it’s easy enough to see
+where the trail’s rugged diagonal line
+leaves the $Xgr basement rock that the diagram has colored orange
+and enters the $Yb that’s colored lime green.
+On the real trail,
+the contact between the two layers is hidden
+somewhere beneath the trail’s cobbles.
+But when the hikers reach that invisible boundary,
+they step off of the Canyon’s basement rock
+and up into the Bass Formation that founds the Supergroup.
+
+The BAH guesses none of this
+as he follows the nephews north
+into the broad valley’s shimmering midday heat.
+He only knows that the cliffs
+rearing above the valley’s talus slopes
+look strange and unfamiliar.
+Just before Mile 5.0,
+for example,
+he sees what he hopes is the Tapeats —
+but it stands atop an unexplained purple stone:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEmJbZgG08mgaN8E4Y5gEIhQWO_QcD7ZMYkcJ_YADESMd88Lm-feFOpPJoGzpa3MRUKw8FnrdPDPgX3b6w7MgwbA7bhjF7JobkZabGmtStRITHwWofSh=w1188-h794-no?authuser=0
@@ -421,30 +561,15 @@ https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEm
 <span style="left:67%;top:56%">Yi</span>
 </div>
 
-He stares above.
-Are those the Tapeats?
-Or a layer unfamiliar?
+*The $Ct standing atop $Yh and $Yi
+above the NKT at Clement Powell Butte.*
 
-See?
-Angle makes you feel like you are making extra progress.
-Like walking up an escalator?
+The BAH has never seen these layers before,
+and is beginning to feel geologically adrift.
 
-Deck of a pitching sea:
-Tapeats angling up, Supergroup angling down, nothing level to fix the eye.
-
-mile 5
-3475 ft
-disorientation!
-by elevation, should now be 25 feet below the Tapeats
-by distance, 2.6 × 2 = 5.2 should also be nearly there
-  is 2.6 really the right number? no. we need from S end of bridge,
-  up to Tapeats, not Tipoff.
-climbed (- 3475 2475) 1000  WOW exactly 1,000 feet from river
-if on BA, would have reached GU at 3450?, PP 3470 and IG 3800
-by this point should be ON TOP of Tapeats
-when are they as far from N top as river is from S top?
-  (- 8241 (- 7260 2480)) 3461 is when they have made up difference
-  at Mile 5!
+The hikers don’t make it another half mile
+before another strange layer appears,
+where a pouroff has scoured a wide bay in the cliff to their left:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w1188-h794-no?authuser=0
@@ -453,21 +578,104 @@ https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnY
 <span style="left:68%;top:48%">Yh</span>
 </div>
 
-Lesson: the Great Unconformity may be great,
-but it’s not everywhere.
-The Tapeats does not everywhere enjoy the privilege
-of resting atop the mighty basement of granite and schist —
-and the valley of Bright Angel Creek is one of those places!
-Before you will be allowed to again meet the Tapeats
-and the Canyon’s other horizontal layers,
-the North Kaibab Trail ascends through no less than 5 layers
-of the mighty Grand Canyon Supergroup.
+*The contact between the $Yh and $Ys beneath the higher $Ct cliffs
+at the foot of Manu Temple.*
 
-# Reeling it in
+How are new layers appearing so quickly?
 
-The question of whether the Tapeats have flitted away
-and abandoned the hiker in the heat
-not entirely silly:
+With the benefit of the hindsight that B provides us,
+it’s evident from the above diagram
+that the Supergroup strata are angling rapidly into the earth
+as the valley stretches northward.
+This 10°–15° tilt makes the Supergroup a particularly poor yardstick
+for the hiker.
+Over the half mile between the two photos above,
+the trail has climbed less than 150ft —
+yet the Hakatai has managed to descend more than 350ft toward the trail!
+More than two thirds of the vertical progress
+that the hiker appears to make against this strata
+must, in fact, be discounted,
+and blamed merely on the strata’s failure to maintain elevation.
+
+The fact that these layers dip at such a steep angle
+is not merely perplexing and dismaying
+for the BAH and his Grand Canyon schematic.
+It’s a geologic affront
+that can only be described as a serious breach of contract.
+
+Whatever the finer details of the Grand Canyon’s pact with its admirers,
+the first clause surely reads:
+*will display stunningly horizontal strata.*
+Its bands of stone are famous
+for each tracing the same elegant line as the horizon above them
+where the sky begins.
+Thus has the Canyon lured and entranced
+the nineteenth century pen-and-ink illustrator,
+the 1940s large-format landscape photographer,
+and even the simple tourist purchasing a postcard.
+
+Alas!
+With respect to this central tenet of Grand Canyon architecture,
+the Supergroup can only be described as a disappointment.
+
+But none of this is quite clear to the BAH trudging north.
+He hasn’t carried any geologic diagrams on the hike.
+Without B to illuminate these details,
+he can only nurse a vague but insistent feeling
+that the world had gone somehow askew.
+
+## Staggering North
+
+It’s just past noon
+when the nephew hiking second in line
+notices the nephew in front starting to stumble.
+Is he feeling okay?
+When he turns to answer, his face is flushed.
+He is quickly diagnosed with the first symptoms of heat exhaustion.
+The team decides that it’s time for an unscheduled emergency rest stop.
+
+And so the BAH and the nephews
+learn another reason for disliking the Supergroup:
+this open valley provides no shade.
+
+The hikers are early in their career
+and haven’t even heard of a trekking umbrella,
+so they’re carrying no shade of their own.
+They’re instead going to have to search for shade on the terrain.
+They squeeze beneath the shade of a tree,
+but its leaves don’t quite manage to block the Sun’s heat.
+They set out again.
+They have only a little more luck
+with a boulder beside the trail.
+
+Eventually,
+they discover the very best shade right at the worst part of the hike.
+The NKT,
+after managing to maintain a constant grade for nearly 6 miles,
+gets bored and decides to toss in a hill as an extra challenge —
+not a slight rise,
+but a real hill that requires a switchback both to climb and descend.
+The hikers find this an unexpected and, frankly,
+an unwelcome addition to their hike.
+They’ll learn later
+that this hill is well known
+and is considered so gratuitous
+that the hiking community has christened it “Asinine Hill”.
+
+But the hill does provide a sliver of shade!
+As the trail reaches the crest,
+it passes under a tiny unexpected cliff
+that isn’t yet in full sun
+and provides exactly the deep dense shade the hikers have been longing for.
+True,
+it’s not quite as much shade as they’d like;
+with their backs against the deliciously cool rock,
+their legs protrude into the hot sun.
+But it’s shade enough
+for their core temperatures to start dropping.
+
+The pause gives the BAH several minutes
+to once again try orienting himself to the geology.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuCBXHA0eJrY54b-L2tlGpyotOvLaEWo9sRxz_5GsWCnxozH6cjX5xoMAhvEHUShkYjRChMTo3ieVDA--DT46Pmop_54kRVQ89-uUrP_pDzmDRWTvOyYCQ=w1080-h810-no?authuser=0
@@ -475,13 +683,33 @@ https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuC
 <span style="left:33%;top:49%">Ys</span>
 </div>
 
-(88/63 if I want more Ys)
+*A surviving photo from the 2014 hike itself:
+the nephews at rest in the shade of Asinine Hill.
+In the distance behind them,
+the valley of Ribbon Falls features cliffs of $Ys and $Mr.*
 
-the hiker is approaching the valley of Ribbon Falls,
-where an ancient hard hill of Shinumo Quartzite
+For a wild moment bursting with hope,
+the BAH wonders
+whether that tall cliff facing them across the valley
+might be the Redwall.
+Could they have climbed into the familiar layers unaware
+while dazed with heat?
+But, no:
+he spies the real $Mr standing at a much higher elevation.
+The nearer cliff —
+which, thanks to B, we can label $Ys —
+must be an unfamiliar stone.
+Like the valley’s other strata, he notes disapprovingly, it’s tilted north,
+like the deck of a ship that’s listing badly to starboard.
 
-stood tall enough that the sea was only able to deposit Tapeats around it
-— or allowed it to deposit but then washed it away.
+So if the lower cliff belongs to the valley,
+and the Redwall belongs to the horizontal strata,
+then where are the Tapeats?
+Shouldn’t they be somewhere in between?
+
+Our final diagram offers a surprise.
+Here at Ribbon Falls,
+the Tapeats are simply missing!
 
 triptych3.png
 
@@ -503,30 +731,38 @@ legend-Yh.png
 
 legend-Yi.png
 
-blah
+The missing $Ct above Ribbon Falls
+makes an ancient landscape suddenly vivid.
+When the sea rushed in to deposit the Tapeats
+and inundated the bare Precambrian rock —
+bare, for neither plant nor animal had yet left the ocean —
+it must have found the terrain not altogether flat.
+The adjacent $Yh and $Yd had been worn all the way down to a plain.
+But a hill of stout $Ys
+had somehow endured the long ages
+and was still standing.
+And so the Tapeats were deposited only to either side of the hill,
+leaving its crown bare to the ancient sky.
 
-blah
+The time available for contemplating rocks soon runs short,
+for it’s 1pm, the sun is arcing west,
+and the hikers’ sliver of shade is starting to disappear.
+The nephews are ready to attempt another mile.
 
-mile 6
-Ribbon Falls
-Hill!
+The heat-stricken nephew is making progress only with difficultly,
+but another mile of nearly exhausted plodding
+brings him to Cottonwood Campground
+which the three hikers welcome as a desert oasis.
+Here they can drink from an actual spigot
+and refill every water bottle they’re carrying.
 
-Either way,
-the result is an unconformity along the south valley edge of Ribbon Falls
-where the $Cba sits directly atop the Supergroup’s $Ys
-without the Tapeats as an intervening layer.
-The unconformity itself will be clearest if,
-on a later trip,
-the hiker has leisure to explore the valley of Ribbon Falls itself:
-
-But even today,
-when the hiker must avoid expense to veer neither left nor right
-while broiling uphill through the sun,
-he will sense something missing atop the walls
-that hem him in to the left —
-that a constant, a reassurance, an anchor
-has momentarily been withdrawn from him
-as the Canyon shimmers ever more emphatically in the heat.
+While the stricken nephew takes a long nap
+amongst the luxurious shade trees beside the ranger station,
+the BAH casts about
+for a familiar layer to measure their progress against.
+Happily, the Tapeats have reappeared,
+and as he looks north towards BA Point
+he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
@@ -536,113 +772,232 @@ https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzG
 <span style="left:53%;top:81%">Yd</span>
 </div>
 
-Or more colloquially,
-“You’re off the edge of the map, mate. Here there be monsters.”
+*Cliffs of $Ct, $Mr, and $Pc beneath Bright Angel Point on the North Rim.*
 
-Next one is of cliff beneath pour-off
-of little drainage between eastern feet of Manu Temple,
-between Ribbon Creek on the north
-and the bigger drainage between Powell and Manu.
+Tarnation!
+Yet again,
+they have toiled uphill for a long mile through the midday furnace
+only to find themselves
+yet again stranded below the Tapeats
+and looking helplessly up at its cliffs.
 
-mile 7
+This strikes the BAH as not just unfair but as downright implausible.
+How can they have failed to reach the Tapeats?
+The hikers at this point
+have climbed more than fifteen hundred vertical feet
+since leaving the Colorado River.
+At this same elevation on the SKT,
+they would have not only have made contact with the Tapeats
+but would have finished climbing them,
+reached their top,
+and made it to the restrooms on the desert floor above.
 
-The Canyon begins to relent.
+Referring back to our B diagrams one last time,
+we can solve the hiker’s puzzle.
+As you move north along the NKT,
+it’s not merely the Supergroup strata that are tilted.
+While they have been trending downwards,
+the Tapeats have been doing the very opposite.
+Ever since Phantom Creek, they’ve been gradually rising.
 
-The Tapeats return.
+The Tapeats start out low —
+on the north bank of Phantom Creek
+they stand at an elevation of less than 4000ft —
+as if luring hikers north
+with the promise of an easy thousand-foot climb to reach them.
+But the Tapeats begin their own climb skyward,
+rising a full six inches higher
+for every foot of elevation gained by the hikers.
 
-Climbing at highest rate yet? [MEASURE ft/mile each mile]
+So the BAH hasn’t been imagining it.
+The strata themselves are in motion against them,
+slowly erasing half of their progress
+as they’ve climbed the sweltering NKT to ever higher elevations.
 
-Cottonwood CG
-friend can collapse under the cottonwood trees
-beside the ranger station
-and help heat stroke through sleep
+Once the stricken nephew wakes they try again,
+and once again the trauma of an additional mile nearly overwhelms him.
+This time they’ve reached the Manzanita Rest Area which,
+like Cottonwood,
+proffers a gleaming water spigot and dappled shade.
 
-2nd third done: 7.2 from BAC, 6.8 from trailhead!
-yet, still hundreds of feet below tapeats: still, reference point receding
-ahead on left is Transept, and Bright Angel Point above it with hotel
+But they’ve reached something else here as well:
+finally, they’re at the Tapeats!
 
-mile 8
-4416 ft
-from top (- 8241 4416) 3825
-  compared to distance from top on south K: (- 7260 2480) 4780
-  distance from top on N K to river: (- 8241 2480) 5761
-from river (- 4416 2480) 1936
-now past hotel and approaching side canyon that takes you up
-NEARLY at tapeats but not yet: off right edge of section is Manzanita Rest Area
-Manzanita is 4600, so only about 100 feet by the time you’re at right edge
-There you FINALLY meet the Tapeats
-and can begin marking progress against familiar layers
-Compare thickness of layers: bot of tapeats to rim, in both directions
-  S rim to S tapeats bottom: (- 7260 3500) 3760
-  N rim to N tapeats bottom: (- 8241 4600) 3641
-  So, essentially, same thickness, if we bump up S rim Tapeats number
+The Manzanita Rest Area is tucked against
+a joyous wall of bright Tapeats sandstone.
+The BAH finally stands on familiar ground.
+Only here,
+at 4600ft elevation
+and having hiked more than 8 miles
+and having climbed two thousand vertical feet from the river,
+do the hikers finally return
+to the Grand Canyon’s postcard layers.
+They can now rest easy,
+knowing that the rest of their hike
+will take them up familiar benches and past familiar cliffs
+that will stand alongside the trail like old friends.
 
-but there’s a good part:
-the layers will now go faster
+## Lessons From The Trail
 
-What’s around corner?
-Here’s view from the P to the east, the Walhalla Plateau:
+At the Manzanita Rest Area in June,
+the Sun sets at 4:30pm.
+
+At least that’s the moment the Sun falls behind the canyon wall.
+Within a few minutes the temperature has dropped
+and the heat-stricken nephew has risen to his feet.
+He says he’s feeling better and is ready for the climb to the North Rim.
+
+As the trail has now returned the hikers to a familiar geology,
+we needn’t belabor the story of their climb to the North Rim —
+their stately ascent through the famous Redwall;
+their pace slowing suddenly
+as the other nephew starts to stagger from fatigue;
+darkness catching them at the Supai Tunnel.
+The light of each headlamp
+reveals glimpses of the secret wars
+that the ants and the beetles
+wage back and forth across the desert trail
+once night has fallen.
+
+Suffice it to say
+that they reach the North Rim Campground before midnight,
+having hiked more than 22 miles in roughly 16 hours —
+setting three personal records,
+but only because none of them have ever walked that far before.
+
+Let’s instead focus
+on how the NKT managed to surprise a hiker
+who had imagined he understood the Grand Canyon’s structure.
+
+The crux is that the BAH
+misunderstood the Kaibab Upwarp.
+
+He knew,
+like every tourist who reads the interpretive signs,
+that the Grand Canyon’s North Rim
+stands a thousand feet higher than the South Rim,
+due to the shape of the “Kaibab Upwarp”
+that long ago lifted both rims towards the sky.
+But in his mind
+he only pushed the North Rim itself up by a thousand feet,
+leaving the strata —
+like the Tapeats, for example —
+still completely level.
+So he will expect to meet each stratum on the NKT
+at exactly the elevation he left it on the SK.
+
+Alas, that’s not how an upwarp works.
+When forces deep beneath a continent
+push the overlying rock skyward,
+the entire stack moves together.
+To push the North Rim a thousand feet higher,
+you have to push every one of its strata higher too,
+Tapeats included.
+But the hiker never thought this through,
+and so his picture of the Canyon suffered from a basic contradiction.
+
+The NKT performs quite a feat.
+By combining the extra elevation necessary to reach the Tapeats
+with the particularly shallow grade of BA Canyon —
+limiting hikers to a miserly 250ft of elevation gain per mile —
+the NK manages to deliver twice as many miles as the SK
+without spending any more time in the horizontal strata
+than the trails on the South Rim.
+While the NK doesn’t quite match the SK’s
+4¾-mile sprint from the Tapeats to the Rim,
+it does accomplish the climb in same 5½ miles as the BAT.
+
+Having thus arranged
+for hikers to endure a full 8½ miles of trail
+between the Colorado River and the Tapeats,
+the NKT then decides to go for variety
+and splits the distance in two:
+the first half basement rock,
+and the second half Supergroup.
+
+Not only is the Supergroup’s 10°–15° tilt an architectural disappointment,
+but its composition breaks one final symmetry to which the BAH had clung.
+The Canyon had been so simple:
+Precambrian rocks were always made of granite and schist,
+while discrete strata always belonged to a more recent eon.
+Now this distinction lies in tatters.
+The Supergroup is built of distinct strata,
+yet is Precambrian like the granites.
+The hiker can no longer simply infer a rock’s eon from its type.
+
+In later years the hiker will learn
+to see these Supergroup exposures along the NKT
+as helpful analogies for other features in the Canyon.
+For example,
+the Hakatai slope we saw earlier — behind Panorama Point —
+prepares the hiker
+for the more aggressive Hakatai slope
+down which the Clear Creek Trail plunges towards the bottom of its canyon:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3fi48va4IPP5omtWte5t9VjSKQRoyFvHL3etVuU6V1Qz1iPnj7oWtN-qeoMLbMPJwjX-sauDmSvkcHL4aIbXvgQF6O7GoPIqZiFLdlmzoAgnMkAQRyaxQXeR2Pt9NZXFV0JG5e1MJ901Ka3nDfcblg2=w1188-h794-no?authuser=0
-<span style="left:45%;top:12%">Pc</span>
-<span style="left:30%;top:43%">Mr</span>
-<span style="left:28%;top:75%">Ct</span>
-<span style="left:12%;top:88%">Yd</span>
+https://lh3.googleusercontent.com/pw/AM-JKLX1DrTa76IDY0HYMVGzLbObKIfO6ZADFluOqj5G1caCGsNb7BXadk61BvZzQcF1Y-2Nmrghht0C6bsduzndNl2FyHS6oUw8qUt2STY5p-_VI4ERS_dxnJSUrH-9g0NrospudQxMa3o4jelL580VNmkhxw=w944-h810-no?authuser=0
+<span style="left:33%;top:49%">Ct</span>
+<span style="left:33%;top:74%">↑ Clear Creek Trail</span>
+<span style="left:63%;top:79%">Yh</span>
 </div>
 
-Previous photo was taken from the bottom of the Transept
-which exits the lower left of this photo,
-looking up at a very close exposure of the $Ct
-behind which reared the $Mr and $Pc thousands of feet above.
+*The Clear Creek Trail descends a slope of $Yh
+like the SKT at Panorama Point.*
 
-From this angle we can see what the hiker,
-still broiling in the creek valley,
-cannot:
-that the ordeal of low altitude desert is nearly over.
+And the NKT’s wide sun-baked valley
+winds up foreshadowing the vast Supergroup exposures
+of the eastern Grand Canyon,
+where low hills and shallow valleys
+so broil in the summer heat
+that the area is known as “Furnace Flats”,
+notorious to hikers and river runners alike.
 
-After the hiker with heat stroke tries another mile? + half?,
-the hikers will attempt another mile past Cottonwood Campground,
-but stop again at Manzanita Rest Area —
-just off the right edge of our geologic section,
-where the trail finally reaches the Tapeats.
+<div class="labels">
+https://lh3.googleusercontent.com/pw/AM-JKLU4TyUp7ehdOZqS8vHo-SyYhCe1Vu8w_TdouxEmbRsxZJcggdaWVajrAAtPWR434uyNy4LGgDOhyAjBLKwVL1CoCy2GJdT38qsnGqtl5rvGwz9yd9HXn1MEmoMnbA3WoEI2ebGNtRdk_xBwHo8V14ymtw=w1213-h810-no?authuser=0
+</div>
 
-There at Rest Area the other hiker rests again in the shade —
-only to suddenly come alive again
+*In Furnace Flats, the Supergroup offers the same
+shallow slopes and lack of shade as on the NKT.*
+
+Thanks to the NKT,
+the hiker won’t be entirely surprised by these landforms,
+and so will grudgingly admit that there was a certain merit
+to the NKT’s hard lesson in geology.
+
+But that’s in the future.
+During the hike itself —
+beneath a blazing sun,
+and in the shimmering heat —
+the NKT’s overly complicated geology
+left the BAH feeling nothing but lost.
+
+<center>⚒</center>
+
+<!--
+
+Ideas:
+By this time thoughts are beginning to grow hazy in the growing heat,
+The hiker is very nearly on a geologic treadmill.
+It sweeps aside its props,
+pulls aside the curtains of basement rock,
+and disgorges the hiker.
 as the westerning Sun falls behind the high cliffs
-along the west edge of the creek.
-They stand to their feet, hoist their daypack,
-and, yeah.
 
-Everything is restored:
-there are Rest Area,
-now standing at the bottom of the Tapeats,
-with same distance to go as from bottom of Tapeats on South Rim.
-The North Kaibab Trail here leaves Bright Angel Creek
-and angles up the green valley
-you can see at the center right of the photo above:
-Roaring Springs,
-cool north-facing cliff faces,
-and up all the layers to the trailhead.
+Photo boys: (88/63 if I want more Ys)
+Verify height of Redwall on BAT; other sources say 500-800 feet.
+Add B quote?
+Small caps for am and pm. DD glyph.
+“ft”.
+Mention individual miles to make more of a narrative?
+Hill in front of ribbon falls
+https://www.sarahbellmaps.com/high-alpine-serif-font/
+Can see North Rim above them as they enter wide-open.
+“First week of June” - what was date?
+Here’s my post beforehand:
+https://www.facebook.com/photo/?fbid=10152123924033365&set=a.10150299361203365
+Given that on June 1st I say “Saturday”,
+the hike must have been on: Saturday June 7 2014.
+When matching photos, don’t look at rocks, look at bushes.
+Use aerial photo in last section to show plateaus?
 
-Except in the dark because exhaustion so not at top til [LATE?].
-
-Lesson:
-n kaibab does not stretch out layers
-you are already used to
-instead it introduces new ones
-n kaibab doesn’t let you make any headway against horizontal layers
-until you are ready to leave the valley of bright angel creek.
-only as you turn aside will you start climbing red etc.
-
-So:
-yeah like being in statis or something,
-8 miles without accomplishing anything.
-(Stats from above.)
-
-Finally catch $Ct at elevation of Manzanita R A.
-
-Won’t enjoy, darkness will fall.
-
-(Conclusion?)
-
+-->
