@@ -41,5 +41,6 @@ publish: index.html
 		HighAlpine.otf \
 		Charis*.woff \
 		legend*.png \
+		map.png \
 		triptych*.png \
 		$(HOME)/tmp/

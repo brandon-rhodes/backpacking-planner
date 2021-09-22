@@ -187,15 +187,15 @@ who would dare pass beneath the Tapeats
 and descend into the twisted maelstrom
 of Precambrian rocks beneath.
 
-<p><img src="map.png"><br>
+<p><img src="map.png" width="426" height="275"><br>
 <i>Here’s the 2-page
 <a href="https://www.trans-canyonshuttle.com/uploads/images/corridor_map.pdf">trail map</a>
 (PDF) the hikers followed back in 2014.
-In the meantime the Park Service has switched to a
+The Park Service has switched to a
 <a href="https://www.nps.gov/grca/planyourvisit/upload/intro-bc-hike.pdf">longer
 brochure</a> (PDF)
-that offers more warnings about the hike
-and a more informative map.</i></p>
+with ample warnings about the hike
+and also a more informative map.</i></p>
 
 The BAH therefore envisions a rim-to-rim hike with the nephews
 in schematic terms.
