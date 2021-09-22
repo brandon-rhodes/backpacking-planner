@@ -19,7 +19,7 @@ abbrevs = {
     'PDF': 'PDF',
     'SIL': 'SIL',
     'USGS': 'USGS',
-    'CC': '<i class="nobr">C–C′</i>',
+    'CC': 'CC',
     'DD': '<i class="nobr">D–D′</i>',
     # s/(\d)[ap]m\b/\1 <span class="sc">pm</span>/
 }
@@ -76,7 +76,7 @@ def main(argv):
         abbrev = match[1]
         return abbrevs[abbrev]
 
-    text = re.sub(r'\b([A-Z][A-Z]+)(?![\w-])', expand_abbrev, text)
+    text = re.sub(r'(?<![!])\b([A-Z][A-Z]+)(?![\w-])', expand_abbrev, text)
 
     text = re.sub(r'\bB\b', 'Billingsley', text)
 
@@ -91,6 +91,11 @@ def main(argv):
     text = re.sub(r'(?<!-)\bC\b', r'<span class=Cambrian>C</span>', text)
     text = re.sub(r'(?<!-)\bCt\b', r'<span class=Cambrian>Ct</span>', text)
 
+    # This substitution goes last so that each "C" doesn't get placed
+    # inside a Cambrian <span>.
+    text = re.sub(r'\bCC\b', r'<i class="nobr">C–C′</i>', text)
+
+    print('<!DOCTYPE html>')
     print(text)
 
 def p(text):

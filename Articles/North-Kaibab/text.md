@@ -1,4 +1,6 @@
-
+<head>
+<title>The Geology of the North Kaibab Trail, by Brandon Rhodes</title>
+</head>
 <style>
 @font-face {
   font-family: High-Alpine;
@@ -775,7 +777,7 @@ leaving its crown bare to the ancient sky.
 The time available for contemplating rocks soon runs short,
 for it’s 1pm, the sun is arcing west,
 and the hikers’ sliver of shade is starting to disappear.
-The nephews are ready to attempt another mile.
+Everyone is ready to try walking again.
 
 The heat-stricken nephew is making progress only with difficultly,
 but another mile of nearly exhausted plodding
@@ -893,9 +895,9 @@ but only because none of them have ever walked that far before.
 
 hikers.jpg
 
-*The next morning,
-after a night’s sleep at the North Rim Campground.
-Photos courtesy of Jim Schoch.*
+*The next morning
+after a long night’s sleep at the North Rim Campground.
+Photos courtesy of the nephews’ father.*
 
 Let’s instead focus
 on how the NKT managed to surprise a hiker
@@ -1018,33 +1020,4 @@ who cites several other geologists on the
 Ryan Clark’s
 [digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
 of B’s map was often consulted.
-Photos are my own.
-
-<!--
-
-Ideas:
-By this time thoughts are beginning to grow hazy in the growing heat,
-The hiker is very nearly on a geologic treadmill.
-It sweeps aside its props,
-pulls aside the curtains of basement rock,
-and disgorges the hiker.
-as the westerning Sun falls behind the high cliffs
-
-Photo boys: (88/63 if I want more Ys)
-Verify height of Redwall on BAT; other sources say 500-800 feet.
-Add B quote?
-Small caps for am and pm. DD glyph.
-“ft”.
-Mention individual miles to make more of a narrative?
-Hill in front of ribbon falls
-https://www.sarahbellmaps.com/high-alpine-serif-font/
-Can see North Rim above them as they enter wide-open.
-“First week of June” - what was date?
-Here’s my post beforehand:
-https://www.facebook.com/photo/?fbid=10152123924033365&set=a.10150299361203365
-Given that on June 1st I say “Saturday”,
-the hike must have been on: Saturday June 7 2014.
-When matching photos, don’t look at rocks, look at bushes.
-Use aerial photo in last section to show plateaus?
-
--->
+Photos are my own if not otherwise attributed.
