@@ -1,4 +1,6 @@
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, user-scalable=yes">
 <title>The Geology of the North Kaibab Trail, by Brandon Rhodes</title>
 </head>
 <style>
@@ -17,10 +19,10 @@
   src: url("CharisSIL-Italic.woff");
 }
 html {
-  padding: 0 1em;
+  padding: 0px 1rem;
 }
 body {
-  max-width: 40em;
+  max-width: 40rem;
   margin: 0 auto;
   color: #333;
   font-family: body;
@@ -79,8 +81,8 @@ before my first hike up the Grand Canyon’s NKT.
 Typical descriptions of the NKT are quick to mention
 its fatal summer temperatures,
 its high altitude trailhead on the North Rim,
-and its 5,761 foot elevation gain
-that requires hikers to climb more than a vertical mile
+and its 5,761 feet of elevation gain
+that require hikers to climb more than a vertical mile
 from the Colorado River.
 
 But the trail presents yet another challenge that, alas,

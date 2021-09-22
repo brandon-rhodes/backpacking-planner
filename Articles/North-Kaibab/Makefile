@@ -50,7 +50,7 @@ GentiumPlus-Regular.woff: $D/GentiumPlus-6.001/web/GentiumPlus-Regular.woff
 $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
 
-publish: index.html
+publish: all
 	cp index.html \
 		HighAlpine.otf \
 		legend*.png \
