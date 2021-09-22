@@ -87,6 +87,8 @@ def main(argv):
         text,
     )
 
+    # text = re.sub(r'\bCt\b', r'<span class=strike>C</span>t', text)
+
     print(text)
 
 def p(text):

@@ -55,6 +55,7 @@ img {
 img.legend { max-width: 75% }
 .am-pm { padding-left: 0.2em; font-variant: small-caps; }
 .nobr { white-space: nowrap }
+.strike { text-decoration: line-through }
 </style>
 
 # The Geology of the North Kaibab Trail
@@ -185,13 +186,13 @@ of Precambrian rocks beneath.
 
 The BAH therefore envisions a rim-to-rim hike with the nephews
 in schematic terms.
-First comes a quick descent of the SKT,
+First, a quick descent of the SKT
 with all the familiar strata serving as mileposts.
 Then a plunge into the Precambrian depths
-that takes them across the Colorado River.
+that will take them across the Colorado River.
 Finally, like a diver rising back to the surface,
-the NKT will carry them safe up into the Tapeats
-and their feet will stand once again on familiar rock.
+the NKT will carry them back up into the Tapeats
+and their feet will once again stand on familiar rock.
 From there the trail will wind past
 the Redwall and then the Coconino,
 whose cliffs will stand sentinel and measure the hikers’ progress
@@ -201,7 +202,7 @@ as they climb — weary but triumphant — to the North Rim.
 
 And so the hiker and the nephews
 start down the SKT before dawn.
-It’s the year 2014 on June 7.
+It’s June 7, 2014.
 The morning is cool, the hike is downhill, and they make excellent time.
 
 To its credit,

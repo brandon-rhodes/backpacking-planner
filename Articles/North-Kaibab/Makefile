@@ -29,3 +29,11 @@ section.svg: i-2688.pdf
 
 $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
+
+publish: index.html
+	cp index.html \
+		HighAlpine.otf \
+		Charis*.woff \
+		legend*.png \
+		triptych*.png \
+		$(HOME)/tmp/
