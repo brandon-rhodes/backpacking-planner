@@ -36,22 +36,16 @@ map-0.png: corridor_map.pdf
 hikers.jpg: hikers.py
 	python hikers.py
 
-# convert -size 768x1024 xc:none \
-# 	-draw "roundrectangle 0,0,768,1024,120,120" /tmp/mask.png
-# convert $(HOME)/Downloads/hikers1.jpeg -scale x1024 -crop 768x1024 \
-# 	-matte /tmp/mask.png -compose DstIn -composite \
-# 	-background none \
-# 	/tmp/hikers1.png
-# convert $(HOME)/Downloads/hikers2.jpeg \
-# 	-background none \
-# 	-scale x1024 -crop 768x1024 \
-# 	-matte /tmp/mask.png -compose DstIn -composite \
-# 	 /tmp/hikers2.png
-# convert +append \
-# 	-background white \
-# 	/tmp/hikers1.png /tmp/hikers2.png \
-# 	-background white \
-# 	hikers.jpg
+D := $(HOME)/Downloads
+FONTS := CharisSIL-Italic.woff GentiumPlus-Regular.woff
+
+fonts: $(FONTS)
+
+CharisSIL-Italic.woff: $D/CharisSIL-6.001/web/CharisSIL-Italic.woff
+	./strip_woff.py $< $@ text.md
+
+GentiumPlus-Regular.woff: $D/GentiumPlus-6.001/web/GentiumPlus-Regular.woff
+	./strip_woff.py $< $@ text.md
 
 $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
@@ -59,8 +53,8 @@ $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 publish: index.html
 	cp index.html \
 		HighAlpine.otf \
-		Charis*.woff \
 		legend*.png \
 		map.png \
 		triptych*.png \
+		$(FONTS) \
 		$(HOME)/tmp/
