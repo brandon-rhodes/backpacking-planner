@@ -175,10 +175,10 @@ where bright heights of order and rationality
 are always underlain by dark hidden depths of primæval chaos.
 
 This emotional contrast
-is only heightened by the National Park brochures.
-They always confine day hikers to the horizontal strata.
-Only there is comfort and safety to be found.
-Heat, dehydration, exhaustion, and even death itself
+is only heightened by the National Park brochures,
+which always confine day hikers to the horizontal strata.
+Only there will they promise the hiker some hope of safety.
+But heat, dehydration, exhaustion, and even death itself
 stand ready to stalk the day hiker
 who would dare pass beneath the Tapeats
 and descend into the twisted maelstrom
@@ -541,7 +541,7 @@ On the real trail,
 the contact between the two layers is hidden
 somewhere beneath the trail’s cobbles.
 But when the hikers reach that invisible boundary,
-they step off of the Canyon’s basement rock
+they step off the Canyon’s basement rock
 and up into the Bass Formation that founds the Supergroup.
 
 The BAH guesses none of this
