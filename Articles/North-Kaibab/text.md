@@ -48,11 +48,13 @@ div.labels span {
   color: white;
   font-size: 16px;
 }
-img {
+body > img {
   display: block; margin: 0px auto; width: 100%; height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
 img.legend { max-width: 75% }
+.Cambrian { position: relative }
+.Cambrian::after { content: "-"; position: absolute; left: 0 }
 .am-pm { padding-left: 0.2em; font-variant: small-caps; }
 .nobr { white-space: nowrap }
 .strike { text-decoration: line-through }
@@ -118,7 +120,7 @@ of the South Rim’s towering ramparts:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w790-h529-no?authuser=0
-<span style="left:60%;top:28%">Pc</span>
+<span style="left:59%;top:27%">Pc</span>
 <span style="left:67%;top:34%">Mr</span>
 <span style="left:46%;top:84%">Ct</span>
 </div>
@@ -178,11 +180,22 @@ This emotional contrast
 is only heightened by the National Park brochures,
 which always confine day hikers to the horizontal strata.
 Only there will they promise the hiker some hope of safety.
-But heat, dehydration, exhaustion, and even death itself
+But they make clear
+that heat, dehydration, exhaustion, and even death itself
 stand ready to stalk the day hiker
 who would dare pass beneath the Tapeats
 and descend into the twisted maelstrom
 of Precambrian rocks beneath.
+
+<p><img src="map.png"><br>
+<i>Here’s the 2-page
+<a href="https://www.trans-canyonshuttle.com/uploads/images/corridor_map.pdf">trail map</a>
+(PDF) the hikers followed back in 2014.
+In the meantime the Park Service has switched to a
+<a href="https://www.nps.gov/grca/planyourvisit/upload/intro-bc-hike.pdf">longer
+brochure</a> (PDF)
+that offers more warnings about the hike
+and a more informative map.</i></p>
 
 The BAH therefore envisions a rim-to-rim hike with the nephews
 in schematic terms.
@@ -340,6 +353,15 @@ legend-Xbr.png
 
 legend-Xr.png
 
+You’ll notice that geologists prefix each strata’s abbreviation
+with a letter for the age it belongs to,
+like X for the ancient basement rocks,
+Y for more recent Precambrian rocks,
+and C with a little dash through it for the Cambrian period.
+(If you’re interested, here’s a
+[complete list](https://ngmdb.usgs.gov/fgdc_gds/geolsymstd/fgdc-geolsym-sec32.pdf)
+from the Federal Geographic Data Committee.)
+
 A few notes about the these diagrams:
 
 * B’s cross section
@@ -358,27 +380,29 @@ A few notes about the these diagrams:
   These measure **trail miles**,
   not miles as the crow flies,
   so the mileposts bunch closer together in the first diagram
-  where the trail does more winding
-  than in the later diagrams.
+  where the trail does a lot of winding.
   Note that Mile 0.0 isn’t at the Colorado River
   but at BA Campground,
   to match the National Park Service’s mileages.
 
 * B’s cross section DD doesn’t run along the NKT itself
   but **parallel to the trail a few thousand feet to the west**.
-  So, strictly speaking,
+  Strictly speaking,
   these diagrams don’t show how the strata
   are exposed on the cliffs along the trail,
   but how they’re arranged
-  inside of the hill on the (northbound) hiker’s left.
+  deep inside the hill on the (northbound) hiker’s left.
   This causes a few small differences,
   but none that will concern us here.
+  (South of the river, for example,
+  the cross section misses the exciting $Yh at Panorama Point
+  and instead intersects the normal $Xbr basement rock to its west.)
 
 So,
 now that we’ve brought B alongside as our geologist,
 what do we learn about this mysterious orange stone?
 
-First, its name: it’s the $Yh.
+First, its name: the $Yh.
 
 Second,
 the diagram reveals why we’re seeing isolated outcrops of Hakatai
@@ -621,8 +645,7 @@ the Supergroup can only be described as a disappointment.
 
 But none of this is quite clear to the BAH trudging north.
 He hasn’t carried any geologic diagrams on the hike.
-Without B to illuminate these details,
-he can only nurse a vague but insistent feeling
+Without them, he can only nurse a vague but insistent feeling
 that the world had gone somehow askew.
 
 ## Staggering North
@@ -788,17 +811,16 @@ The hikers at this point
 have climbed more than fifteen hundred vertical feet
 since leaving the Colorado River.
 At this same elevation on the SKT,
-they would have not only have made contact with the Tapeats
-but would have finished climbing them,
-reached their top,
-and made it to the restrooms on the desert floor above.
+they wouldn’t merely have reached the Tapeats —
+they would have finished climbing them,
+and would already be past the restrooms up on the desert above.
 
 Referring back to our B diagrams one last time,
 we can solve the hiker’s puzzle.
 As you move north along the NKT,
 it’s not merely the Supergroup strata that are tilted.
 While they have been trending downwards,
-the Tapeats have been doing the very opposite.
+the Tapeats have been doing the opposite.
 Ever since Phantom Creek, they’ve been gradually rising.
 
 The Tapeats start out low —
@@ -827,9 +849,8 @@ finally, they’re at the Tapeats!
 The Manzanita Rest Area is tucked against
 a joyous wall of bright Tapeats sandstone.
 The BAH finally stands on familiar ground.
-Only here,
-at 4600ft elevation
-and having hiked more than 8 miles
+Only here at 4600ft of elevation,
+having hiked more than 8 miles
 and having climbed two thousand vertical feet from the river,
 do the hikers finally return
 to the Grand Canyon’s postcard layers.
@@ -845,13 +866,13 @@ the Sun sets at 4:30pm.
 
 At least that’s the moment the Sun falls behind the canyon wall.
 Within a few minutes the temperature has dropped
-and the heat-stricken nephew has risen to his feet.
+and the heat-stricken nephew suddenly rises to his feet.
 He says he’s feeling better and is ready for the climb to the North Rim.
 
 As the trail has now returned the hikers to a familiar geology,
 we needn’t belabor the story of their climb to the North Rim —
 their stately ascent through the famous Redwall;
-their pace slowing suddenly
+their pace slowing severely
 as the other nephew starts to stagger from fatigue;
 darkness catching them at the Supai Tunnel.
 The light of each headlamp

@@ -14,11 +14,7 @@ abbrevs = {
     'SKT': 'South Kaibab Trail',
     'SK': 'South Kaibab',
     'PP': 'Plateau Point',
-    'A': 'A',
-    'B': 'Billingsley',
     'CG': 'CG',
-    'H': 'H',
-    'I': 'I',
     'IMG': 'IMG',
     'PDF': 'PDF',
     'USGS': 'USGS',
@@ -77,7 +73,9 @@ def main(argv):
         abbrev = match[1]
         return abbrevs[abbrev]
 
-    text = re.sub(r'\b([A-Z]+)(?![\w-])', expand_abbrev, text)
+    text = re.sub(r'\b([A-Z][A-Z]+)(?![\w-])', expand_abbrev, text)
+
+    text = re.sub(r'\bB\b', 'Billingsley', text)
 
     text = re.sub(r'(\d+)ft', r'\1 feet', text)
 
@@ -87,7 +85,8 @@ def main(argv):
         text,
     )
 
-    # text = re.sub(r'\bCt\b', r'<span class=strike>C</span>t', text)
+    text = re.sub(r'(?<!-)\bC\b', r'<span class=Cambrian>C</span>', text)
+    text = re.sub(r'(?<!-)\bCt\b', r'<span class=Cambrian>Ct</span>', text)
 
     print(text)
 
