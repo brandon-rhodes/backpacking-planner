@@ -17,6 +17,7 @@ abbrevs = {
     'CG': 'CG',
     'IMG': 'IMG',
     'PDF': 'PDF',
+    'SIL': 'SIL',
     'USGS': 'USGS',
     'CC': '<i class="nobr">C–C′</i>',
     'DD': '<i class="nobr">D–D′</i>',

@@ -48,7 +48,7 @@ div.labels span {
   color: white;
   font-size: 16px;
 }
-body > img {
+body > img, div > img {
   display: block; margin: 0px auto; width: 100%; height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
@@ -994,6 +994,20 @@ the NKT’s overly complicated geology
 left the BAH feeling nothing but lost.
 
 <center>⚒</center>
+
+*Credits* —
+Inspired by the work of George H. B,
+who cites several other geologists on the
+[official USGS map](https://pubs.usgs.gov/imap/i-2688/).
+Ryan Clark’s
+[digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
+of B’s map was a convenient resource.
+Title font:
+[High Alpine](https://www.sarahbellmaps.com/high-alpine-serif-font/)
+by Sarah Bell.
+Body font:
+[Charis SIL](https://software.sil.org/charis/).
+Photos are my own.
 
 <!--
 
