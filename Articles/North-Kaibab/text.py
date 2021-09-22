@@ -55,7 +55,9 @@ def main(argv):
         im = Image.open(url)
         w, h = im.size
         return f'<img src="{url}" height={h} width={w}>'
+
     text = re.sub(r'<p>(triptych[^<]*\.png)</p>', f, text)
+    text = re.sub(r'<p>(hikers.jpg)</p>', f, text)
 
     def f(match):
         url = match.group(1)

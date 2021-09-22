@@ -33,6 +33,26 @@ map.png: map-0.png
 map-0.png: corridor_map.pdf
 	convert -density 25 $< map.png
 
+hikers.jpg: hikers.py
+	python hikers.py
+
+# convert -size 768x1024 xc:none \
+# 	-draw "roundrectangle 0,0,768,1024,120,120" /tmp/mask.png
+# convert $(HOME)/Downloads/hikers1.jpeg -scale x1024 -crop 768x1024 \
+# 	-matte /tmp/mask.png -compose DstIn -composite \
+# 	-background none \
+# 	/tmp/hikers1.png
+# convert $(HOME)/Downloads/hikers2.jpeg \
+# 	-background none \
+# 	-scale x1024 -crop 768x1024 \
+# 	-matte /tmp/mask.png -compose DstIn -composite \
+# 	 /tmp/hikers2.png
+# convert +append \
+# 	-background white \
+# 	/tmp/hikers1.png /tmp/hikers2.png \
+# 	-background white \
+# 	hikers.jpg
+
 $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
 

@@ -52,12 +52,16 @@ body > img, div > img {
   display: block; margin: 0px auto; width: 100%; height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
-img.legend { max-width: 75% }
-.Cambrian { position: relative }
-.Cambrian::after { content: "-"; position: absolute; left: 0 }
-.am-pm { padding-left: 0.2em; font-variant: small-caps; }
-.nobr { white-space: nowrap }
-.strike { text-decoration: line-through }
+img.legend {max-width: 75%}
+.Cambrian {position: relative}
+.Cambrian::after {content: "-"; position: absolute; left: 0}
+.am-pm {padding-left: 0.2em; font-variant: small-caps;}
+.nobr {white-space: nowrap}
+.strike {text-decoration: line-through}
+h3, h3 + p {text-align: center; font-weight: normal; font-size: smaller}
+h3 {font-style: italic}
+h3 + p {max-width: 80%; margin: 1em auto}
+
 </style>
 
 # The Geology of the North Kaibab Trail
@@ -887,6 +891,12 @@ having hiked more than 22 miles in roughly 16 hours —
 setting three personal records,
 but only because none of them have ever walked that far before.
 
+hikers.jpg
+
+*The next morning,
+after a night’s sleep at the North Rim Campground.
+Photos courtesy of Jim Schoch.*
+
 Let’s instead focus
 on how the NKT managed to surprise a hiker
 who had imagined he understood the Grand Canyon’s structure.
@@ -995,18 +1005,19 @@ left the BAH feeling nothing but lost.
 
 <center>⚒</center>
 
-*Credits* —
-Inspired by the work of George H. B,
-who cites several other geologists on the
-[official USGS map](https://pubs.usgs.gov/imap/i-2688/).
-Ryan Clark’s
-[digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
-of B’s map was a convenient resource.
+### Credits
+
 Title font:
 [High Alpine](https://www.sarahbellmaps.com/high-alpine-serif-font/)
 by Sarah Bell.
 Body font:
 [Charis SIL](https://software.sil.org/charis/).
+Inspired by the work of George H. B,
+who cites several other geologists on the
+[official USGS map](https://pubs.usgs.gov/imap/i-2688/).
+Ryan Clark’s
+[digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
+of B’s map was often consulted.
 Photos are my own.
 
 <!--
