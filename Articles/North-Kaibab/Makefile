@@ -11,9 +11,6 @@ index.html: text.md text.py
 	pandoc -f markdown_strict $< | python text.py > /tmp/out
 	mv /tmp/out $@
 
-text.md: $(HOME)/Plain/Drafts/north-kaibab-geology
-	cp $< $@
-
 triptych1.png triptych2.png triptych3.png: section3.png crop_triptych.py
 	python crop_triptych.py
 
@@ -62,4 +59,4 @@ DEST := $(HOME)/rhodesmill.org/brandon/north-kaibab-trail
 
 publish: all $(FONTS)
 	mkdir -p $(DEST)
-	cp $(ALL) $(FONTS) legend-*.png $(DEST)
+	cp $(ALL) $(FONTS) banner.png legend-*.png $(DEST)

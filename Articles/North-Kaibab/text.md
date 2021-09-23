@@ -17,7 +17,7 @@
   src: url("CharisSIL-Italic.woff");
 }
 html {
-  padding: 0px 1rem;
+  padding: 1rem;
 }
 body {
   max-width: 40rem;
@@ -36,7 +36,7 @@ h1, h2 {
   font-weight: normal;
   line-height: 1;
 }
-h1 {font-size: 72pt}
+h1 {font-size: 72pt; text-align: center}
 h2 {font-size: 56pt}
 h3, h3 + p {text-align: center; font-weight: normal; font-size: smaller}
 h3 {font-style: italic}
@@ -52,7 +52,7 @@ div.labels span {
   color: white;
   font-size: 16px;
 }
-body > img, div > img {
+body > img, div > img, figure > img {
   display: block;
   margin: 0px auto;
   width: 100%;
@@ -63,13 +63,17 @@ img.legend {max-width: 75%}
 .Cambrian {position: relative}
 .Cambrian::after {content: "-"; position: absolute; left: 0}
 .am-pm {padding-left: 0.2em; font-variant: small-caps}
+.center {text-align: center}
 .nobr {white-space: nowrap}
 </style>
 </head><body>
 
+<div><img src="banner.png"></div>
+
 # The Geology of the North Kaibab Trail
 
-by [Brandon Rhodes](https://rhodesmill.org/brandon/)
+<p class=center>by
+<a href="https://rhodesmill.org/brandon/">Brandon Rhodes</a></p>
 
 <center>⚒</center>
 
