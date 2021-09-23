@@ -730,7 +730,7 @@ he spies the real $Mr standing at a much higher elevation.
 The nearer cliff —
 which, thanks to B, we can label $Ys —
 must be an unfamiliar stone.
-Like the valley’s other strata, he notes disapprovingly, it’s tilted north,
+Like the valley’s other strata, he notices, it’s tilted north,
 like the deck of a ship that’s listing badly to starboard.
 
 So if the lower cliff belongs to the valley,
@@ -1026,4 +1026,5 @@ Ryan Clark’s
 of B’s map was also consulted.
 Diagrams processed by a custom
 [Python script](https://github.com/brandon-rhodes/backpacking-planner/blob/master/Articles/North-Kaibab/transform.py).
-Photographs are my own if not otherwise attributed.
+Photographs are my own if not otherwise attributed.<br>
+© 2021

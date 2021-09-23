@@ -41,9 +41,12 @@ hikers.jpg: hikers.py
 	python hikers.py
 
 D := $(HOME)/Downloads
-FONTS := CharisSIL-Italic.woff GentiumPlus-Regular.woff
+FONTS := CharisSIL-Italic.woff GentiumPlus-Regular.woff HighAlpine.otf
 
 fonts: $(FONTS)
+
+HighAlpine.otf: $D/HighAlpine.otf
+	cp $< $@
 
 CharisSIL-Italic.woff: $D/CharisSIL-6.001/web/CharisSIL-Italic.woff
 	./strip_woff.py $< $@ text.md
@@ -54,5 +57,9 @@ GentiumPlus-Regular.woff: $D/GentiumPlus-6.001/web/GentiumPlus-Regular.woff
 $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
 
-publish: all
-	cp $(ALL) $(HOME)/tmp/
+DEST := $(HOME)/tmp
+DEST := $(HOME)/rhodesmill.org/brandon/north-kaibab-trail
+
+publish: all $(FONTS)
+	mkdir -p $(DEST)
+	cp $(ALL) $(FONTS) legend-*.png $(DEST)
