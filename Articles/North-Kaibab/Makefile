@@ -1,7 +1,11 @@
 
 LEGENDS := legend-Mr.png
 
-all: index.html triptych1.png triptych2.png triptych3.png map.png $(LEGENDS)
+ALL := index.html hikers.jpg map.png \
+	triptych1.png triptych2.png triptych3.png \
+	$(LEGENDS)
+
+all: $(ALL)
 
 index.html: text.md text.py
 	pandoc -f markdown_strict $< | python text.py > /tmp/out
@@ -51,10 +55,4 @@ $(LEGENDS): crop_legends.py layers-screenshot-1.png layers-screenshot-2.png
 	python crop_legends.py
 
 publish: all
-	cp index.html \
-		HighAlpine.otf \
-		legend*.png \
-		map.png \
-		triptych*.png \
-		$(FONTS) \
-		$(HOME)/tmp/
+	cp $(ALL) $(HOME)/tmp/

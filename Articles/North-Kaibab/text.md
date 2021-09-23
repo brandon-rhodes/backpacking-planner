@@ -1,12 +1,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=yes">
-<title>The Geology of the North Kaibab Trail, by Brandon Rhodes</title>
-</head>
+<title>The Geology of the North Kaibab Trail - by Brandon Rhodes</title>
 <style>
 @font-face {
   font-family: High-Alpine;
-  font-weight: normal;
   src: url("HighAlpine.otf") format("opentype");
 }
 @font-face {
@@ -26,47 +24,47 @@ body {
   margin: 0 auto;
   color: #333;
   font-family: body;
-  font-weight: normal;
   font-size: 18px;
+  font-weight: normal;
   line-height: 1.5;
 }
 h1, h2 {
-  margin-top: 30pt;
+  margin-top: 40px;
   margin-bottom: 0px;
   color: black;
   font-family: High-Alpine;
   font-weight: normal;
   line-height: 1;
 }
-h1 {
-  font-size: 72pt;
-}
-h2 {
-  font-size: 56pt;
-}
+h1 {font-size: 72pt}
+h2 {font-size: 56pt}
+h3, h3 + p {text-align: center; font-weight: normal; font-size: smaller}
+h3 {font-style: italic}
+h3 + p {max-width: 80%; margin: 1em auto}
 div.labels {
   position: relative;
 }
 div.labels span {
   position: absolute;
+  margin-top: -8px;
+  line-height: 1;
   color: white;
   font-size: 16px;
 }
 body > img, div > img {
-  display: block; margin: 0px auto; width: 100%; height: auto;
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+  height: auto;
   aspect-ratio: attr(width) / attr(height);
 }
 img.legend {max-width: 75%}
 .Cambrian {position: relative}
 .Cambrian::after {content: "-"; position: absolute; left: 0}
-.am-pm {padding-left: 0.2em; font-variant: small-caps;}
+.am-pm {padding-left: 0.2em; font-variant: small-caps}
 .nobr {white-space: nowrap}
-.strike {text-decoration: line-through}
-h3, h3 + p {text-align: center; font-weight: normal; font-size: smaller}
-h3 {font-style: italic}
-h3 + p {max-width: 80%; margin: 1em auto}
-
 </style>
+</head><body>
 
 # The Geology of the North Kaibab Trail
 
@@ -116,7 +114,7 @@ the high white Coconino cliffs whose sheer and dizzy precipice
 dominates the view from so many South Rim overlooks,
 and the mighty Redwall
 whose height can be difficult to gauge from the rim
-but whose cliffs stand at least a hundred feet taller.
+but whose cliffs stand at least a hundred feet taller than the Coconino.
 
 When a hiker looks back south from Plateau Point —
 the most remote inner-canyon overlook
@@ -128,9 +126,9 @@ of the South Rim’s towering ramparts:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w790-h529-no?authuser=0
-<span style="left:59%;top:27%">Pc</span>
-<span style="left:67%;top:34%">Mr</span>
-<span style="left:46%;top:84%">Ct</span>
+<span style="left:60%;top:30%">Pc</span>
+<span style="left:67%;top:36%">Mr</span>
+<span style="left:46%;top:89%">Ct</span>
 </div>
 
 *The view back toward the South Rim from Plateau Point.*
@@ -147,11 +145,11 @@ caps the far wall of Pipe Creek canyon:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLUm5sv17J3qPxJ4AN09vjc9CIYHZDDulV0f7jAR9ykUa40oMTIhM5hl7TxLQ3aTGtUNp8GhCF0nAkUVsSt9P9-tnPOJyX_jclV7sOag36ICb7zBnZNDDERmua3yjTjEvExeniWh2lafoQj4Xy9RJi1EOQ=w1188-h794-no
-<span style="left:17%;top:50%">Pc</span>
-<span style="left:15%;top:60%">Mr</span>
-<span style="left:88%;top:53%">Mr</span>
-<span style="left:5%;top:71%">Ct</span>
-<span style="left:55%;top:72%">Ct</span>
+<span style="left:17%;top:52%">Pc</span>
+<span style="left:16%;top:63%">Mr</span>
+<span style="left:88%;top:56%">Mr</span>
+<span style="left:5%;top:76%">Ct</span>
+<span style="left:55%;top:78%">Ct</span>
 <span style="left:66%;top:90%">Xbr</span>
 </div>
 
@@ -207,16 +205,16 @@ and also a more informative map.</i></p>
 
 The BAH therefore envisions a rim-to-rim hike with the nephews
 in schematic terms.
-First, a quick descent of the SKT
+First comes a quick descent of the SKT
 with all the familiar strata serving as mileposts.
 Then a plunge into the Precambrian depths
 that will take them across the Colorado River.
 Finally, like a diver rising back to the surface,
-the NKT will carry them back up into the Tapeats
+they will follow the NKT back up into the Tapeats
 and their feet will once again stand on familiar rock.
 From there the trail will wind past
 the Redwall and then the Coconino,
-whose cliffs will stand sentinel and measure the hikers’ progress
+whose cliffs will stand sentinel to measure the hikers’ progress
 as they climb — weary but triumphant — to the North Rim.
 
 ## Loomings
@@ -239,11 +237,11 @@ just as the hikers have finished their descent through the Tapeats:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfvb7MwQ7YOUg6FE5i0E5HB9Z65J_weffvN_ers5EgnJQuip9GRqT5xoBSE7a-ISS9l843Joqg-RFo1mwW_Bd8C5ylBK4RHMOSZvg8Ewh4la8yZSh_0A9Q=w1078-h720-no?authuser=0
-<span style="left:30%;top:40%">Ct</span>
-<span style="left:60%;top:37%">Ct</span>
-<span style="left:51%;top:45%">Xbr</span>
-<span style="left:63%;top:43%">Xgr</span>
-<span style="left:55%;top:57%">Yh</span>
+<span style="left:30%;top:46%">Ct</span>
+<span style="left:60%;top:43%">Ct</span>
+<span style="left:51%;top:47%">Xbr</span>
+<span style="left:63%;top:46%">Xgr</span>
+<span style="left:55%;top:60%">Yh</span>
 </div>
 
 *The startling $Yh on the SKT at Panorama Point.*
@@ -252,7 +250,7 @@ In the distance, across the Colorado River,
 the geology is conventional and familiar:
 a picket of $Ct cliffs caps $Xbr and $Xgr basement rocks,
 just as the BAT has taught the hiker to expect.
-But what’s going on here, over on this side of the river?
+But what’s going on over on this side of the river?
 The SKT approaches Panorama Point and its lonely slab of $Ct
 across a surprising shallow slope of loose orange stone.
 
@@ -284,8 +282,8 @@ the orange stone reappears high in the cliffs on their left:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w790-h529-no?authuser=0
-<span style="left:38%;top:20%">Ct</span>
-<span style="left:45%;top:31%">Yh</span>
+<span style="left:38%;top:25%">Ct</span>
+<span style="left:45%;top:34%">Yh</span>
 <span style="left:30%;top:58%">Xr</span>
 <span style="left:72%;top:58%">Xr</span>
 </div>
@@ -485,12 +483,12 @@ But the rest of the valley is a shimmering desert of shrub and stone.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
-<span style="left:17%;top:4.5%">South Rim</span>
-<span style="left:6%;top:23%">↓ Colorado River</span>
-<span style="left:20%;top:33%">↓ The Box</span>
-<span style="left:26%;top:39%">↓ Mile 4.0</span>
-<span style="left:62%;top:53%">↓ Ribbon Falls</span>
-<span style="left:67%;top:73%">↓ Cottonwood CG</span>
+<span style="left:17%;top:7%">South Rim</span>
+<span style="left:6%;top:25%">↓ Colorado River</span>
+<span style="left:20%;top:36%">↓ The Box</span>
+<span style="left:26%;top:42%">↓ Mile 4.0</span>
+<span style="left:62%;top:55%">↓ Ribbon Falls</span>
+<span style="left:67%;top:75%">↓ Cottonwood CG</span>
 </div>
 
 *The wide valley of BA Creek between Mile 4.0 and Cottonwood Campground,
@@ -589,9 +587,9 @@ but it stands atop an unexplained purple stone:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEmJbZgG08mgaN8E4Y5gEIhQWO_QcD7ZMYkcJ_YADESMd88Lm-feFOpPJoGzpa3MRUKw8FnrdPDPgX3b6w7MgwbA7bhjF7JobkZabGmtStRITHwWofSh=w1188-h794-no?authuser=0
-<span style="left:30%;top:39%">Ct</span>
-<span style="left:65%;top:38%">Yh</span>
-<span style="left:67%;top:56%">Yi</span>
+<span style="left:30%;top:45%">Ct</span>
+<span style="left:65%;top:41%">Yh</span>
+<span style="left:67%;top:58%">Yi</span>
 </div>
 
 *The $Ct standing atop $Yh and $Yi
@@ -606,9 +604,9 @@ where a pouroff has scoured a wide bay in the cliff to their left:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w1188-h794-no?authuser=0
-<span style="left:61%;top:4%">Ct</span>
-<span style="left:37%;top:39%">Ys</span>
-<span style="left:68%;top:48%">Yh</span>
+<span style="left:60%;top:10%">Ct</span>
+<span style="left:37%;top:43%">Ys</span>
+<span style="left:68%;top:52%">Yh</span>
 </div>
 
 *The contact between the $Yh and $Ys beneath the higher $Ct cliffs
@@ -711,8 +709,8 @@ to once again try orienting himself to the geology.
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuCBXHA0eJrY54b-L2tlGpyotOvLaEWo9sRxz_5GsWCnxozH6cjX5xoMAhvEHUShkYjRChMTo3ieVDA--DT46Pmop_54kRVQ89-uUrP_pDzmDRWTvOyYCQ=w1080-h810-no?authuser=0
-<span style="left:63%;top:12%">Mr</span>
-<span style="left:33%;top:49%">Ys</span>
+<span style="left:63%;top:16%">Mr</span>
+<span style="left:33%;top:52%">Ys</span>
 </div>
 
 *A surviving photo from the 2014 hike itself:
@@ -798,10 +796,10 @@ he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
-<span style="left:43%;top:21%">Pc</span>
-<span style="left:34%;top:45%">Mr</span>
-<span style="left:50%;top:47%">Ct</span>
-<span style="left:53%;top:81%">Yd</span>
+<span style="left:43%;top:24%">Pc</span>
+<span style="left:34%;top:48%">Mr</span>
+<span style="left:50%;top:50%">Ct</span>
+<span style="left:53%;top:84%">Yd</span>
 </div>
 
 *Cliffs of $Ct, $Mr, and $Pc beneath Bright Angel Point on the North Rim.*
@@ -901,8 +899,9 @@ hikers.jpg
 after a long night’s sleep at the North Rim Campground.
 Photos courtesy of the nephews’ father.*
 
-Let’s instead focus
-on how the NKT managed to surprise a hiker
+Let’s instead
+focus on the question
+of how the NKT managed to surprise a hiker
 who had imagined he understood the Grand Canyon’s structure.
 
 The crux is that the BAH
@@ -914,7 +913,7 @@ that the Grand Canyon’s North Rim
 stands a thousand feet higher than the South Rim,
 due to the shape of the “Kaibab Upwarp”
 that long ago lifted both rims towards the sky.
-But in his mind
+But in his mind,
 he only pushed the North Rim itself up by a thousand feet,
 leaving the strata —
 like the Tapeats, for example —
@@ -927,15 +926,15 @@ When forces deep beneath a continent
 push the overlying rock skyward,
 the entire stack moves together.
 To push the North Rim a thousand feet higher,
-you have to push every one of its strata higher too,
+you have to push every one of its strata higher, too,
 Tapeats included.
 But the hiker never thought this through,
-and so his picture of the Canyon suffered from a basic contradiction.
+so his picture of the Canyon suffered from a basic contradiction.
 
 The NKT performs quite a feat.
 By combining the extra elevation necessary to reach the Tapeats
 with the particularly shallow grade of BA Canyon —
-limiting hikers to a miserly 250ft of elevation gain per mile —
+which limits hikers to a miserly 250ft of elevation gain per mile —
 the NK manages to deliver twice as many miles as the SK
 without spending any more time in the horizontal strata
 than the trails on the South Rim.
@@ -946,7 +945,7 @@ it does accomplish the climb in same 5½ miles as the BAT.
 Having thus arranged
 for hikers to endure a full 8½ miles of trail
 between the Colorado River and the Tapeats,
-the NKT then decides to go for variety
+the NKT then decides to include some variety
 and splits the distance in two:
 the first half basement rock,
 and the second half Supergroup.
@@ -955,9 +954,9 @@ Not only is the Supergroup’s 10°–15° tilt an architectural disappointment,
 but its composition breaks one final symmetry to which the BAH had clung.
 The Canyon had been so simple:
 Precambrian rocks were always made of granite and schist,
-while discrete strata always belonged to a more recent eon.
+while layered strata always belonged to a more recent eon.
 Now this distinction lies in tatters.
-The Supergroup is built of distinct strata,
+The Supergroup is built of layered strata,
 yet is Precambrian like the granites.
 The hiker can no longer simply infer a rock’s eon from its type.
 
@@ -972,9 +971,9 @@ down which the Clear Creek Trail plunges towards the bottom of its canyon:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLX1DrTa76IDY0HYMVGzLbObKIfO6ZADFluOqj5G1caCGsNb7BXadk61BvZzQcF1Y-2Nmrghht0C6bsduzndNl2FyHS6oUw8qUt2STY5p-_VI4ERS_dxnJSUrH-9g0NrospudQxMa3o4jelL580VNmkhxw=w944-h810-no?authuser=0
-<span style="left:33%;top:49%">Ct</span>
-<span style="left:33%;top:74%">↑ Clear Creek Trail</span>
-<span style="left:63%;top:79%">Yh</span>
+<span style="left:32%;top:51%">Ct</span>
+<span style="left:33%;top:77%">↑ Clear Creek Trail</span>
+<span style="left:63%;top:82%">Yh</span>
 </div>
 
 *The Clear Creek Trail descends a slope of $Yh
@@ -1015,11 +1014,13 @@ Title font:
 [High Alpine](https://www.sarahbellmaps.com/high-alpine-serif-font/)
 by Sarah Bell.
 Body font:
-[Gentium SIL](https://software.sil.org/gentium/).
-Inspired by the work of George H. B,
-who cites several other geologists as sources on the
-[official USGS map](https://pubs.usgs.gov/imap/i-2688/).
+[Gentium SIL](https://software.sil.org/gentium/).
+Caption font:
+[Charis SIL](https://software.sil.org/charis/).
+Inspired by the work of George H. B.
+He cites several other geologists on his
+[geologic map](https://pubs.usgs.gov/imap/i-2688/).
 Ryan Clark’s
 [digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
 of B’s map was often consulted.
-Photos are my own if not otherwise attributed.
+Photographs are my own if not otherwise attributed.
