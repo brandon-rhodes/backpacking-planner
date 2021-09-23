@@ -1,6 +1,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=yes">
+<meta property="og:image" content="https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w900-no?authuser=0">
 <title>The Geology of the North Kaibab Trail - by Brandon Rhodes</title>
 <style>
 @font-face {
