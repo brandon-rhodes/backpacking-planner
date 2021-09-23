@@ -509,7 +509,7 @@ But here,
 BA Creek has plainly breached the Tapeats —
 they’re in plain view as a row of high cliffs
 high atop each side of the valley —
-yet it hasn’t had to carve a narrows.
+yet it hasn’t been forced to carve a narrows.
 Instead,
 the creek has been able to furnish itself with a wide spacious valley
 and with a streambed
@@ -545,7 +545,7 @@ legend-Xr.png
 B’s cross section reveals the answer:
 the bottom of this valley isn’t basement rock at all!
 It’s the same series of Supergroup strata
-that could be glimpsed above the Colorado River,
+that could be glimpsed above Phantom Ranch,
 from the $Yb
 through the $Yh
 to the $Ys.
@@ -556,8 +556,8 @@ But here they’ve returned as a deep stack of long continuous strata.
 Reading the cross section from left to right,
 we see that even as the hikers
 were at Mile 3.0 winding north
-through the Box’s $Xgr,
-the Supergroup started to reappear in the cliffs above them.
+through the $Xgr of the Box,
+the Supergroup was starting to reappear in the cliffs above them.
 For more than a mile
 its strata have been slowly descending toward the trail.
 And here, just past Mile 4.0,
@@ -566,8 +566,8 @@ the $Yb has finally reached the valley floor.
 On the diagram,
 it’s easy enough to see
 where the trail’s rugged diagonal line
-leaves the $Xgr basement rock that the diagram has colored orange
-and enters the $Yb that’s colored lime green.
+leaves the $Xgr basement rock that the diagram color-codes orange
+and enters the $Yb that’s coded green.
 On the real trail,
 the contact between the two layers is hidden
 somewhere beneath the trail’s cobbles.
@@ -577,7 +577,7 @@ and up into the Bass Formation that founds the Supergroup.
 
 The BAH guesses none of this
 as he follows the nephews north
-into the broad valley’s shimmering midday heat.
+into the broad valley’s dazzling midday heat.
 He only knows that the cliffs
 rearing above the valley’s talus slopes
 look strange and unfamiliar.
@@ -683,7 +683,7 @@ Eventually,
 they discover the very best shade right at the worst part of the hike.
 The NKT,
 after managing to maintain a constant grade for nearly 6 miles,
-gets bored and decides to toss in a hill as an extra challenge —
+gets bored and tosses in a hill as an extra challenge —
 not a slight rise,
 but a real hill that requires a switchback both to climb and descend.
 The hikers find this an unexpected and, frankly,
@@ -723,14 +723,14 @@ For a wild moment bursting with hope,
 the BAH wonders
 whether that tall cliff facing them across the valley
 might be the Redwall.
-Could they have climbed into the familiar layers unaware
+Could they have climbed into the familiar layers unawares
 while dazed with heat?
 But, no:
 he spies the real $Mr standing at a much higher elevation.
 The nearer cliff —
 which, thanks to B, we can label $Ys —
 must be an unfamiliar stone.
-Like the valley’s other strata, he notices, it’s tilted north,
+Like this valley’s other strata, he notices, it’s tilted north,
 like the deck of a ship that’s listing badly to starboard.
 
 So if the lower cliff belongs to the valley,
@@ -791,8 +791,8 @@ While the stricken nephew takes a long nap
 amongst the luxurious shade trees beside the ranger station,
 the BAH casts about
 for a familiar layer to measure their progress against.
-Happily, the Tapeats have reappeared,
-and as he looks north towards BA Point
+Happily, the Tapeats have reappeared.
+As he looks north towards BA Point
 he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
@@ -807,9 +807,8 @@ https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzG
 
 Tarnation!
 Yet again,
-they have toiled uphill for a long mile through the midday furnace
-only to find themselves
-yet again stranded below the Tapeats
+they have toiled uphill for a long mile through the midday furnace,
+only to find themselves still stranded below the Tapeats
 and looking helplessly up at its cliffs.
 
 This strikes the BAH as not just unfair but as downright implausible.
@@ -859,7 +858,7 @@ The BAH finally stands on familiar ground.
 Only here at 4600ft of elevation,
 having hiked more than 8 miles
 and having climbed two thousand vertical feet from the river,
-do the hikers finally return
+have the hikers finally returned
 to the Grand Canyon’s postcard layers.
 They can now rest easy,
 knowing that the rest of their hike
@@ -915,7 +914,7 @@ stands a thousand feet higher than the South Rim,
 due to the shape of the “Kaibab Upwarp”
 that long ago lifted both rims towards the sky.
 But in his mind,
-he only pushed the North Rim itself up by a thousand feet,
+he had only pushed the North Rim itself up by a thousand feet,
 leaving the strata —
 like the Tapeats, for example —
 still completely level.
@@ -933,7 +932,7 @@ But the hiker never thought this through,
 so his picture of the Canyon suffered from a basic contradiction.
 
 The NKT performs quite a feat.
-By combining the extra elevation necessary to reach the Tapeats
+By combining the extra elevation that the Upwarp gives the Tapeats
 with the particularly shallow grade of BA Canyon —
 which limits hikers to a miserly 250ft of elevation gain per mile —
 the NK manages to deliver twice as many miles as the SK
@@ -946,10 +945,9 @@ it does accomplish the climb in same 5½ miles as the BAT.
 Having thus arranged
 for hikers to endure a full 8½ miles of trail
 between the Colorado River and the Tapeats,
-the NKT then decides to include some variety
-and splits the distance in two:
-the first half basement rock,
-and the second half Supergroup.
+the NKT decides it wants some variety
+and splits the extra miles
+between basement rock and the Supergroup.
 
 Not only is the Supergroup’s 10°–15° tilt an architectural disappointment,
 but its composition breaks one final symmetry to which the BAH had clung.
@@ -957,12 +955,12 @@ The Canyon had been so simple:
 Precambrian rocks were always made of granite and schist,
 while layered strata always belonged to a more recent eon.
 Now this distinction lies in tatters.
-The Supergroup is built of layered strata,
-yet is Precambrian like the granites.
+The Supergroup is built of layered strata like the rocks above it,
+yet is Precambrian like the granites below.
 The hiker can no longer simply infer a rock’s eon from its type.
 
 In later years the hiker will learn
-to see these Supergroup exposures along the NKT
+to see these Supergroup exposures along the SK and NK Trails
 as helpful analogies for other features in the Canyon.
 For example,
 the Hakatai slope we saw earlier — behind Panorama Point —
@@ -986,7 +984,7 @@ of the eastern Grand Canyon,
 where low hills and shallow valleys
 so broil in the summer heat
 that the area is known as “Furnace Flats”,
-notorious to hikers and river runners alike.
+notorious to hikers and river runners alike:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLU4TyUp7ehdOZqS8vHo-SyYhCe1Vu8w_TdouxEmbRsxZJcggdaWVajrAAtPWR434uyNy4LGgDOhyAjBLKwVL1CoCy2GJdT38qsnGqtl5rvGwz9yd9HXn1MEmoMnbA3WoEI2ebGNtRdk_xBwHo8V14ymtw=w900-h602-no?authuser=0
