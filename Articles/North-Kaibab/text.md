@@ -43,6 +43,7 @@ h3 {font-style: italic}
 h3 + p {max-width: 80%; margin: 1em auto}
 div.labels {
   position: relative;
+  font-weight: bold;
 }
 div.labels span {
   position: absolute;
@@ -796,7 +797,7 @@ he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w900-h675-no?authuser=0
-<span style="left:36%;top:27%;color:black">Pc</span>
+<span style="left:44%;top:23%">Pc</span>
 <span style="left:34%;top:48%">Mr</span>
 <span style="left:50%;top:50%">Ct</span>
 <span style="left:53%;top:84%">Yd</span>
