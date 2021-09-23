@@ -125,7 +125,7 @@ the $Pc and $Mr are the most prominent features
 of the South Rim’s towering ramparts:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w790-h529-no?authuser=0
+https://lh3.googleusercontent.com/pw/ACtC-3f5sygJsXwDl99XeiA3lj2p8cAlS0Fey6hDyZ_lChCNzR0zmJF0RnH0v8eU7EjhCm86ZwkTtXyt8m7cjkk1Nktswrtlaa28tPbXUCVGfQAUmC4paWjYF7wf9uAfyZa6etx7OaSBEk9O4UgkLPHrLmYJ=w900-h602-no?authuser=0
 <span style="left:60%;top:30%">Pc</span>
 <span style="left:67%;top:36%">Mr</span>
 <span style="left:46%;top:89%">Ct</span>
@@ -144,7 +144,7 @@ There, a fine section of Tapeats cliffs
 caps the far wall of Pipe Creek canyon:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLUm5sv17J3qPxJ4AN09vjc9CIYHZDDulV0f7jAR9ykUa40oMTIhM5hl7TxLQ3aTGtUNp8GhCF0nAkUVsSt9P9-tnPOJyX_jclV7sOag36ICb7zBnZNDDERmua3yjTjEvExeniWh2lafoQj4Xy9RJi1EOQ=w1188-h794-no
+https://lh3.googleusercontent.com/pw/AM-JKLUm5sv17J3qPxJ4AN09vjc9CIYHZDDulV0f7jAR9ykUa40oMTIhM5hl7TxLQ3aTGtUNp8GhCF0nAkUVsSt9P9-tnPOJyX_jclV7sOag36ICb7zBnZNDDERmua3yjTjEvExeniWh2lafoQj4Xy9RJi1EOQ=w900-h602-no
 <span style="left:17%;top:52%">Pc</span>
 <span style="left:16%;top:63%">Mr</span>
 <span style="left:88%;top:56%">Mr</span>
@@ -236,7 +236,7 @@ that the Canyon unveils a surprising new stratum,
 just as the hikers have finished their descent through the Tapeats:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfvb7MwQ7YOUg6FE5i0E5HB9Z65J_weffvN_ers5EgnJQuip9GRqT5xoBSE7a-ISS9l843Joqg-RFo1mwW_Bd8C5ylBK4RHMOSZvg8Ewh4la8yZSh_0A9Q=w1078-h720-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfvb7MwQ7YOUg6FE5i0E5HB9Z65J_weffvN_ers5EgnJQuip9GRqT5xoBSE7a-ISS9l843Joqg-RFo1mwW_Bd8C5ylBK4RHMOSZvg8Ewh4la8yZSh_0A9Q=w900-h602-no?authuser=0
 <span style="left:30%;top:46%">Ct</span>
 <span style="left:60%;top:43%">Ct</span>
 <span style="left:51%;top:47%">Xbr</span>
@@ -281,7 +281,7 @@ and climb into the empty valley above it,
 the orange stone reappears high in the cliffs on their left:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w790-h529-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w900-h602-no?authuser=0
 <span style="left:38%;top:25%">Ct</span>
 <span style="left:45%;top:34%">Yh</span>
 <span style="left:30%;top:58%">Xr</span>
@@ -359,11 +359,11 @@ legend-Xbr.png
 
 legend-Xr.png
 
-You’ll notice that geologists prefix each strata’s abbreviation
+You’ll notice that geologists start each strata’s abbreviation
 with a letter for the age it belongs to,
-like X for the ancient basement rocks,
+like X for the old Precambrian basement rocks,
 Y for more recent Precambrian rocks,
-and C with a little dash through it for the Cambrian period.
+and C with a little dash through it for the Cambrian period itself.
 (If you’re interested, here’s a
 [complete list](https://ngmdb.usgs.gov/fgdc_gds/geolsymstd/fgdc-geolsym-sec32.pdf)
 from the Federal Geographic Data Committee.)
@@ -482,7 +482,7 @@ nourishing a slender ribbon of green foliage.
 But the rest of the valley is a shimmering desert of shrub and stone.
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w619-h619-no
+https://lh3.googleusercontent.com/pw/AM-JKLWEZsKeJ922CNdZAbysUkDa9hpiJbBhgvbaJnAGdIzuj5h8PQD_wh4o_5G_HwY2M73f0xY4ZiUcrS60ZtOy-Hdiqpb2MFL8MBACqo_H8tKrWvLoqfVPyklOkE1peeU0exWyCKMyGvUhkhSqAN7X_Z-ppQ=w900-h900-no
 <span style="left:17%;top:7%">South Rim</span>
 <span style="left:6%;top:25%">↓ Colorado River</span>
 <span style="left:20%;top:36%">↓ The Box</span>
@@ -586,7 +586,7 @@ he sees what he hopes is the Tapeats —
 but it stands atop an unexplained purple stone:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEmJbZgG08mgaN8E4Y5gEIhQWO_QcD7ZMYkcJ_YADESMd88Lm-feFOpPJoGzpa3MRUKw8FnrdPDPgX3b6w7MgwbA7bhjF7JobkZabGmtStRITHwWofSh=w1188-h794-no?authuser=0
+https://lh3.googleusercontent.com/pw/ACtC-3dZd8K85aPXz3CDLRCFnouk9DB5VWNAr20wMEmJbZgG08mgaN8E4Y5gEIhQWO_QcD7ZMYkcJ_YADESMd88Lm-feFOpPJoGzpa3MRUKw8FnrdPDPgX3b6w7MgwbA7bhjF7JobkZabGmtStRITHwWofSh=w900-h602-no?authuser=0
 <span style="left:30%;top:45%">Ct</span>
 <span style="left:65%;top:41%">Yh</span>
 <span style="left:67%;top:58%">Yi</span>
@@ -603,7 +603,7 @@ before another strange layer appears,
 where a pouroff has scoured a wide bay in the cliff to their left:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w1188-h794-no?authuser=0
+https://lh3.googleusercontent.com/pw/ACtC-3e8w92iDW8JH-XZPkuNasp848V-uwZrwuVInnYUTwMS1zhck2aT3bqOd73g0r0287EEmynOWi9v1c7QbuISQx_VNEj-aoGU_n5qqrTGEPl20L1Ll3CJT89Y1R6rcseHp8ERkS6ILjh8dsDrnU64ugVn=w900-h602-no?authuser=0
 <span style="left:60%;top:10%">Ct</span>
 <span style="left:37%;top:43%">Ys</span>
 <span style="left:68%;top:52%">Yh</span>
@@ -708,7 +708,7 @@ The pause gives the BAH several minutes
 to once again try orienting himself to the geology.
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuCBXHA0eJrY54b-L2tlGpyotOvLaEWo9sRxz_5GsWCnxozH6cjX5xoMAhvEHUShkYjRChMTo3ieVDA--DT46Pmop_54kRVQ89-uUrP_pDzmDRWTvOyYCQ=w1080-h810-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLUZV6d-eAodlBMtTbNOATqNiGWvYcLQTHF9GuCBXHA0eJrY54b-L2tlGpyotOvLaEWo9sRxz_5GsWCnxozH6cjX5xoMAhvEHUShkYjRChMTo3ieVDA--DT46Pmop_54kRVQ89-uUrP_pDzmDRWTvOyYCQ=w900-h675-no?authuser=0
 <span style="left:63%;top:16%">Mr</span>
 <span style="left:33%;top:52%">Ys</span>
 </div>
@@ -795,7 +795,7 @@ and as he looks north towards BA Point
 he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w900-h675-no?authuser=0
 <span style="left:36%;top:27%;color:black">Pc</span>
 <span style="left:34%;top:48%">Mr</span>
 <span style="left:50%;top:50%">Ct</span>
@@ -970,7 +970,7 @@ for the more aggressive Hakatai slope
 down which the Clear Creek Trail plunges towards the bottom of its canyon:
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLX1DrTa76IDY0HYMVGzLbObKIfO6ZADFluOqj5G1caCGsNb7BXadk61BvZzQcF1Y-2Nmrghht0C6bsduzndNl2FyHS6oUw8qUt2STY5p-_VI4ERS_dxnJSUrH-9g0NrospudQxMa3o4jelL580VNmkhxw=w944-h810-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLX1DrTa76IDY0HYMVGzLbObKIfO6ZADFluOqj5G1caCGsNb7BXadk61BvZzQcF1Y-2Nmrghht0C6bsduzndNl2FyHS6oUw8qUt2STY5p-_VI4ERS_dxnJSUrH-9g0NrospudQxMa3o4jelL580VNmkhxw=w900-h773-no?authuser=0
 <span style="left:32%;top:51%">Ct</span>
 <span style="left:33%;top:77%">↑ Clear Creek Trail</span>
 <span style="left:63%;top:82%">Yh</span>
@@ -988,7 +988,7 @@ that the area is known as “Furnace Flats”,
 notorious to hikers and river runners alike.
 
 <div class="labels">
-https://lh3.googleusercontent.com/pw/AM-JKLU4TyUp7ehdOZqS8vHo-SyYhCe1Vu8w_TdouxEmbRsxZJcggdaWVajrAAtPWR434uyNy4LGgDOhyAjBLKwVL1CoCy2GJdT38qsnGqtl5rvGwz9yd9HXn1MEmoMnbA3WoEI2ebGNtRdk_xBwHo8V14ymtw=w1213-h810-no?authuser=0
+https://lh3.googleusercontent.com/pw/AM-JKLU4TyUp7ehdOZqS8vHo-SyYhCe1Vu8w_TdouxEmbRsxZJcggdaWVajrAAtPWR434uyNy4LGgDOhyAjBLKwVL1CoCy2GJdT38qsnGqtl5rvGwz9yd9HXn1MEmoMnbA3WoEI2ebGNtRdk_xBwHo8V14ymtw=w900-h602-no?authuser=0
 </div>
 
 *In Furnace Flats, the Supergroup offers the same
