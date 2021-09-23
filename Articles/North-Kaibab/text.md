@@ -796,7 +796,7 @@ he spots a prominent Tapeats cliff frowning down on the campground:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLVDciknDmme3p-HDZ4FOi9PeE_DWm2k-KjEJzGHncccyh6XS-iIJO0q2gtqJlw89RuAqPzmvr7tSryD3zpxfCsyaixA5KNCI2OTuuDm4nwzY85jVaeLH5gfTWiHVkEgrKpQU5xYHmR4bg7ifiRxi0okXQ=w1059-h794-no?authuser=0
-<span style="left:43%;top:24%">Pc</span>
+<span style="left:36%;top:27%;color:black">Pc</span>
 <span style="left:34%;top:48%">Mr</span>
 <span style="left:50%;top:50%">Ct</span>
 <span style="left:53%;top:84%">Yd</span>
@@ -1017,10 +1017,12 @@ Body font:
 [Gentium SIL](https://software.sil.org/gentium/).
 Caption font:
 [Charis SIL](https://software.sil.org/charis/).
-Inspired by the work of George H. B.
-He cites several other geologists on his
+Geology from George H. B
+and the other geologists credited on his
 [geologic map](https://pubs.usgs.gov/imap/i-2688/).
 Ryan Clark’s
 [digital version](https://rclark.github.io/grand-canyon-geology/#11/36.1495/-111.9874)
-of B’s map was often consulted.
+of B’s map was also consulted.
+Diagrams processed by a custom
+[Python script](https://github.com/brandon-rhodes/backpacking-planner/blob/master/Articles/North-Kaibab/transform.py).
 Photographs are my own if not otherwise attributed.
