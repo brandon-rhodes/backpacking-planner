@@ -2,6 +2,7 @@
 #
 # python astronomy_events.py 36.0544 -112.1401 2019-04-23 2019-04-29 US/Arizona
 # python astronomy_events.py 36.0544 -112.1401 2020-09-27 2020-10-03 US/Arizona
+# ../astronomy_events.py 36.0544 -112.1401 2021-10-10 2021-10-17 US/Pacific
 
 from __future__ import print_function
 
@@ -39,7 +40,7 @@ def events(args):
     start = ts.utc(start)
     end = ts.utc(end)
 
-    topos = api.Topos('{} N'.format(args.latitude), '{} E'.format(args.longitude))
+    topos = api.Topos(float(args.latitude), float(args.longitude))
 
     e = load('de421.bsp')
     sun = e['sun']
@@ -48,12 +49,16 @@ def events(args):
     times, events = almanac.find_discrete(
         start, end, almanac.sunrise_sunset(e, topos)
     )
-    assert events[0] == 1  # make sure sequence starts with sunrise
+
+    # Make sure sequence starts with sunrise.
+    if events[0] != 1:
+        times = times[1:]
+        events = events[1:]
 
     def f(t):
         return t.astimezone(tz).strftime('%H:%M')
 
-    width = 34
+    width = 45
     sun_ra_array = earth.at(times).observe(sun).radec()[0].hours
     planets = [
         ('s', earth.at(times).observe(e['saturn barycenter']).radec()[0].hours),
@@ -64,18 +69,18 @@ def events(args):
         ('M', earth.at(times).observe(e['moon']).radec()[0].hours),
     ]
 
-    for i in range(0, len(times), 2):
+    for i in range(0, len(times) - 1, 2):
         sunrise, sunset = times[i], times[i+1]
         hours = (sunset.tt - sunrise.tt) * 24.0
-        t = sunset
         sky = [' '] * width
         sun_ra = sun_ra_array[i+1]
         for letter, ra_array in planets:
             ra = ra_array[i+1]
             j = int(((sun_ra - ra) / 24.0) * width)
             sky[j] = letter
-        yield '{} sunrise {:.1f}h daylight {} sunset |{}|'.format(
-            f(sunrise), hours, f(sunset), ''.join(sky),
+        yield '{:2} Daylight {}-{} = {:.1f}h |{}|'.format(
+            sunrise.astimezone(tz).strftime('%d'),
+            f(sunrise), f(sunset), hours, ''.join(sky),
         )
 
 if __name__ == '__main__':
