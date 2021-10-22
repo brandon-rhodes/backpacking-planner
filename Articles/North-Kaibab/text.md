@@ -254,9 +254,9 @@ https://lh3.googleusercontent.com/pw/AM-JKLXeSgnE7MqQSDaz_cPUbhvNHmqEbvs6aSnQcfv
 
 In the distance, across the Colorado River,
 the geology is conventional and familiar:
-a picket of $Ct cliffs caps $Xbr and $Xgr basement rocks,
+a picket of $Ct cliffs stands atop $Xbr and $Xgr basement rocks,
 just as the BAT has taught the hiker to expect.
-But what’s going on over on this side of the river?
+But the rocks on this side of the river are different.
 The SKT approaches Panorama Point and its lonely slab of $Ct
 across a surprising shallow slope of loose orange stone.
 
@@ -277,14 +277,10 @@ Shouldn’t the Tapeats have been followed by basement rock instead?
 Since they missed it the first time,
 the Canyon offers a second outcrop
 of the same anomalous orange stone.
-The hikers cross the Colorado River at the bridge,
-refill with water at BA Campground,
-and start hiking up the NKT along BA Creek.
-Once they pass the cluster of
-[famous stone cabins](https://www.nps.gov/grca/learn/photosmultimedia/colter_phantom_photos.htm)
-that make up Phantom Ranch
-and climb into the empty valley above it,
-the orange stone reappears high in the cliffs on their left:
+You might have glimpsed it yourself —
+it’s peeking out behind the $Ct outcrop in the photo above,
+high on the west wall of Bright Angel Canyon.
+Here’s a closer view:
 
 <div class="labels">
 https://lh3.googleusercontent.com/pw/AM-JKLW4_YtvyEqMWcIVCbTW2TUk25Dh4JxCyFxDOqaA7Wu9SfIb6NQRfBwdo3tXOD_Elwl0SrzsYrHkLnHx8WJm-_24uiBkZF1VFojYWCxRqsV6fSP1E03GUifPamPrVbWm0ALUZzy5xK9w4qHh4jkmeTjwvg=w900-h602-no?authuser=0
@@ -299,26 +295,28 @@ where an outcrop of $Yh stands high in the cliffs.*
 
 It might take a moment
 for your eyes to calibrate the scale of this image.
-The $Ct cliffs atop the canyon wall
-stand more than a thousand feet above BA Creek at the bottom —
+The $Ct cliffs stand
+more than a thousand feet above BA Creek on the valley floor —
 you are looking at nearly a vertical quarter mile of rock.
 The creek, though it’s a full twenty feet wide,
-is barely visible as a slender brown-green ribbon
+is barely visible here as a slender brown-green ribbon
 running along the base of the cliffs.
 The NKT alongside it is invisible,
 though you might spot the Clear Creek Trail
 curving toward the photographer
 across the near side of the valley floor.
 
-It’s nearly 9am as the hiker and nephews
-reach this section of the NKT.
-With their attention on the trail in front of them
-and their eyes shaded by hat brims,
-they never even see the rusty orange outcrop high in the cliffs above.
-They see only the rock that’s level with the trail:
-rugged slopes of $Xr,
-a basement rock of exactly the sort that the BAH expects.
-At this point, his mental Grand Canyon schematic remains unchallenged.
+The hiker and nephews, alas,
+fail to notice this second exposure of orange stone,
+which is soon hidden behind other cliffs
+as they finish descending the SKT
+and cross the bridge over the Colorado River.
+It’s nearly 9am as they refill with water at BA Campground,
+start up the NKT,
+and pass Phantom Ranch.
+By the time they’re directly beneath the rusty orange outcrop,
+it’s entirely hidden by the steeper $Xr cliffs right along the trail —
+basement rocks of exactly the sort that the BAH expects.
 
 ## B’s DD
 
