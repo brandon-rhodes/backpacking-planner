@@ -1027,5 +1027,8 @@ Ryan Clark’s
 of B’s map was also consulted.
 Diagrams processed by a custom
 [Python script](https://github.com/brandon-rhodes/backpacking-planner/blob/master/Articles/North-Kaibab/transform.py).
-Photographs are my own if not otherwise attributed.<br>
-© 2021
+Photographs are my own if not otherwise attributed.
+
+### Contact
+
+© 2021 brandon@rhodesmill.org
