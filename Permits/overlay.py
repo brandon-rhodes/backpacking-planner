@@ -1,4 +1,3 @@
-import datetime as dt
 import os
 import sys
 from PySide2 import QtGui
@@ -25,12 +24,9 @@ painter = QPainter(writer)
 y = 10.05 * IN
 painter.drawText(0.7 * IN, y, number)
 painter.drawText(6.3 * IN, y, expiration)
-y = 10.4 * IN
-#painter.drawText(0.7 * IN, y, 'signature')
-painter.drawText(6.3 * IN, y, dt.date.today().strftime('%Y %b %d'))
 
 image = QtGui.QImage(os.path.expanduser('~/signature.png'))
 pixmap = QtGui.QPixmap(image)
-painter.drawPixmap(1.3 * IN, 10.15 * IN, 1.5 * IN, 0.3 * IN, pixmap)
+painter.drawPixmap(1.3 * IN, 10.2 * IN, 1.5 * IN, 0.3 * IN, pixmap)
 
 painter.end()
