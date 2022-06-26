@@ -22,5 +22,8 @@ req: $D/request-2022.pdf
 $D/request-2022.pdf: $D/grand-canyon-2022a.pdf $D/grand-canyon-2022b.pdf
 	pdftk $^ cat output $@
 
+tmp.pdf: overlay.pdf  # see overlay2.py
+	pdftk ~/Downloads/R2206575.pdf stamp overlay.pdf output tmp.pdf
+
 # permit-request.pdf:
 # 	wget https://www.nps.gov/grca/planyourvisit/upload/permit-request.pdf
