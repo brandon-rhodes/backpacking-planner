@@ -17,7 +17,9 @@ A9 Little Colorado confluence
 # 2.4 to Hance; intermediate points are estimates:
 0.4 BC9 Neville Rapids #rafters #water #?
 1.0 BC9 Papago Creek #camp #water #?
-1.0 BD9 Hance Rapids #rafters #water
+# NPS Escalante_Route.pdf:
+# “The beach above Hance Rapid is popular with river camps”
+1.0 BD9 Hance Rapids #camp #rafters #water
 
 2.6 BE9 Mineral Canyon
 3.9 BE9 Hance Creek #camp #water
@@ -27,7 +29,14 @@ A9 Little Colorado confluence
 0.2 BF5 Horseshoe Mesa campsites #toilet #camp
 1.5 BG9 Cottonwood Creek #water #camp
 5.5 BH9 Grapevine Creek #water #camp
-8.7 BJ9 Lonetree Canyon
+
+# https://www.birdandhike.com/Hike/GRCA/Tonto_E/05_Gra-Bol/05_Gra-Bol.htm
+# “Campsite for 2 tents ... 1.73 (mi)”
+# “From Grapevine Canyon, it is about 6.4 miles and 2.75 hours to Boulder
+# Canyon... There are no campsites here, and no water either.”
+1.7 BH9 Grapevine west campsite #camp
+4.7 BH9 Boulder Wash
+2.3 BJ9 Lonetree Canyon
 3.5 BJ9 Cremation Creek
 2.1 Tip Off
 2.7 CIG Indian Garden #water #toilet #camp
