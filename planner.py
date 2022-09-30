@@ -161,10 +161,12 @@ def main(argv):
     for waypoint in waypoints[1:]:
         #print('*', waypoint)
         if waypoint == 'camp':
-            if '#camp' not in attributes[last_waypoint]:
-                print('WARNING: no campground')
+            if '#camp' in attributes[last_waypoint]:
+                suffix = ''
+            else:
+                suffix = ' (warning: no #camp)'
             day = day + 1
-            print('{:31}--- DAY {} ---'.format('', day))
+            print('{:31}--- DAY {} ---{}'.format('', day, suffix))
             miles_today = 0.0
             continue
         new_miles = mileages[last_waypoint][waypoint]
