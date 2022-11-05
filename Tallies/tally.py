@@ -5,10 +5,13 @@ import fileinput
 import sys
 
 def main(argv):
+    factor = 1.0
     for line in fileinput.input():
         line = line.strip()
         if not line:
             continue
+        if line == 'km':
+            factor = 0.62137119
         if not line[0].isdigit():
             print(line)
             continue
@@ -22,7 +25,7 @@ def main(argv):
                 description.append(field)
                 continue
             if '.' in field:
-                miles += float(field)
+                miles += float(field) * factor
             else:
                 hour = int(field[:2])
                 minute = int(field[2:])
