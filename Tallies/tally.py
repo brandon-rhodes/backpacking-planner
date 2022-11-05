@@ -12,6 +12,7 @@ def main(argv):
             continue
         if line == 'km':
             factor = 0.62137119
+            continue
         if not line[0].isdigit():
             print(line)
             continue
