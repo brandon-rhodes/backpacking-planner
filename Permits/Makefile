@@ -7,6 +7,9 @@ PDFS=$(patsubst $F/%.fdf, $D/%.pdf, $(FDFS))
 
 all: $(PDFS)
 
+# The "grep" in the rule below distinguishes the original permit request
+# form PDF from the new one, which in this directory we name with ".1".
+
 $(PDFS): $D/%.pdf: $F/%.fdf \
 		permit-request.pdf permit-request.pdf.1 \
 		overlay.pdf
