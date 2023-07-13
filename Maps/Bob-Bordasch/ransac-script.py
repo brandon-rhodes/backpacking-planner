@@ -1,7 +1,7 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from skimage import data
+from skimage import data, io
 from skimage.util import img_as_float
 from skimage.feature import (corner_harris, corner_subpix, corner_peaks,
                              plot_matches)
@@ -10,22 +10,28 @@ from skimage.exposure import rescale_intensity
 from skimage.color import rgb2gray
 from skimage.measure import ransac
 
+a = 'www.bobbordasch.com/trips/GC-Oct13-Flip/Map-Day1.jpg'
+b = 'www.bobbordasch.com/trips/GC-Oct13-Flip/Map-Day2.jpg'
 
 # generate synthetic checkerboard image and add gradient for the later matching
-checkerboard = img_as_float(data.checkerboard())
-img_orig = np.zeros(list(checkerboard.shape) + [3])
-img_orig[..., 0] = checkerboard
-gradient_r, gradient_c = (np.mgrid[0:img_orig.shape[0],
-                                   0:img_orig.shape[1]]
-                          / float(img_orig.shape[0]))
-img_orig[..., 1] = gradient_r
-img_orig[..., 2] = gradient_c
-img_orig = rescale_intensity(img_orig)
+#checkerboard = img_as_float(data.checkerboard())
+# img_orig = np.zeros(list(checkerboard.shape) + [3])
+# img_orig[..., 0] = checkerboard
+# gradient_r, gradient_c = (np.mgrid[0:img_orig.shape[0],
+#                                    0:img_orig.shape[1]]
+#                           / float(img_orig.shape[0]))
+# img_orig[..., 1] = gradient_r
+# img_orig[..., 2] = gradient_c
+# img_orig = rescale_intensity(img_orig)
+
+img_orig = io.imread(a)
+img_warped = io.imread(b)
+
 img_orig_gray = rgb2gray(img_orig)
 
 # warp synthetic image
-tform = AffineTransform(scale=(0.9, 0.9), rotation=0.2, translation=(20, -10))
-img_warped = warp(img_orig, tform.inverse, output_shape=(200, 200))
+# tform = AffineTransform(scale=(0.9, 0.9), rotation=0.2, translation=(20, -10))
+# img_warped = warp(img_orig, tform.inverse, output_shape=(200, 200))
 img_warped_gray = rgb2gray(img_warped)
 
 # extract corners using Harris' corner measure
