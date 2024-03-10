@@ -1,0 +1,75 @@
+
+BACKPACK
+ │
+ ├─MAIN POCKET
+ │
+ │ Quilt
+ │ Tent
+ │ Water filter system
+ │ Water storage system
+ │ Brimmed hat
+ │ Raincoat
+ │ Puffy
+ │
+ ├─CHEST PACK
+ │
+ │ Compass
+ │ Binoculars
+ │ Soap
+ │
+ ├─CLOTHES SACK
+ │
+ │ Balaclava
+ │ Long sleeve top
+ │ Socks (2 pair)
+ │ Underwear (2)
+ │ Warm hat
+ │
+ ├─MISC STUFF SACK
+ │
+ │ Blister pads
+ │ Camera battery
+ │ Headlamps (2)
+ │ Insect mesh
+ │ Lighter
+ │ Line
+ │ Repair tape
+ │
+ ├─STOVE SACK
+ │
+ │ Cup and lid
+ │ Pot and lid
+ │ Stove
+ │ Tripod
+ │
+ └─OUTSIDE POCKETS
+
+   Ground cloth
+   Ratsack
+   Notebook, pen, pencil
+
+CARRY-ON
+
+   Camera
+   GPS watch and cord
+   Maps
+   Permits
+   Shoes
+   Starting outfit
+
+CHECKED BAG
+ │
+ │ Belt
+ │ Bottles (2)
+ │ Sleeping pad
+ │ Tent poles
+ │ Tent stakes
+ │ Trowel
+ │
+ └─MESH SACK
+
+   Knife
+   Leatherman micra
+   Matches
+   Spork
+   Ziploc bags
