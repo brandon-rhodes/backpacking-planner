@@ -1,33 +1,40 @@
 
-BACKPACK
+BACKPACK                        CARRY-ON
  │
- ├─MAIN POCKET
- │
- │ Quilt
- │ Tent
- │ Water filter system
- │ Water storage system
+ ├─MAIN POCKET                     Camera, charging cable
+ │                                 GPS watch, charging cable
+ │ Quilt                           Maps
+ │ Tent                            Permits
+ │ Water filter system             Shoes
+ │ Water storage system            Starting outfit
  │ Brimmed hat
- │ Raincoat
- │ Puffy
- │
- ├─CHEST PACK
- │
+ │ Raincoat                     CHECKED BAG
+ │ Puffy                         │
+ │                               │ Belt
+ ├─MESH SLEEVE POCKET            │ Bottles (2)
+ │                               │ Sleeping pad
+ │ First aid kit                 │ Tent poles
+ │ Moleskin                      │ Tent stakes
+ │ Toothbrush toothpaste         │ Trekking poles
+ │ Ziploc bags                   │ Trekking umbrella
+ │                               │ Trowel
+ ├─CHEST PACK                    │
+ │                               └─MESH SACK
  │ Compass
- │ Binoculars
- │ Soap
- │
- ├─CLOTHES SACK
- │
- │ Balaclava
- │ Long sleeve top
- │ Socks (2 pair)
+ │ Binoculars                      Knife
+ │ Soap                            Leatherman micra
+ │                                 Matches
+ ├─CLOTHES SACK                    Spork
+ │                                 Wipes
+ │ Balaclava                       Extra lighter
+ │ Long sleeve top                 Extra Ziploc bags
+ │ Long underwear
+ │ Socks (2 pair)               BUY AT DESTINATION
  │ Underwear (2)
- │ Warm hat
- │
+ │ Warm hat                        Food
+ │                                 Stove fuel
  ├─MISC STUFF SACK
  │
- │ Blister pads
  │ Camera battery
  │ Headlamps (2)
  │ Insect mesh
@@ -47,29 +54,3 @@ BACKPACK
    Ground cloth
    Ratsack
    Notebook, pen, pencil
-
-CARRY-ON
-
-   Camera
-   GPS watch and cord
-   Maps
-   Permits
-   Shoes
-   Starting outfit
-
-CHECKED BAG
- │
- │ Belt
- │ Bottles (2)
- │ Sleeping pad
- │ Tent poles
- │ Tent stakes
- │ Trowel
- │
- └─MESH SACK
-
-   Knife
-   Leatherman micra
-   Matches
-   Spork
-   Ziploc bags
