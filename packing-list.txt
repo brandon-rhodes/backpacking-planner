@@ -1,53 +1,56 @@
 
-BACKPACK                        CARRY-ON
+BACKPACK                         CARRY-ON
  │
- ├─MAIN POCKET                     Camera, charging cable
- │                                 GPS watch, charging cable
- │ Quilt                           Maps
- │ Tent                            Permits
- │ Water filter system             Shoes
- │ Water storage system            Starting outfit
- │ Brimmed hat
- │ Raincoat                     CHECKED BAG
- │ Puffy                         │
- │                               │ Belt
- ├─MESH SLEEVE POCKET            │ Bottles (2)
- │                               │ Sleeping pad
- │ First aid kit                 │ Tent poles
- │ Moleskin                      │ Tent stakes
- │ Toothbrush toothpaste         │ Trekking poles
- │ Ziploc bags                   │ Trekking umbrella
- │                               │ Trowel
- ├─CHEST PACK                    │
- │                               └─MESH SACK
- │ Compass
- │ Binoculars                      Knife
- │ Soap                            Leatherman micra
- │                                 Matches
- ├─CLOTHES SACK                    Spork
- │                                 Wipes
- │ Balaclava                       Extra lighter
- │ Long sleeve top                 Extra Ziploc bags
+ ├─MAIN POCKET                      Civilian clothes, pajamas
+ │                                  GPS watch, charging cable
+ │ Brimmed hat                      Camera, charging cable
+ │ Water storage system             Maps
+ │ Water filter system              Permits
+ │ Tent                             Backpacking shoes
+ │ Raincoat                         Starting outfit
+ │ Sleeping bag
+ │ Puffy                         CHECKED BAG
+ │ │                              │
+ │ ├─MESH SLEEVE POCKET           │ Bottles (2)
+ │ │                              │ Sleeping pad
+ │ │ Moleskin                     │ Tent poles
+ | | Repair tape                  │ Trekking poles
+ │ │ First aid kit                │ Trekking umbrella
+ │ │ Toothbrush toothpaste        │
+ | | Toilet paper                 └─MESH SACK
+ │ │ Ziploc bags
+ | └ Wipes                          Line
+ │                                  Spork
+ ├─CHEST PACK                       Coffee
+ │                                  Matches
+ │ Compass                          Trowel, tent stakes
+ │ Binoculars                       Leatherman micra
+ | Pen or pencil                    Ultralight knife
+ | Loupe                            Extra Ziploc bags
+ │ Soap
+ │                               BUY AT DESTINATION
+ ├─CLOTHES SACK
+ │                                  Food
+ │ Balaclava                        Stove fuel
+ │ Long sleeve top                  Wipes?
  │ Long underwear
- │ Socks (2 pair)               BUY AT DESTINATION
- │ Underwear (2)
- │ Warm hat                        Food
- │                                 Stove fuel
+ │ Underwear
+ │ Warm hat
+ │ Gloves
+ │ Socks
+ │
  ├─MISC STUFF SACK
  │
  │ Camera battery
+ │ Line w/safety pins
  │ Headlamps (2)
  │ Insect mesh
  │ Lighter
- │ Line
- │ Repair tape
  │
  ├─STOVE SACK
  │
- │ Cup and lid
  │ Pot and lid
  │ Stove
- │ Tripod
  │
  └─OUTSIDE POCKETS
 
