@@ -14,19 +14,19 @@ BACKPACK                         CARRY-ON
  │ ├─MESH SLEEVE POCKET           │ Bottles (2)
  │ │                              │ Sleeping pad
  │ │ Moleskin                     │ Tent poles
- | | Repair tape                  │ Trekking poles
+ │ │ Repair tape                  │ Trekking poles
  │ │ First aid kit                │ Trekking umbrella
  │ │ Toothbrush toothpaste        │
- | | Toilet paper                 └─MESH SACK
+ │ │ Toilet paper                 └─MESH SACK
  │ │ Ziploc bags
- | └ Wipes                          Line
+ │ └ Wipes                          Line
  │                                  Spork
  ├─CHEST PACK                       Coffee
  │                                  Matches
  │ Compass                          Trowel, tent stakes
  │ Binoculars                       Leatherman micra
- | Pen or pencil                    Ultralight knife
- | Loupe                            Extra Ziploc bags
+ │ Pen or pencil                    Ultralight knife
+ │ Loupe                            Extra Ziploc bags
  │ Soap
  │                               BUY AT DESTINATION
  ├─CLOTHES SACK
