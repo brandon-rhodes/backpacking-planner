@@ -16,9 +16,11 @@ FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
 
 def main(argv):
     parser = argparse.ArgumentParser(
-        description='Compute hiking distance between water sources.'
+        description='Compute hiking distance between water sources.',
     )
-    parser.add_argument('itinerary_file', help='Path to itinerary file')
+    parser.add_argument(
+        'itinerary', nargs='+', help='Path to an itinerary file',
+    )
     args = parser.parse_args(argv)
 
     with open('mileages') as f:
@@ -141,11 +143,17 @@ def main(argv):
     ]
 
     waypoints = []
-    for line in open(args.itinerary_file):
-        line = line.split('#')[0].strip()
-        if not line:
-            continue
-        waypoints.append(line)
+
+    arg1 = args.itinerary[0]
+    if ' ' in arg1:
+        waypoints = args.itinerary
+    else:
+        filename = arg1  # TODO: also accept multiple filenames?
+        for line in open(filename):
+            line = line.split('#')[0].strip()
+            if not line:
+                continue
+            waypoints.append(line)
 
     waypoints = list(expand_waypoints(waypoints, mileages))
     #pprint(waypoints)
