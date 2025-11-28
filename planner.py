@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import argparse
+import os
 import sys
 
 # https://www.nps.gov/grca/planyourvisit/upload/tonto_distances.pdf
@@ -23,7 +24,8 @@ def main(argv):
     )
     args = parser.parse_args(argv)
 
-    with open('mileages') as f:
+    directory = os.path.dirname(sys.argv[0])
+    with open(directory + '/mileages') as f:
         mileages, attributes = parse_mileage_file(f)
 
     remoteness = compute_remoteness(mileages)
