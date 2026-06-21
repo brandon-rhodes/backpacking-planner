@@ -10,10 +10,10 @@ import sys
 # TODO: Lower Boucher trail?
 
 HEADING = '''
-miles miles miles since  from
-      today total water safety
-'''.strip()
-FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5.1f} {:5.1f}  {}'
+miles miles miles  has
+      today total water
+'''.strip('\n')
+FORMAT = '{:5.1f} {:5.1f} {:5.1f} {:5}  {}'
 
 def main(argv):
     parser = argparse.ArgumentParser(
@@ -165,8 +165,8 @@ def main(argv):
     miles_today = 0.0
     miles_since_water = 0.0
     print(HEADING)
-    print(FORMAT.format(0.0, 0.0, 0.0, 0.0,
-                        remoteness[waypoints[0]], waypoints[0]))
+    print(FORMAT.format(0.0, 0.0, 0.0,
+                        is_water_at(waypoints[0], attributes), waypoints[0]))
     last_waypoint = waypoints[0]
     for waypoint in waypoints[1:]:
         #print('*', waypoint)
@@ -176,7 +176,7 @@ def main(argv):
             else:
                 suffix = ' (warning: no #camp)'
             day = day + 1
-            print('{:31}--- DAY {} ---{}'.format('', day, suffix))
+            print('{:25}--- DAY {} ---{}'.format('', day, suffix))
             miles_today = 0.0
             continue
         new_miles = mileages[last_waypoint][waypoint]
@@ -184,11 +184,12 @@ def main(argv):
         miles_today += new_miles
         miles_since_water += new_miles
         words = [waypoint]
-        words.extend(sorted(attributes[waypoint], reverse=True))
-        #if waypoint in water:
+        words.extend(sorted([
+            a for a in attributes[waypoint] if a != '#water'
+        ], reverse=True))
         print(FORMAT.format(
-            new_miles, miles_today, miles, miles_since_water,
-            remoteness[waypoint], ' '.join(words)
+            new_miles, miles_today, miles,
+            is_water_at(waypoint, attributes), ' '.join(words)
         ))
         if '#water' in attributes[waypoint]:
             miles_since_water = 0.0
@@ -306,6 +307,10 @@ def compute_remoteness(mileages):
             queue.append(tup)
         queue.sort()
     return remoteness
+
+def is_water_at(waypoint, attributes):
+    yes = '#water' in attributes[waypoint]
+    return ' yes' if yes else ''
 
 if __name__ == '__main__':
     main(sys.argv[1:])
