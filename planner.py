@@ -35,6 +35,7 @@ def main(argv):
     arg1 = args.itinerary[0]
     if ' ' in arg1:
         waypoints = args.itinerary
+        waypoints = un_abbreviate_waypoints(waypoints, mileages)
     else:
         filename = arg1  # TODO: also accept multiple filenames?
         for line in open(filename):
@@ -135,6 +136,18 @@ def parse_location(words):
         i -= 1
     name = ' '.join(words[:i+1 or None])
     return name, attributes
+
+def un_abbreviate_waypoints(waypoints, mileages):
+    out = []
+    known_waypoints = sorted(mileages.keys())
+    for prefix in waypoints:
+        matches = [w for w in known_waypoints if w.startswith(prefix)]
+        if len(matches) == 0:
+            exit(f'No matching waypoint: {prefix!r}')
+        elif len(matches) > 1:
+            exit(f'Too many matching waypoints: {prefix!r}')
+        out.append(matches[0])
+    return out
 
 def expand_waypoints(waypoints, mileages):
     start = waypoints[0]
