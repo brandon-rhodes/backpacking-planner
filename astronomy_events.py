@@ -1,10 +1,15 @@
-#!/usr/bin/env python
+#!/usr/bin/env -S uv run --script
 #
-# python astronomy_events.py 36.0544 -112.1401 2019-04-23 2019-04-29 US/Arizona
-# python astronomy_events.py 36.0544 -112.1401 2020-09-27 2020-10-03 US/Arizona
-# ../astronomy_events.py 36.0544 -112.1401 2021-10-10 2021-10-17 US/Pacific
-# ../astronomy_events.py 36.0544 -112.1401 2022-10-02 2022-10-08 US/Arizona
-# ./astronomy_events.py 36.0544 -112.1401 2023-10-15 2023-10-21 US/Arizona
+# /// script
+# requires-python = ">=3.8"
+# dependencies = [
+#     "skyfield",
+#     "pytz",
+# ]
+# ///
+#
+# Example:
+# ./astronomy_events.py 36.0544 -112.1401 2019-04-23 2019-04-29 US/Arizona
 
 from __future__ import print_function
 
